@@ -162,7 +162,7 @@ button.view-product:hover{
 /* Shop by Gender*/
 
 .gender{
-  padding: 60px 40px;
+  padding: 30px 40px;
   background-color: #f5f5f5;
   text-align: center;
 }
@@ -173,4 +173,157 @@ button.view-product:hover{
   margin-bottom: 40px;
 }
 
+.gender-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 60px;
+}
 
+.gender-card-male{
+  background-image: url(../../assets/images/man-hiking-clothes.jpg);
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+
+.gender-card-female{
+  background-image: url(../../assets/images/woman-hiking-clothes.jpg);
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+
+.gender-card-female:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.gender-card-male:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.gender-card-female,
+.gender-card-male 
+h3{
+  text-align: center;
+  font-size: 40px;
+}
+
+/* About us */
+
+ .about-us{
+  background-image: url(../../assets/images/banner-about-us.jpg);
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+ }
+
+ .about-us-content{
+  position: relative;
+  z-index: 2;
+ }
+
+ .about-us-content h2{
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #f5f5f5;
+ }
+
+ /* Shop by acivity */
+
+.activity{
+  padding: 30px 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.activity h1{
+  font-size: 50px;
+  color: #164D56;
+  margin-bottom: 40px;
+}
+
+.activity-card{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 20px;
+}
+
+.hiking{
+  background-image: url(../../assets/images/woman-hiking.jpg);
+  background-size: cover;
+  width: 250px;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+}
+
+.skiing{
+  background-image: url(../../assets/images/man-skiing.jpg);
+  background-size: cover;
+  width: 250px;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+}
+
+.camping{
+  background-image: url(../../assets/images/camping.jpg);
+  background-size: cover;
+  width: 250px;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+}
+
+.canoeing{
+  background-image: url(../../assets/images/canoeing.jpg);
+  background-size: cover;
+  width: 250px;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-radius: 25px;
+}
