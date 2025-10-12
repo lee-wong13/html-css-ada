@@ -10,3 +10,40 @@ body {
   background-color: var(--color-secondary);
 }
 
+/* Navigation bar */
+
+header{
+  display: flex;
+  align-items: center;
+  background-color: #164d568e;
+}
+
+img{
+  width: 130px;
+  height: auto;
+  float: left;
+  margin: 20px;
+  padding: 10px;
+}
+
+nav{
+  margin-left: 150px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+li a{
+  text-decoration: none;
+  color: #164D56;
+  margin: 25px;
+}
+
+
