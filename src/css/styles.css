@@ -358,3 +358,62 @@ h3{
   border-radius: 10px;
   margin-bottom: 15px;
 }
+
+/* Review */
+
+.review{
+  padding: 30px 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.review h1{
+  font-size: 50px;
+  color: #164D56;
+  margin-bottom: 50px;
+}
+
+
+/* Subscibe */
+
+.subscribe{
+  background-color: #164d5694;
+}
+
+.subscribe h1{
+  font-size: 30px;
+  color: #164D56;
+  margin-bottom: 35px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.subscribe-input{
+  margin: 20px 50px;
+  text-align: center;
+}
+
+.subscribe-input input{
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.subscribe-input button{
+  background-color: #e27c60;
+  padding: 5px 25px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.subscribe-input button:hover{
+  background-color: #e27c60a4;
+}
+
+.subscribe p{
+  text-align: center;
+  padding-bottom: 50px;
+  font-style: italic;
+  color: #164D56;
+}
