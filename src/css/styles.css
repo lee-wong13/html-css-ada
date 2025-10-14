@@ -563,3 +563,32 @@ span {
   font-weight: 500;
   color: #f5f5f5;
 }
+
+
+/* ------------- Cart Page --------------------- */
+
+.cart-title{
+  text-align: center;
+  margin: 70px;
+  font-size: 50px;
+  color: #164d56c0;
+}
+
+
+/* ----------------- Check out --------------------------*/
+
+.checkout-title{
+  text-align: center;
+  margin: 70px;
+  font-size: 50px;
+  color: #164d56c0;
+}
+
+/* ------------------- Success Page ------------------------ */
+
+.success-msg{
+  text-align: center;
+  margin: 70px;
+  font-size: 30px;
+  color: #164d56c0;
+}
