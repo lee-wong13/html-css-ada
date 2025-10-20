@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
 
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/checkout-styles.css">
 </head>
 <body>
 
@@ -35,7 +35,133 @@
 
     </header>
 
-    <h1 class="checkout-title"> Checkout </h1>
+    <div class="container">
+
+        <h1> Checkout </h1>
+
+        <div class="grid">
+
+          <!--- ====== Left form ================ -->
+
+          <section class="col col-left">
+
+            <!-- Email -->
+
+
+            <h2 class="section-title">Email</h2>
+            <label for="email">email</label>
+            <input type="email" name="email" placeholder="email">
+            <p class="hint">We'll send your order confirmation and updates to this email</p>
+            <label class="checkline">
+              <input type="checkbox"> News and Info
+            </label>
+
+            <!---- ======= Delivery ========== ------->
+
+            <h2 class="section-title">Delivery</h2>
+            <div class="row">
+              <div>
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" placeholder="First name">
+              </div>
+
+              <div>
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" placeholder="Last Name">
+              </div>
+            </div>
+
+
+            <label for="address">Address</label>
+            <input type="text" name="address" placeholder="Address">
+
+            <label for="apt">Apartment nr, house nr,...</label>
+            <input type="text" placeholder="Apartment nr, house nr,...">
+
+            <div class="row">
+              <div>
+                <label for="post">Postal Code</label>
+                <input type="text" name="post" placeholder="Postal Code">
+              </div>
+
+              <div>
+                <label for="city">City</label>
+                <input type="text" name="city" placeholder="City">
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="province">Province</label>
+                <input type="text" name="province" placeholder="Province">
+              </div>
+              <div>
+                <label for="country">Country</label>
+                <input type="text" name="country" placeholder="Country">
+              </div>
+            </div>
+
+            <label class="checkline">
+              <input type="checkbox" name="save"> Save information
+            </label>
+
+            <!-- ============== Shipping Method =============== -->
+
+            <h2 class="section-title">Shipping Method</h2>
+
+          <label class="option">
+          <div class="left">
+            <input type="radio" name="ship" checked>
+            <div>
+              <div><strong>Standard Shipping</strong></div>
+              <small>4–7 Business Days with Tracking Number</small>
+            </div>
+          </div>
+          <div class="price">69</div>
+        </label>
+
+        <label class="option">
+          <div class="left">
+            <input type="radio" name="ship">
+            <div>
+              <div><strong>Express Shipping</strong></div>
+              <small>2–3 Business Days with Tracking Number</small>
+            </div>
+          </div>
+          <div class="price">99</div>
+        </label>
+
+        <label class="option">
+          <div class="left">
+            <input type="radio" name="ship">
+            <div>
+              <div><strong>Same Day/Next Day Delivery (Premium)</strong></div>
+              <small>within 24 hours</small>
+            </div>
+          </div>
+          <div class="price">139</div>
+        </label>
+
+        <label class="option">
+          <div class="left">
+            <input type="radio" name="ship">
+            <div>
+              <div><strong>Free Shipping</strong></div>
+              <small>5–10 Business Days</small>
+            </div>
+          </div>
+          <div class="price">0</div>
+        </label>
+
+
+          </section>
+        </div>
+
+    </div>
+
+    
+
+
     
 </body>
 </html>
