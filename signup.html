@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/signup-style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
+
+
 <body>
 
     <div class="wrapper">
@@ -13,17 +16,26 @@
             <h1>Sign Up</h1>
             <div class="input-box">
                 <input type="text" name="username" placeholder="Username">
+                <i class='bxr  bx-user'  ></i> 
             </div>
             <div class="input-box">
                 <input type="email" name="email" placeholder="Email">
+                <i class='bxr  bx-envelope-open'  ></i> 
             </div>
             <div class="input-box">
                 <input type="password" name="password" placeholder="Password">
+                <i class='bxr  bx-lock'  ></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Confirm Password">
+                <i class='bxr  bx-lock'  ></i> 
             </div>
 
-            <div class="sign-up">
-                
+            <div class="remember">
+                <label for="remember"><input type="checkbox">Remember Me</label>
             </div>
+
+            <button class="signup-btn">Sign Up</button>
         </form>
     </div>
     
