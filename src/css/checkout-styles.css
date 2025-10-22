@@ -110,9 +110,10 @@ span {
 /* -------------- Body ----------------*/
 
 .container{
-    max-width: 1000px;
-    margin: 24px auto 60px;
-    padding: 0 16px;
+    max-width: 90%;
+    height: 50%;
+    margin: 24px auto 80px;
+    padding: 0 20px;
 }
 
 h1{
@@ -122,14 +123,13 @@ h1{
     margin: 60px;
 }
 
-/* Layout two columns side by side */ 
-
-.container{
+.grid{
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 30px;
+  width: 80%;
 }
+
+/* Layout two columns side by side */ 
 
 .col-left{
   flex: 1;
@@ -222,5 +222,68 @@ h2{
   font-family: "Roboto Condensed", sans-serif;
   color: #0b0b0b;
 }
+
+.option img{
+  width: 23px;
+  height: auto;
+  margin: 0 5px 0 5px;
+}
+
+.checkline input{
+  margin: 10px 0 10px 0;
+}
+
+.actions{
+  margin: 10px 0 10px 70px;
+}
+
+.actions button{
+  background-color: #e27c60;
+  padding: 8px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 44%;
+}
+
+.actions button:hover{
+  background-color: #e27c60a4;
+}
+
+/* ====== Right order summary ====== */ 
+
+.col-right{
+  flex: 1;
+  min-width: 300px;
+  background-color: #164d5646;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #0b0b0b;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #0b0b0b;
+  padding: 8px 0;
+}
+
+.item img{
+  width: 100px;
+  height: 120px;
+  border-radius: 8px;
+  margin-right: 10px;
+  border: 1px solid #0b0b0b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.name, 
+.muted {
+  color: #0b0b0b;
+  text-align: justify;
+}
+
+
 
 
