@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Product</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/product-styles.css">
     <meta name="description" content="Our Products">
 </head>
 <body>
@@ -41,6 +41,38 @@
 
     <!-- Product Section -->
 
+      <div class="container">
+
+        <div class="topbar">
+          <div class="sort">
+            <span>Sort by</span>
+            <select name="sort-by">
+              <option>Popular</option>
+              <Option>Price: Low to High</Option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="content">
+
+          <!-- ==== Right: Product Grid =====-->
+
+          <div class="filter-dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category</button>
+
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Jacket</a>
+              <a href="#">Pants</a>
+              <a href="#">Hat</a>
+              <a href="#">Gloves</a>
+            </div>
+          </div>
+
+
+
+      </div>
     
     
 </body>

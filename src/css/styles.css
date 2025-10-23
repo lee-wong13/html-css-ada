@@ -23,56 +23,11 @@ body {
   background-color: var(--color-secondary);
 }
 
-/* Navigation bar */
-
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
 }
-
-header{
-  display: flex;
-  align-items: center;
-  background-color: #164d568e;
-}
-
-header img{
-  width: 130px;
-  height: auto;
-  float: left;
-  margin: 20px;
-  padding: 10px;
-}
-
-nav{
-  margin-left: 150px;
-}
-
-nav ul {
-  padding: 0px;
-}
-
-nav li{
-  display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-nav li a{
-  text-decoration: none;
-  color: #164D56;
-  margin: 40px;
-}
-
-nav li a:hover{
-  color: #f5f5f5;
-}
-
-nav li.signup{
-  margin-left: 120px;
-}
-
 
 h1, h2, p, h3{
   font-family: "Roboto Condensed", sans-serif;
@@ -106,6 +61,59 @@ span {
   font-family: var(--body-font);
   font-weight: var(--font-regular);
 }
+
+
+
+
+/* Navigation bar */
+
+header{
+  width: 100%;
+  background-color: #164d568e;
+}
+
+nav{
+  height: 97px;
+  max-width: 1320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  column-gap: 4rem;
+}
+
+nav img{
+  width: max-content;
+  height: 69px;
+}
+
+
+nav li{
+  display: inline-block;
+}
+
+nav a{
+  font-weight: var(--font-semi-bold);
+  font-size: 20px;
+  text-decoration: none;
+  color: #164D56;
+}
+
+nav a:hover {
+  color: #f5f5f5;
+}
+
+nav i {
+  font-size: 1.5rem;
+  color: #164D56;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
 
 /* Welcome Banner*/
 
@@ -602,55 +610,5 @@ h3{
 
 
 
-/* CSS for Product Page*/
-
-.banner-product{ 
-  background-image: url(../../assets/images/mountain-bg.jpg);
-  background-size: cover;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-.banner-product h1{
-  font-size: 40px;
-  margin-bottom: 30px;
-  font-weight: 500;
-  color: #f5f5f5;
-}
 
 
-/* ------------- Cart Page --------------------- */
-
-.cart-title{
-  text-align: center;
-  margin: 70px;
-  font-size: 50px;
-  color: #164d56c0;
-}
-
-
-/* ----------------- Check out --------------------------*/
-
-.checkout-title{
-  text-align: center;
-  margin: 70px;
-  font-size: 50px;
-  color: #164d56c0;
-}
-
-/* ------------------- Success Page ------------------------ */
-
-.success-msg{
-  text-align: center;
-  margin: 70px;
-  font-size: 30px;
-  color: #164d56c0;
-}
-
-
-/* -------------------------- Sign Up -------------------------------------------- */ 
