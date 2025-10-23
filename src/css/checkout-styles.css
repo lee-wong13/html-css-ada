@@ -136,6 +136,7 @@ h1{
   min-width: 300px;
   background-color: #164d5646;
   padding: 20px;
+  margin-left: 50px;
   border-radius: 20px;
   border: 1px solid #0b0b0b;
 }
@@ -261,12 +262,19 @@ h2{
   border: 1px solid #0b0b0b;
 }
 
+.col-right h2{
+  color: #164D56;
+  margin: 40px 0 20px 20px;
+  padding-top: 20px;
+}
+
 .item{
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #0b0b0b;
   padding: 8px 0;
+  margin: 20px;
 }
 
 .item img{
@@ -281,7 +289,7 @@ h2{
 .name, 
 .muted {
   color: #0b0b0b;
-  text-align: justify;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 

@@ -6,7 +6,7 @@
     <title>Your Cart</title>
 
 
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/cart-styles.css">
 </head>
 <body>
 
@@ -36,10 +36,82 @@
 
     </header>
 
-    <h1 class="cart-title"> Your cart </h1>
+    <h1>Your Cart</h1>
+
+    <div class="cart-header">
+      <h3 class="item">Item</h3>
+      <h3 class="price">Price</h3>
+      <h3 class="quantity">Quantity</h3>
+      <h3 class="total">Total</h3>
+    </div>
 
 
+    <div class="cart-item">
+      <div class="col item">
+        <img src="assets/images/RainyDays_Jacket1.jpg" alt="StormGuard Pro Outdoor Jacket">
+        <div>
+          <p class="desc">StormGuard Pro Outdoor Jacket</p>
+          <p class="desc-detail">• size s<br>• orange</p>
+        </div>
+      </div>
+      <div class="col price">899</div>
+      <div class="col quantity">
+        <input type="number" value="1" min="0">
+      </div>
+      <div class="col total">899</div>
+    </div>
 
+
+    <div class="cart-item">
+        <div class="col item">
+          <img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell">
+          <div>
+            <p class="desc">Midnight Reflective Urban Shell</p>
+            <p class="desc-detail">• size s<br>• black</p>
+          </div>
+        </div>
+        <div class="col price">799</div>
+        <div class="col quantity">
+          <input type="number" value="1" min="0">
+        </div>
+        <div class="col total">799</div>
+    </div>
+
+
+      <div class="cart-item">
+            <div class="col item">
+              <img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men">
+              <div>
+                <p class="desc">Rain Jacket for Men</p>
+                <p class="desc-detail">• size m<br>• red</p>
+              </div>
+            </div>
+            <div class="col price">850</div>
+            <div class="col quantity">
+              <input type="number" value="1" min="0">
+            </div>
+            <div class="col total">850</div>
+      </div>
+
+      
+      <div class="cart-code-summary">
+
+        <div class="coupon">
+          <input type="text" placeholder="apply code...">
+          <button>Apply Code</button>
+        </div>
+
+        <div class="summary">
+            <p><span>Subtotal</span><span>2548</span></p>
+            <p><span>Shipping</span><span>0</span></p>
+            <p><span>Tax</span><span>637</span></p>
+            <hr>
+            <p class="total"><span>Total</span><span>2548</span></p>
+        </div>
+
+      </div>
+
+       <!-- =================== Footer =======================-->
     
 </body>
 </html>
