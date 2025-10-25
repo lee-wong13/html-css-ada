@@ -107,6 +107,55 @@ span {
   font-weight: var(--font-regular);
 }
 
+/* Navigation bar */
+
+header{
+  width: 100%;
+  background-color: #164d568e;
+}
+
+nav{
+  height: 97px;
+  max-width: 1320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  column-gap: 4rem;
+}
+
+nav img{
+  width: max-content;
+  height: 69px;
+}
+
+
+nav li{
+  display: inline-block;
+}
+
+nav a{
+  font-weight: var(--font-semi-bold);
+  font-size: 20px;
+  text-decoration: none;
+  color: #164D56;
+}
+
+nav a:hover {
+  color: #f5f5f5;
+}
+
+nav i {
+  font-size: 1.5rem;
+  color: #164D56;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+
 
 /* ------------- Order Box -----------------*/
 

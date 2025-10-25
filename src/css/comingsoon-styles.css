@@ -1,0 +1,30 @@
+/* Use import to split up your CSS into manageable chunks */
+@import url("./_reset.css");
+/* Files that are only needed to be imported are called partials */
+/* These are marked with an underscore: */
+@import url("./_variables.css");
+/* Feel free to add as many of these imports as you need */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --body-font: "Roboto Condensed", sans-serif;
+  --h3-font-size: 20px;
+  --normal-font-size: 15px;
+
+  /* Font weight */
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+
+
+body {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}

@@ -31,3 +31,7 @@ The site needs to have every page listed in the site architecture on your chosen
 - Please include a link to your live site, deployed on Netlify or GitHub Pages in your submission.
 - Please include a link to your public GitHub repo containing your code in your submission.
 - There is no reflection for this CA.
+
+
+Wireframe Figma: 
+https://www.figma.com/design/sFpobxNwobujz86P7Gh9Kk/Rainydays.ada?node-id=0-1&t=H7AAKGFLwRF2V9qA-1 
