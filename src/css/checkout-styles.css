@@ -123,7 +123,7 @@ h1{
     margin: 60px;
 }
 
-.grid{
+.container{
   display: flex;
   gap: 30px;
   width: 80%;
@@ -290,6 +290,76 @@ h2{
 .muted {
   color: #0b0b0b;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Footer ------- */
+
+
+
+.grid {
+  display: grid;
+  gap: 4.5rem;
+}
+
+/* FOOTER ============================================= */
+.footer {
+  padding: 3rem 0;
+}
+
+.footer__content {
+  row-gap: 3rem;
+}
+
+.footer__rainy{
+  display: flex;
+  flex-direction: column;        
+  justify-content: center;       
+  align-items: center;  
+  gap: 1.5rem;
+}
+.footer__logo img {
+  width: 129px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center; 
+  gap: 5px;
+}
+.footer__social img {
+  width: 30px;
+  object-fit: contain;
+}
+
+.footer__data {
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+}
+
+.footer__title {
+  margin-bottom: .5rem;
+  color: #0b0b0b;
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.25rem;
+  color: #0b0b0b;
+}
+.footer__icon-pay{
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+.footer__icon-pay img{
+  max-width: 45px;
+  object-fit: contain;
+}
+
+.footer__copy {
+  text-align: center;
+  color: #F5F5F5;
+  background-color: black;
+  padding: .25rem 0;
 }
 
 
