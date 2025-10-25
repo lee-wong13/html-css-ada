@@ -36,5 +36,3 @@ The site needs to have every page listed in the site architecture on your chosen
 Wireframe Figma: 
 https://www.figma.com/design/sFpobxNwobujz86P7Gh9Kk/Rainydays.ada?node-id=0-1&t=H7AAKGFLwRF2V9qA-1 
 
-GitHub Pages: 
- https://lee-wong13.github.io/html-css-ada/
