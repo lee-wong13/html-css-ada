@@ -6,43 +6,61 @@
     <title>Checkout</title>
 
     <link rel="stylesheet" href="src/css/checkout-styles.css">
+
+       <!-- RemixIcons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
 
-     <!-- Navigation -->
+      <!-- Navigation -->
 
-    <header>
+  <header>
+    <nav class="nav">
+      <!-- nav logo -->
+      <a href="/index.html" class="nav__logo">
+        <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
+      </a>
 
-      <!-- Logo -->
-      <a href="index.html" class="logo"><img src="assets/images/RainyDays_Logo.png" alt="Rainy Days"></a>
-
-      <!-- Nav link-->
-
-      <nav>
-
-        <ul>
-          <li><a href="product.html">Shop</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="support.html">Support</a></li>
-
-          <!-- Fix this -->
-
-          <li class="signup"><a href="signup.html">Sign Up</a></li>
-          <li class="cart"><a href="cart.html">Cart</a></li>
-         
+      <!-- nav middle menu -->
+      <div class="nav__menu" >
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="product.html" class="nav__link active-link">Shop</a>
+          </li>
+          <li class="nav__item">
+            <a href="about-us.html" class="nav__link">About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="support.html" class="nav__link">Support</a>
+          </li>
         </ul>
-      </nav>
+      </div>
 
-    </header>
+      <!-- nav left menu -->
+      <div class="nav__left-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <i class="ri-search-line"></i>
+            <a href="signup.html" class="nav__link">Sign Up</a>
+          </li>
+          <li class="nav__item">
+            <a href="cart.html" class="nav__link">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+  </header>
 
 
     <h1> Checkout </h1>
 
-    <div class="container">
+   
 
         
 
-        <div class="container">
+        <div class="container-checkout">
 
           <!--- ====== Left form ================ -->
 
@@ -293,7 +311,9 @@
 
     </div>
 
-    </div>
+    <hr>
+
+    
 
     
 
