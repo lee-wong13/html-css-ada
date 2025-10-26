@@ -70,49 +70,49 @@
 
 
             <h2 class="section-title">Email</h2>
-            <label for="email"><input type="email" name="email" placeholder="email">
+            <label for="email"><input type="email" name="email" placeholder="email" id="email">
             </label>
             <p class="hint">We'll send your order confirmation and updates to this email</p>
             <label class="checkline">
               <input type="checkbox"> News and Info
             </label>
 
-            <!---- ======= Delivery ========== ------->
+            <!----======= Delivery ========== ------->
 
             <h2 class="section-title">Delivery</h2>
             <div class="row">
               <div>
-                <label for="firstname"><input type="text" name="firstname" placeholder="First name"></label>
+                <label for="firstname"><input type="text" name="firstname" placeholder="First name" id="firstname"></label>
               </div>
 
               <div>
-                <label for="lastname"><input type="text" name="lastname" placeholder="Last Name"></label>
+                <label for="lastname"><input type="text" name="lastname" placeholder="Last Name" id="lastname"></label>
               </div>
             </div>
 
 
-            <label for="address"><input type="text" name="address" placeholder="Address"></label>
+            <label for="address"><input type="text" name="address" placeholder="Address" id="address"></label>
             
 
-            <label for="apt"><input type="text" placeholder="Apartment nr, house nr,..."></label>
+            <label for="apt"><input type="text" placeholder="Apartment nr, house nr,..." id="apt"></label>
             
 
             <div class="row">
               <div>
-                <label for="post"><input type="text" name="post" placeholder="Postal Code"></label>   
+                <label for="post"><input type="text" name="post" placeholder="Postal Code" id="post"></label>   
               </div>
 
               <div>
-                <label for="city"><input type="text" name="city" placeholder="City"></label>
+                <label for="city"><input type="text" name="city" placeholder="City" id="city"></label>
               </div>
             </div>
 
             <div class="row">
               <div>
-                <label for="province"><input type="text" name="province" placeholder="Province"></label>
+                <label for="province"><input type="text" name="province" placeholder="Province" id="province"></label>
               </div>
               <div>
-                <label for="country"><input type="text" name="country" placeholder="Country"></label>
+                <label for="country"><input type="text" name="country" placeholder="Country" id="country"></label>
               </div>
             </div>
 
@@ -124,7 +124,7 @@
 
             <h2 class="section-title">Shipping Method</h2>
 
-          <label class="option">
+          <div class="option">
           <div class="left">
             <input type="radio" name="ship" checked>
             <div>
@@ -133,9 +133,9 @@
             </div>
           </div>
           <div class="price">69</div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="ship">
             <div>
@@ -144,9 +144,9 @@
             </div>
           </div>
           <div class="price">99</div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="ship">
             <div>
@@ -155,9 +155,9 @@
             </div>
           </div>
           <div class="price">139</div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="ship">
             <div>
@@ -166,7 +166,7 @@
             </div>
           </div>
           <div class="price">0</div>
-        </label>
+        </div>
 
 
         <!--- ======= Payment Method =========== -->
@@ -175,7 +175,7 @@
         <h2 class="section-title">Payment Method</h2>
 
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="pay" checked>
             <div>
@@ -187,9 +187,9 @@
             <img src="assets/images/mastercard-logo.png" alt="mastercard-logo">
             <img src="assets/images/amex-logo.png" alt="amex-logo">
           </div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="pay">
             <div><strong>Paypal</strong></div>
@@ -197,9 +197,9 @@
           <div class="icons">
             <img src="assets/images/paypal-logo.png" alt="paypal-logo">
           </div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="pay">
             <div><strong>Google Pay</strong></div>
@@ -207,9 +207,9 @@
           <div class="icons">
             <img src="assets/images/googlepay-logo.png" alt="googlepay-logo">
           </div>
-        </label>
+        </div>
 
-        <label class="option">
+        <div class="option">
           <div class="left">
             <input type="radio" name="pay">
             <div><strong>Apple Pay</strong></div>
@@ -217,11 +217,11 @@
           <div class="icons">
             <img src="assets/images/applepay-logo.png" alt="applepay-logo">
           </div>
-        </label>
+        </div>
 
-        <label class="checkline">
+        <div class="checkline">
           <input type="checkbox"> Terms & Conditions
-        </label>
+        </div>
 
         <div class="actions">
           <button class="btn secondary" onclick="location.href='product.html'">Continue Shopping</button>
