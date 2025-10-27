@@ -270,6 +270,7 @@ button.view-product:hover{
   position: relative;
   border-radius: 25px;
   filter: brightness(0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gender-card-female{
@@ -284,14 +285,17 @@ button.view-product:hover{
   position: relative;
   border-radius: 25px;
   filter: brightness(0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gender-card-female:hover{
   cursor: pointer;
+  filter: brightness(100%);
 }
 
 .gender-card-male:hover{
   cursor: pointer;
+  filter: brightness(100%);
 }
 
 .gender-card-female h3{
@@ -319,10 +323,11 @@ h3{
  .about-us{
   background-image: url(../../assets/images/banner-about-us.jpg);
   background-size: cover;
-  height: 75vh;
+  height: 700px;
+  padding-right: 10rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   color: #fff;
   position: relative;
@@ -331,6 +336,7 @@ h3{
  .about-us-content{
   position: relative;
   z-index: 2;
+  width: 660px;
  }
 
  .about-us-content h2{
@@ -342,6 +348,8 @@ h3{
 
  .about-us p{
   font-size: 20px;
+  line-height: 25px;
+  text-align: left;
  }
 
  /* Shop by acivity */
@@ -350,26 +358,29 @@ h3{
   padding: 30px 40px;
   background-color: #f5f5f5;
   text-align: center;
+  
 }
 
 .activity h1{
-  font-size: 50px;
-  color: #164D56;
-  margin-bottom: 50px;
+  font-size: 48px;
+  color: var(--color-primary);
+  margin-bottom: 40px;
 }
 
 .activity-card{
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   margin: 20px;
+  justify-content: space-evenly;
+  position: relative;
 }
 
 .hiking{
   background-image: url(../../assets/images/woman-hiking.jpg);
   background-size: cover;
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 275px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -377,13 +388,15 @@ h3{
   color: #fff;
   position: relative;
   border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.5);
 }
 
 .skiing{
   background-image: url(../../assets/images/man-skiing.jpg);
   background-size: cover;
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 270px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -391,13 +404,15 @@ h3{
   color: #fff;
   position: relative;
   border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.5);
 }
 
 .camping{
   background-image: url(../../assets/images/camping.jpg);
   background-size: cover;
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 270px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -405,13 +420,15 @@ h3{
   color: #fff;
   position: relative;
   border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.5);
 }
 
 .canoeing{
   background-image: url(../../assets/images/canoeing.jpg);
   background-size: cover;
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 270px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -419,7 +436,40 @@ h3{
   color: #fff;
   position: relative;
   border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.5);
 }
+
+.activity-card h3{
+  font-size: 36px;
+}
+
+.hiking:hover, 
+.skiing:hover,
+.camping:hover, 
+.canoeing:hover{
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.right-arrow{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transform: translateX(200%);
+  width: 32px;
+  height: 68px;
+  background-color: #85a0a5;
+  text-align: center;
+  line-height: 68px;
+}
+
+.right-arrow:hover{
+  background-color: #164d569a;
+}
+
 
 /* Special Price */
 
@@ -449,10 +499,27 @@ h3{
 }
 
 .sale-img img{
-  width: 100%;
+  width: 390px;
+  height: 435px;
   border-radius: 10px;
   margin-bottom: 15px;
-  height: 70vh;
+}
+
+.sale-per{
+  position: relative;
+  width: 390px;
+  height: 435px;
+  margin-bottom: 1rem;
+}
+
+.sale-per p{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #0b0b0b;
+  opacity: 0.7;
+  padding: 1rem;
 }
 
 .sale-img h2{
@@ -475,6 +542,12 @@ h3{
   margin-top: 20px;
 }
 
+.price-col{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
 /* Review */
 
 .review{
@@ -485,7 +558,7 @@ h3{
 
 .review h1{
   font-size: 50px;
-  color: #164D56;
+  color: var(--color-primary);
   margin-bottom: 50px;
 }
 
@@ -504,8 +577,9 @@ h3{
 }
 
 .review-card img{
-  width: 100%;
-  height: 70vh;
+  width: 383px;
+  height: 574px;
+  object-fit: cover;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -521,6 +595,10 @@ h3{
   color: #0b0b0b;
 }
 
+.star{
+  font-size: 40px;
+}
+
 
 
 /* Subscibe */
@@ -530,8 +608,8 @@ h3{
 }
 
 .subscribe h1{
-  font-size: 30px;
-  color: #164D56;
+  font-size: 48px;
+  color: var(--color-primary);
   margin-bottom: 35px;
   padding-top: 50px;
   text-align: center;
@@ -564,7 +642,8 @@ h3{
   text-align: center;
   padding-bottom: 50px;
   font-style: italic;
-  color: #164D56;
+  color: var(--color-primary);
+  font-size: 20px;
 }
 
 
@@ -579,7 +658,7 @@ h3{
 
 /* FOOTER ============================================= */
 .footer {
-  padding: 3rem 0;
+  margin-top: 3rem;
 }
 
 .footer__content {
