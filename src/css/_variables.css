@@ -1,7 +1,19 @@
 /* Use this file to store your useful variables */
 /* This could be colors, fonts, or padding sizes! */
 
+
 :root {
   --color-primary: #164D56;
   --color-secondary: #f5f5f5;
+
+  --body-font: "Roboto Condensed", sans-serif;
+  --h3-font-size: 20px;
+  --normal-font-size: 15px;
+
+  /* Font weight */
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-black: 900;
 }

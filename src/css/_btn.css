@@ -1,0 +1,8 @@
+.btn{
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  font-family: var(--body-font);
+  font-size: 20px;
+  background-color: #e27d60;
+  cursor: pointer;
+}
