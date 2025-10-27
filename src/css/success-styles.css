@@ -297,7 +297,7 @@ p{
 .container-shipping h2{
     margin: 20px 40px;
     font-size: 30px;
-    color: #164D56;
+    color: var(--color-primary);
 }
 
 .shipping-box p{

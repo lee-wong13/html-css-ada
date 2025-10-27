@@ -157,7 +157,7 @@ nav i {
 }
 
 h1{
-    color: #164D56;
+    color: var(--color-primary);
     font-size: 50px;
     text-align: center;
     margin: 40px 0 40px 0;
@@ -178,7 +178,7 @@ h1{
 
 .cart-header h3{
     font-size: 30px;
-    color: #164D56;
+    color: var(--color-primary);
 
 }
 
@@ -233,7 +233,7 @@ h1{
 }
 
 p{
-    color: #164D56;
+    color: var(--color-primary);
     margin-left: 30px;
 }
 
@@ -262,7 +262,7 @@ input[value="1"]{
 }
 
 .cart-item .total{
-    color: #164D56;
+    color: var(--color-primary);
     font-size: 20px;
 }
 
