@@ -161,7 +161,8 @@ button.shopnow:hover{
   background-color: #e27c60;
 }
 
-/* New Arrival */
+/* New Arrival */¨
+
 
 .new-arrival{
   padding: 60px 40px;
@@ -169,10 +170,17 @@ button.shopnow:hover{
   text-align: center;
 }
 
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .new-arrival h1{
-  font-size: 50px;
+  font-size: 48px;
   color: #164D56;
   margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .product-grid{
@@ -182,31 +190,34 @@ button.shopnow:hover{
 }
 
 .product-card{
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0,0.05);
-  transition: transform 0.3s ease;
   background-color: white;
+  align-items: center;
 }
 
 .product-card img{
-  width: 100%;
-  height: 70vh;
+  width: 314px;
+  height: 380px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .product-card h3{
-  font-size: 40px;
+  font-size: 24px;
   margin-bottom: 10px;
-  color: #164D56;
+  color: var(--color-primary);
+  text-align: center;
 }
 
 .product-card p {
   color: #2b2b2b;
-  font-weight: bold;
   margin-bottom: 15px;
-  font-size: 30px;
+  font-size: 24px;
+  text-align: center;
 }
 
 button.view-product{
@@ -215,6 +226,7 @@ button.view-product{
   border-radius: 25px;
   font-size: 15px;
   cursor: pointer;
+  width: 189px;
 }
 
 button.view-product:hover{
@@ -228,25 +240,28 @@ button.view-product:hover{
   padding: 30px 40px;
   background-color: #f5f5f5;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .gender h1{
-  font-size: 50px;
-  color: #164D56;
+  font-size: 48px;
+  color: var(--color-primary);
   margin-bottom: 40px;
 }
 
 .gender-grid{
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 10px;
   margin: 60px;
+  justify-content: space-evenly;
 }
 
 .gender-card-male{
   background-image: url(../../assets/images/man-hiking-clothes.jpg);
   background-size: cover;
-  height: 75vh;
+  width: 404px;
+  height: 499px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,38 +269,49 @@ button.view-product:hover{
   color: #fff;
   position: relative;
   border-radius: 25px;
-  opacity: 0.5;
+  filter: brightness(0.5);
 }
 
 .gender-card-female{
   background-image: url(../../assets/images/woman-hiking-clothes.jpg);
   background-size: cover;
-  height: 75vh;
+  width: 404px;
+  height: 499px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
   position: relative;
   border-radius: 25px;
-  opacity: 0.5;
+  filter: brightness(0.5);
 }
 
 .gender-card-female:hover{
   cursor: pointer;
-  opacity: 1;
 }
 
 .gender-card-male:hover{
   cursor: pointer;
-  opacity: 1;
 }
 
-.gender-card-female,
+.gender-card-female h3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
+  font-size: 40px;| 
+}
+
 .gender-card-male 
 h3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
   text-align: center;
-  font-size: 40px;
+  font-size: 40px;| 
 }
 
 /* About us */
@@ -308,10 +334,14 @@ h3{
  }
 
  .about-us-content h2{
-  font-size: 40px;
+  font-size: 48px;
   margin-bottom: 30px;
   font-weight: 500;
   color: #f5f5f5;
+ }
+
+ .about-us p{
+  font-size: 20px;
  }
 
  /* Shop by acivity */
