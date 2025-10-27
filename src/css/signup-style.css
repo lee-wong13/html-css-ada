@@ -26,7 +26,6 @@ body{
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
-    box-shadow: ;
 }
 
 .wrapper h1{
