@@ -10,6 +10,24 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+:root {
+  --color-primary: #164D56;
+  --color-secondary: #f5f5f5;
+
+  --body-font: "Roboto Condensed", sans-serif;
+  --h3-font-size: 20px;
+  --normal-font-size: 15px;
+
+  /* Font weight */
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-black: 900;
+}
+
+
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
