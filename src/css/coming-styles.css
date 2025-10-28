@@ -27,7 +27,7 @@
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
-  background-image: url(../assets/images/gradient-mountain-landscape/6186486.jpg);
+  background-image: url(../../assets/images/gradient-mountain-landscape/6186486.jpg);
   background-size: cover;
   display: flex;
   background-repeat: no-repeat;
