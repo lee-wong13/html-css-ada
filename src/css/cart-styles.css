@@ -2,7 +2,7 @@
 @import url("./_reset.css");
 /* Files that are only needed to be imported are called partials */
 /* These are marked with an underscore: */
-@import url("./_variables.css");
+@import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
