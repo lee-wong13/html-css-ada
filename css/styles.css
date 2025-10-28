@@ -118,7 +118,7 @@ nav i {
 /* Welcome Banner*/
 
 .banner{ 
-  background-image: url(../../assets/images/banner.jpg);
+  background-image: url(../assets/images/banner.jpg);
   background-size: cover;
   height: 85vh;
   display: flex;
@@ -258,7 +258,7 @@ button.view-product:hover{
 }
 
 .gender-card-male{
-  background-image: url(../../assets/images/man-hiking-clothes.jpg);
+  background-image: url(../assets/images/man-hiking-clothes.jpg);
   background-size: cover;
   width: 404px;
   height: 499px;
@@ -274,7 +274,7 @@ button.view-product:hover{
 }
 
 .gender-card-female{
-  background-image: url(../../assets/images/woman-hiking-clothes.jpg);
+  background-image: url(../assets/images/woman-hiking-clothes.jpg);
   background-size: cover;
   width: 404px;
   height: 499px;
@@ -321,7 +321,7 @@ h3{
 /* About us */
 
  .about-us{
-  background-image: url(../../assets/images/banner-about-us.jpg);
+  background-image: url(../assets/images/banner-about-us.jpg);
   background-size: cover;
   height: 700px;
   padding-right: 10rem;
@@ -377,7 +377,7 @@ h3{
 }
 
 .hiking{
-  background-image: url(../../assets/images/woman-hiking.jpg);
+  background-image: url(../assets/images/woman-hiking.jpg);
   background-size: cover;
   width: 300px;
   height: 275px;
@@ -393,7 +393,7 @@ h3{
 }
 
 .skiing{
-  background-image: url(../../assets/images/man-skiing.jpg);
+  background-image: url(../assets/images/man-skiing.jpg);
   background-size: cover;
   width: 300px;
   height: 270px;
@@ -425,7 +425,7 @@ h3{
 }
 
 .canoeing{
-  background-image: url(../../assets/images/canoeing.jpg);
+  background-image: url(../assets/images/canoeing.jpg);
   background-size: cover;
   width: 300px;
   height: 270px;
