@@ -30,7 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(../../assets/images/mountain-bg.jpg);
+    background-image: url(../assets/images/mountain-bg.jpg);
     background-size: cover;
     background-position: center;
     color: var(--color-primary);
