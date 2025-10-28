@@ -2,6 +2,10 @@
 /* This could be colors, fonts, or padding sizes! */
 
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
 :root {
   --color-primary: #164D56;
   --color-secondary: #f5f5f5;
