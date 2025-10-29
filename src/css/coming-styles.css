@@ -5,6 +5,8 @@
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
 
+@import url("./btn.css");
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
@@ -82,6 +84,7 @@ body {
 
 
 
+
 /* ---------------------------------- */
 /*           MEDIA QUERIES            */
 /* ---------------------------------- */
@@ -102,6 +105,8 @@ body {
     font-size: 18px;
     line-height: 28px;
   }
+
+
 }
 
 /* For tablets and large phones */
