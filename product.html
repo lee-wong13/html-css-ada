@@ -16,7 +16,7 @@
   <header>
     <nav class="nav">
       <!-- nav logo -->
-      <a href="/index.html" class="nav__logo">
+      <a href="index.html" class="nav__logo">
         <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
       </a>
 
@@ -63,36 +63,201 @@
 
       <div class="container">
 
-        <div class="topbar">
-          <div class="sort">
+    <div class="topbar">
+      <div class="sort">
+
+        <div class="dropdown">
+          <div class="select">
             <span>Sort by</span>
-            <select name="sort-by">
-              <option>Popular</option>
-              <Option>Price: Low to High</Option>
-              <option>Price: High to Low</option>
-              <option>Newest</option>
-            </select>
+            <i class="fa fa-chevron-left">&#x2C5</i>
           </div>
+          <input type="hidden" name="gender">
+          <ul class="dropdown-menu">
+            <li id="popular">Popular</li>
+            <li id="low-to-high">Low to High</li>
+            <li id="high-to-low">High to Low</li>
+            <li id="newest">Newest</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ===== Right: Product Layout =====-->
+
+      <div class="accordion-filter">
+        <details>
+          <summary>Filter</summary>
+          <ul>
+            <li>
+              <input type="checkbox" id="man" name="interest" value="men" />
+              <label for="coding">Men</label>
+            </li>
+            <li>
+              <input type="checkbox" id="women" name="interest" value="women" />
+              <label for="coding">Women</label>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Category</summary>
+          <ul>
+            <li>
+              <input type="checkbox" id="rain" name="interest" value="rain" />
+              <label for="coding">Rain</label>
+            </li>
+            <li>
+              <input type="checkbox" id="jacket" name="interest" value="jacket" />
+              <label for="coding">Jacket</label>
+            </li>
+            <li>
+              <input type="checkbox" id="fleece" name="interest" value="fleece" />
+              <label for="coding">Fleece</label>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Size</summary>
+          <ul>
+            <li>
+              <input type="checkbox" id="size-xs" name="interest" value="size-xs" />
+              <label for="coding">XS</label>
+            </li>
+            <li>
+              <input type="checkbox" id="size-s" name="interest" value="size-s" />
+              <label for="coding">S</label>
+            </li>
+            <li>
+              <input type="checkbox" id="size-m" name="interest" value="size-m" />
+              <label for="coding">M</label>
+            </li>
+            <li>
+              <input type="checkbox" id="size-l" name="interest" value="size-l" />
+              <label for="coding">L</label>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Price Range</summary>
+          <ul>
+            <li>
+              <input type="checkbox" id="range-0-500" name="interest" value="0-500" />
+              <label for="coding">0 - 500</label>
+            </li>
+            <li>
+              <input type="checkbox" id="range-500-2k" name="interest" value="500-2000" />
+              <label for="coding">500 - 2,000</label>
+            </li>
+            <li>
+              <input type="checkbox" id="range-2k-4k" name="interest" value="2000-4000" />
+              <label for="coding">2,000 - 4,000</label>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>ฺฺBrand</summary>
+          <ul>
+
+          </ul>
+        </details>
+      </div>
+
+      <!-- ===== Left: Product Layout ===== -->
+
+      <div class="product">
+        <div class="item">
+          <a href="rain-jacket-for-men.html">
+            <div class="card-product">
+              <div class="pic">
+                <img src="./assets/images/RainyDays_Jacket3.jpg" alt="picture">
+              </div>
+              <h1>Rain Jacket for Men</h1>
+              <p class="price">850 NOK</p>
+            </div>
+          </a>
+
         </div>
 
-        <div class="content">
-
-          <!-- ==== Right: Product Grid =====-->
-
-          <div class="filter-dropdown">
-            <button onclick="myFunction()" class="dropbtn">Category</button>
-
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Jacket</a>
-              <a href="#">Pants</a>
-              <a href="#">Hat</a>
-              <a href="#">Gloves</a>
+        <div class="item">
+          <a href="midnight-reflective-urban-shell.html">
+            <div class="card-product">
+              <div class="pic">
+                <div class="pic">
+                  <img src="./assets/images/RainyDays_Jacket2.jpg" alt="picture">
+                </div>
+              </div>
+              <h1>Midnight Reflective Urban</h1>
+              <p class="price">799 NOK</p>
             </div>
-          </div>
+          </a>
+        </div>
 
+        <div class="item">
+          <a href="stormguard-pro-outdoor-jacket.html">
+            <div class="card-product">
+              <div class="pic">
+                <img src="./assets/images/RainyDays_Jacket4.jpg" alt="picture">
+              </div>
+              <h1>Velocity Sport Jacket</h1>
+              <p class="price">1869 NOK <span class="sale-price">2199 NOK</span></p>
+            </div>
+          </a>
+        </div>
 
+        <div class="item">
+          <a href="stormguard-pro-outdoor-jacket.html">
+            <div class="card-product">
+              <div class="pic">
+                <img src="./assets/images/RainyDays_Jacket1.jpg" alt="picture">
+              </div>
+              <h1>Storm Guard Pro Outdoor Jacket</h1>
+              <p class="price">850 NOK</p>
+            </div>
+          </a>
+        </div>
 
+        <div class="item">
+          <a href="rain-jacket-for-men.html">
+            <div class="card-product">
+              <div class="pic">
+                <img src="./assets/images/RainyDays_Jacket7.jpg" alt="picture">
+              </div>
+              <h1>Thermal Fleece Jacket</h1>
+              <p class="price">1689 NOK <span class="sale-price">2195 NOK</span></p>
+            </div>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="rain-jacket-for-men.html">
+            <div class="card-product">
+              <div class="pic">
+                <img src="./assets/images/RainyDays_Jacket5.jpg" alt="picture">
+              </div>
+              <h1>Explorer Windbreaker</h1>
+              <p class="price">2100 NOK</p>
+            </div>
+          </a>
+        </div>
       </div>
+    </div>
+
+    <div class="pagination">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+      <p>...</p>
+      <p>></p>
+    </div>
+  </div>
 
 
       <hr>
@@ -109,7 +274,7 @@
         <div class="footer__data grid">
           <div class="footer__rainy">
             <div class="footer__logo">
-              <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+              <a href="index.html"><img src="assets/images/RainyDays_Logo.png" alt="rainydays logo"></a>
             </div>
             <ul class="footer__social">
               <li>
