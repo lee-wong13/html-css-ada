@@ -54,9 +54,9 @@
 
 
   </header>
-    </header>
+    
 
-    <h1>Your Cart</h1>
+    <h1 class="page__title">Your Cart</h1>
 
     <div class="cart-header">
       <h3 class="item">Item</h3>
@@ -74,62 +74,98 @@
           <p class="desc-detail">• size s<br>• orange</p>
         </div>
       </div>
-      <div class="col price">899</div>
-      <div class="col quantity">
-        <input type="number" value="1" min="0">
+      <div class="col price">
+        <p>899</p>
       </div>
-      <div class="col total">899</div>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1"></input>
+        <button class="option">+</button>
+      </div>
+      <div class="col total">
+        <p>899</p>
+      </div>
     </div>
 
 
     <div class="cart-item">
-        <div class="col item">
-          <img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell">
-          <div>
-            <p class="desc">Midnight Reflective Urban Shell</p>
-            <p class="desc-detail">• size s<br>• black</p>
-          </div>
+      <div class="col item">
+        <img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell">
+        <div>
+          <p class="desc">Midnight Reflective Urban Shell</p>
+          <p class="desc-detail">• size s<br>• black</p>
         </div>
-        <div class="col price">799</div>
-        <div class="col quantity">
-          <input type="number" value="1" min="0">
-        </div>
-        <div class="col total">799</div>
+      </div>
+      <div class="col price">
+        <p>799</p>
+      </div>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1"></input>
+        <button class="option">+</button>
+      </div>
+      <div class="col total">
+        <p>799</p>
+      </div>
     </div>
 
 
-      <div class="cart-item">
-            <div class="col item">
-              <img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men">
-              <div>
-                <p class="desc">Rain Jacket for Men</p>
-                <p class="desc-detail">• size m<br>• red</p>
-              </div>
-            </div>
-            <div class="col price">850</div>
-            <div class="col quantity">
-              <input type="number" value="1" min="0">
-            </div>
-            <div class="col total">850</div>
+    <div class="cart-item">
+      <div class="col item">
+        <img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men">
+        <div>
+          <p class="desc">Rain Jacket for Men</p>
+          <p class="desc-detail">• size m<br>• red</p>
+        </div>
       </div>
-
+      <div class="col price">
+        <p>850</p>
+      </div>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1"></input>
+        <button class="option">+</button>
+      </div>
+      <div class="col total">
+        <p>850</p>
+      </div>
+    </div>
       
       <div class="cart-code-summary">
 
-        <div class="coupon">
-          <input type="text" placeholder="apply code...">
-          <button>Apply Code</button>
-        </div>
-
-        <div class="summary">
-            <p><span>Subtotal</span><span>2548</span></p>
-            <p><span>Shipping</span><span>0</span></p>
-            <p><span>Tax</span><span>637</span></p>
-            <hr>
-            <p class="total"><span>Total</span><span>2548</span></p>
-        </div>
-
+      <div class="coupon">
+        <input type="text" placeholder="apply code...">
+        <button class="btn" type="button">Apply Code</button>
       </div>
+
+      <div class="summary">
+        <div class="col-detail-shipping">
+          <div class="subtotal shipping-col">
+            <h1>Subtotal</h1>
+            <h1>2548</h1>
+          </div>
+          <div class="shipping shipping-col">
+            <p>Shipping</p>
+            <p>0</p>
+          </div>
+          <div class="tax shipping-col">
+            <p>Tax</p>
+            <p>637</p>
+          </div>
+          <hr>
+          <div class="total shipping-col">
+            <h1>Total</h1>
+            <h1>2548</h1>
+          </div>
+          <hr>
+          <div class="bottom-col">
+            <button class="btn" type="button" onclick="location.href='product.html'">Continue Shopping</button>
+            <button class="btn" type="button" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
       <hr>
 
