@@ -149,16 +149,18 @@ nav i {
 }
 
 button.shopnow{
-  background-color: #e27c60a6;
+  background-color: #e27c60;
   padding: 10px 30px;
   border-radius: 25px;
   font-size: 15px;
   font-weight: 200;
   cursor: pointer;
+  font-weight: var(--font-semi-bold);
 }
 
 button.shopnow:hover{
-  background-color: #e27c60;
+  background-color: white;
+  color: black;
 }
 
 /* New Arrival */¨
@@ -230,7 +232,8 @@ button.view-product{
 }
 
 button.view-product:hover{
-  background-color: #e27c60a4;
+  background-color: white;
+  color: black;
 }
 
 

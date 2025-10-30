@@ -6,3 +6,8 @@
   background-color: #e27d60;
   cursor: pointer;
 }
+
+.btn:hover{
+  background-color: white;
+  color: black;
+}
