@@ -638,7 +638,8 @@ h3{
 }
 
 .subscribe-input button:hover{
-  background-color: #e27c60a4;
+  background-color: white;
+  color: black;
 }
 
 .subscribe p{
