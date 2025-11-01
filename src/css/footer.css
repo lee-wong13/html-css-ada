@@ -1,0 +1,132 @@
+
+/* FOOTER ============================================= */
+.grid {
+  display: grid;
+  gap: 4.5rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  
+}
+
+.footer__content {
+  row-gap: 3rem;
+}
+
+.footer__rainy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__logo img {
+  width: 129px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer__social img {
+  width: 30px;
+  object-fit: contain;
+}
+
+.footer__data {
+  /* grid-template-columns: repeat(5, max-content); */
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.footer__title {
+  margin-bottom: 0.5rem;
+  color: #0b0b0b;
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.25rem;
+  color: #0b0b0b;
+}
+.footer__icon-pay {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer__icon-pay img {
+  max-width: 45px;
+  object-fit: contain;
+}
+
+.footer__copy {
+  text-align: center;
+  color: #f5f5f5;
+  background-color: black;
+  padding: 0.25rem 0;
+}
+
+@media (max-width: 1024px) {
+  body {
+    position: relative;
+  }
+  .footer{
+    /* margin-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+  }
+  .footer__content {
+    row-gap: .5rem;
+  }
+  .footer__content .grid{
+    gap: 2.5rem;
+  }
+  .footer__data {
+    width: auto;
+  }
+}
+
+@media (max-width: 820px) {
+  .footer {
+    position: static !important;
+  }
+  .footer__data {
+    padding-bottom: 0.5rem;
+  }
+  .footer__content .grid {
+    gap: 2rem;
+  }
+  .footer__title {
+    font-size: 18px;
+  }
+  .footer__links {
+    row-gap: .2rem;
+  }
+  .footer__links a {
+   font-size: 14px; 
+  }
+}
+
+@media (max-width: 430px) {
+  .footer {
+    position:static !important;
+  }
+  .footer__data {
+    grid-template-rows: 1fr;
+    grid-template-columns: none;
+    gap: 1.5rem;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  .footer__copy span {
+    font-size: 0.75rem;
+  }
+}
