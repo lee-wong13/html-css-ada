@@ -6,6 +6,8 @@
 /* Feel free to add as many of these imports as you need */
 
 @import url("./btn.css");
+@import url("./header.css");
+@import url("./footer.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -64,54 +66,6 @@ a {
   max-width: 1440px;
   padding: 2rem 5.5rem;
   margin: 0 auto;
-}
-
-/* NAVIGATION BAR ============================================= */
-
-header {
-  width: 100%;
-  background-color: #164d568e;
-}
-
-nav {
-  height: 97px;
-  max-width: 1320px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: auto;
-  column-gap: 4rem;
-}
-
-nav img {
-  width: max-content;
-  height: 69px;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  font-weight: var(--font-semi-bold);
-  font-size: 20px;
-  text-decoration: none;
-  color: #164d56;
-}
-
-nav a:hover {
-  color: #f5f5f5;
-}
-
-nav i {
-  font-size: 1.5rem;
-  color: #164d56;
-}
-
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  column-gap: 3rem;
 }
 
 /* -------------- Body ----------------*/
@@ -259,7 +213,10 @@ input[type="email"] {
 .item {
   display: flex;
   gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
   justify-content: space-between;
+  border-bottom: 1px solid black;
 }
 
 .item img {
@@ -328,76 +285,49 @@ input[type="email"] {
 
 
 
-/* Footer ------- */
+/* Rersponsive ======================== */ 
 
-
-
-.grid {
-  display: grid;
-  gap: 4.5rem;
+@media (max-width: 1024px) {
+  .container {
+    padding: 2rem;
+  }
+  .title{
+    margin: 3.5rem;
+  }
+  .section-title{
+    margin-top: 1rem;
+  }
 }
 
-/* FOOTER ============================================= */
-.footer {
-  margin-top: 3rem;
+@media (max-width: 820px) {
+  .container {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 40px;
+    margin: 3rem;
+  }
+  .section-title{
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+  input {
+    font-size: 14px !important;
+  }
+  .checkout-layout {
+    gap: .5rem;
+  }
+  .col {
+    padding: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
 }
 
-.footer__content {
-  row-gap: 3rem;
+@media (max-width: 430px) {
+  .checkout-layout {
+    flex-direction: column-reverse;
+  }
 }
-
-.footer__rainy{
-  display: flex;
-  flex-direction: column;        
-  justify-content: center;       
-  align-items: center;  
-  gap: 1.5rem;
-}
-.footer__logo img {
-  width: 129px;
-}
-
-.footer__social {
-  display: flex;
-  align-items: center; 
-  gap: 5px;
-}
-.footer__social img {
-  width: 30px;
-  object-fit: contain;
-}
-
-.footer__data {
-  grid-template-columns: repeat(5, max-content);
-  justify-content: center;
-}
-
-.footer__title {
-  margin-bottom: .5rem;
-  color: #0b0b0b;
-}
-.footer__links {
-  display: grid;
-  row-gap: 0.25rem;
-  color: #0b0b0b;
-}
-.footer__icon-pay{
-  display: flex;
-  justify-content: center; 
-  gap: 20px;
-}
-.footer__icon-pay img{
-  max-width: 45px;
-  object-fit: contain;
-}
-
-.footer__copy {
-  text-align: center;
-  color: #F5F5F5;
-  background-color: black;
-  padding: .25rem 0;
-}
-
-
-
-
