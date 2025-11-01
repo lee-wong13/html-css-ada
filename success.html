@@ -13,44 +13,37 @@
 
  <!-- Navigation -->
 
-  <header>
-    <nav class="nav">
-      <!-- nav logo -->
-      <a href="index.html" class="nav__logo">
-        <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-      </a>
+ 
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
+        </a>
+      </div>
 
-      <!-- nav middle menu -->
-      <div class="nav__menu" >
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="product.html" class="nav__link active-link">Shop</a>
-          </li>
-          <li class="nav__item">
-            <a href="about-us.html" class="nav__link">About Us</a>
-          </li>
-          <li class="nav__item">
-            <a href="support.html" class="nav__link">Support</a>
-          </li>
+      <div class="flex">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <ul class="sub-menu">
+            <li><a href="product.html">Shop</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </ul>
+
+        <ul class="sub-menu-2">
+          <li><i class="ri-search-line"></i></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
 
-      <!-- nav left menu -->
-      <div class="nav__left-menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <i class="ri-search-line"></i>
-            <a href="signup.html" class="nav__link">Sign Up</a>
-          </li>
-          <li class="nav__item">
-            <a href="cart.html" class="nav__link">Cart</a>
-          </li>
-        </ul>
-      </div>
     </nav>
-
-
   </header>
+
+  <!-- ============== Content =================-->
 
     <h1>Thank you for shopping with us!</h1>
     <p class="text-msg">Your order has been placed successfully!</p>
@@ -135,7 +128,6 @@
     <hr class="end-line">
 
 
-    <!-- add footer -->
 
 
 <!-- =================== Footer =======================-->
