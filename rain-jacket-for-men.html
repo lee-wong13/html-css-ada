@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rain Jacket for Men</title>
     <link rel="stylesheet" href="src/css/product-detail-styles.css">
+    <meta name="description" content="Rain Jacket for men">
     
     <!-- RemixIcons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -14,42 +15,33 @@
 
     <!-- Navigation -->
 
-  <header>
-    <nav class="nav">
-      <!-- nav logo -->
-      <a href="index.html" class="nav-logo">
-        <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-      </a>
+   <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
+        </a>
+      </div>
 
-      <!-- nav middle menu -->
-      <div class="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="product.html" class="nav-link active-link">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a href="about-us.html" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="support.html" class="nav-link">Support</a>
-          </li>
+      <div class="flex">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <ul class="sub-menu">
+            <li><a href="product.html">Shop</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </ul>
+
+        <ul class="sub-menu-2">
+          <li><i class="ri-search-line"></i></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
 
-      <!-- nav left menu -->
-      <div class="nav-left-menu">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <i class="ri-search-line"></i>
-            <a href="signup.html" class="nav-link">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a href="cart.html" class="nav-link">Cart</a>
-          </li>
-        </ul>
-      </div>
     </nav>
-
   </header>
 
   <section class="breadcrumb container">
@@ -394,7 +386,8 @@
     </div>
   </footer>
 
-
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="src/js/script.js"></script>
     
 </body>
 </html>
