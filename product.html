@@ -13,43 +13,33 @@
 
      <!-- Navigation -->
 
-  <header>
-    <nav class="nav">
-      <!-- nav logo -->
-      <a href="index.html" class="nav__logo">
-        <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-      </a>
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
+        </a>
+      </div>
 
-      <!-- nav middle menu -->
-      <div class="nav__menu" >
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="product.html" class="nav__link active-link">Shop</a>
-          </li>
-          <li class="nav__item">
-            <a href="about-us.html" class="nav__link">About Us</a>
-          </li>
-          <li class="nav__item">
-            <a href="support.html" class="nav__link">Support</a>
-          </li>
+      <div class="flex">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <ul class="sub-menu">
+            <li><a href="product.html">Shop</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </ul>
+
+        <ul class="sub-menu-2">
+          <li><i class="ri-search-line"></i></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
 
-      <!-- nav left menu -->
-      <div class="nav__left-menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <i class="ri-search-line"></i>
-            <a href="signup.html" class="nav__link">Sign Up</a>
-          </li>
-          <li class="nav__item">
-            <a href="cart.html" class="nav__link">Cart</a>
-          </li>
-        </ul>
-      </div>
     </nav>
-
-
   </header>
 
 
@@ -61,30 +51,10 @@
 
     <!-- Product Section -->
 
-      <div class="container">
+    <div class="container">
+      <div class="content">
 
-    <div class="topbar">
-      <div class="sort">
-
-        <div class="dropdown">
-          <div class="select">
-            <span>Sort by</span>
-            <i class="fa fa-chevron-left">&#x2C5</i>
-          </div>
-          <input type="hidden" name="gender">
-          <ul class="dropdown-menu">
-            <li id="popular">Popular</li>
-            <li id="low-to-high">Low to High</li>
-            <li id="high-to-low">High to Low</li>
-            <li id="newest">Newest</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="content">
-
-      <!-- ===== Right: Product Layout =====-->
+      <!-- ===== Left: Product Layout =====-->
 
       <div class="accordion-filter">
         <details>
@@ -167,85 +137,109 @@
         </details>
       </div>
 
-      <!-- ===== Left: Product Layout ===== -->
+      <!-- ===== Right : Product Layout ===== -->
 
-      <div class="product">
-        <div class="item">
-          <a href="rain-jacket-for-men.html">
-            <div class="card-product">
-              <div class="pic">
-                <img src="./assets/images/RainyDays_Jacket3.jpg" alt="picture">
+      <div class="right-layout">
+        <div class="topbar">
+          <div class="sort">
+
+            <div class="dropdown">
+              <div class="select">
+                <span>Sort by</span>
+                <i class="fa fa-chevron-left">&#x2C5</i>
               </div>
-              <h1>Rain Jacket for Men</h1>
-              <p class="price">850 NOK</p>
+              <input type="hidden" name="gender">
+              <ul class="dropdown-menu">
+                <li id="popular">Popular</li>
+                <li id="low-to-high">Low to High</li>
+                <li id="high-to-low">High to Low</li>
+                <li id="newest">Newest</li>
+              </ul>
             </div>
-          </a>
+          </div>
 
         </div>
+        <div class="product">
 
-        <div class="item">
-          <a href="midnight-reflective-urban-shell.html">
-            <div class="card-product">
-              <div class="pic">
+          <div class="item">
+            <a href="rain-jacket-for-men.html">
+              <div class="card-product">
                 <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket2.jpg" alt="picture">
+                  <img src="./assets/images/RainyDays_Jacket3.jpg" alt="picture">
                 </div>
+                <h1>Rain Jacket for Men</h1>
+                <p class="price">850 NOK</p>
               </div>
-              <h1>Midnight Reflective Urban</h1>
-              <p class="price">799 NOK</p>
-            </div>
-          </a>
-        </div>
+            </a>
 
-        <div class="item">
-          <a href="stormguard-pro-outdoor-jacket.html">
-            <div class="card-product">
-              <div class="pic">
-                <img src="./assets/images/RainyDays_Jacket4.jpg" alt="picture">
-              </div>
-              <h1>Velocity Sport Jacket</h1>
-              <p class="price">1869 NOK <span class="sale-price">2199 NOK</span></p>
-            </div>
-          </a>
-        </div>
+          </div>
 
-        <div class="item">
-          <a href="stormguard-pro-outdoor-jacket.html">
-            <div class="card-product">
-              <div class="pic">
-                <img src="./assets/images/RainyDays_Jacket1.jpg" alt="picture">
+           <div class="item">
+            <a href="midnight-reflective-urban-shell.html">
+              <div class="card-product">
+                <div class="pic">
+                  <div class="pic">
+                    <img src="./assets/images/RainyDays_Jacket2.jpg" alt="picture">
+                  </div>
+                </div>
+                <h1>Midnight Reflective Urban</h1>
+                <p class="price">799 NOK</p>
               </div>
-              <h1>Storm Guard Pro Outdoor Jacket</h1>
-              <p class="price">850 NOK</p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <div class="item">
-          <a href="rain-jacket-for-men.html">
-            <div class="card-product">
-              <div class="pic">
-                <img src="./assets/images/RainyDays_Jacket7.jpg" alt="picture">
+           <div class="item">
+            <a href="stormguard-pro-outdoor-jacket.html">
+              <div class="card-product">
+                <div class="pic">
+                  <img src="./assets/images/RainyDays_Jacket4.jpg" alt="picture">
+                </div>
+                <h1>Velocity Sport Jacket</h1>
+                <p class="price">1869 NOK <span class="sale-price">2199 NOK</span></p>
               </div>
-              <h1>Thermal Fleece Jacket</h1>
-              <p class="price">1689 NOK <span class="sale-price">2195 NOK</span></p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <div class="item">
-          <a href="rain-jacket-for-men.html">
-            <div class="card-product">
-              <div class="pic">
-                <img src="./assets/images/RainyDays_Jacket5.jpg" alt="picture">
+         <div class="item">
+            <a href="stormguard-pro-outdoor-jacket.html">
+              <div class="card-product">
+                <div class="pic">
+                  <img src="./assets/images/RainyDays_Jacket1.jpg" alt="picture">
+                </div>
+                <h1>Storm Guard Pro Outdoor Jacket</h1>
+                <p class="price">850 NOK</p>
               </div>
-              <h1>Explorer Windbreaker</h1>
-              <p class="price">2100 NOK</p>
-            </div>
-          </a>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="rain-jacket-for-men.html">
+              <div class="card-product">
+                <div class="pic">
+                  <img src="./assets/images/RainyDays_Jacket7.jpg" alt="picture">
+                </div>
+                <h1>Thermal Fleece Jacket</h1>
+                <p class="price">1689 NOK <span class="sale-price">2195 NOK</span></p>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="rain-jacket-for-men.html">
+              <div class="card-product">
+                <div class="pic">
+                  <img src="./assets/images/RainyDays_Jacket5.jpg" alt="picture">
+                </div>
+                <h1>Explorer Windbreaker</h1>
+                <p class="price">2100 NOK</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
+
 
     <div class="pagination">
       <p>1</p>
