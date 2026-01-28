@@ -38,7 +38,7 @@
         <ul class="sub-menu-2">
           <li><i class="ri-search-line"></i></li>
           <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart(3)</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
 
@@ -112,8 +112,21 @@
       </div>
       <div class="add-to-btn-product">
         <button class="btn" type="button">Add to Wishist</button>
-        <button class="btn" type="button" onclick="location.href='cart.html'">Add to Cart</button>
+        <button class="btn" type="button" id="addToCartBtn">Add to Cart</button>
       </div>
+      <script>
+        document.getElementById('addToCartBtn').addEventListener('click', function() {
+          const size = document.querySelector('.size-product .select span').textContent;
+          const color = document.querySelector('.color-product .select span').textContent;
+          addToCart(
+            'Midnight Reflective Urban Shell',
+            '799',
+            'assets/images/RainyDays_Jacket2.jpg',
+            size,
+            color
+          );
+        });
+      </script>
     </div>
     <!-- </div> -->
   </section>

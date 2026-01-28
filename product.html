@@ -35,7 +35,7 @@
         <ul class="sub-menu-2">
           <li><i class="ri-search-line"></i></li>
           <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart(3)</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
 
@@ -61,12 +61,12 @@
           <summary>Filter</summary>
           <ul>
             <li>
-              <input type="checkbox" id="man" name="interest" value="men" />
-              <label for="coding">Men</label>
+              <input type="checkbox" id="male" name="interest" value="male" />
+              <label for="male">Men</label>
             </li>
             <li>
-              <input type="checkbox" id="women" name="interest" value="women" />
-              <label for="coding">Women</label>
+              <input type="checkbox" id="female" name="interest" value="female" />
+              <label for="female">Women</label>
             </li>
           </ul>
         </details>
@@ -75,16 +75,16 @@
           <summary>Category</summary>
           <ul>
             <li>
-              <input type="checkbox" id="rain" name="interest" value="rain" />
-              <label for="coding">Rain</label>
-            </li>
-            <li>
               <input type="checkbox" id="jacket" name="interest" value="jacket" />
-              <label for="coding">Jacket</label>
+              <label for="jacket">Jacket</label>
             </li>
             <li>
-              <input type="checkbox" id="fleece" name="interest" value="fleece" />
-              <label for="coding">Fleece</label>
+              <input type="checkbox" id="womens" name="interest" value="womens" />
+              <label for="womens">Womens</label>
+            </li>
+            <li>
+              <input type="checkbox" id="mens" name="interest" value="mens" />
+              <label for="mens">Mens</label>
             </li>
           </ul>
         </details>
@@ -94,19 +94,27 @@
           <ul>
             <li>
               <input type="checkbox" id="size-xs" name="interest" value="size-xs" />
-              <label for="coding">XS</label>
+              <label for="size-xs">XS</label>
             </li>
             <li>
               <input type="checkbox" id="size-s" name="interest" value="size-s" />
-              <label for="coding">S</label>
+              <label for="size-s">S</label>
             </li>
             <li>
               <input type="checkbox" id="size-m" name="interest" value="size-m" />
-              <label for="coding">M</label>
+              <label for="size-m">M</label>
             </li>
             <li>
               <input type="checkbox" id="size-l" name="interest" value="size-l" />
-              <label for="coding">L</label>
+              <label for="size-l">L</label>
+            </li>
+            <li>
+              <input type="checkbox" id="size-xl" name="interest" value="size-xl" />
+              <label for="size-xl">XL</label>
+            </li>
+            <li>
+              <input type="checkbox" id="size-xxl" name="interest" value="size-xxl" />
+              <label for="size-xxl">XXL</label>
             </li>
           </ul>
         </details>
@@ -115,16 +123,16 @@
           <summary>Price Range</summary>
           <ul>
             <li>
-              <input type="checkbox" id="range-0-500" name="interest" value="0-500" />
-              <label for="coding">0 - 500</label>
+              <input type="checkbox" id="range-0-100" name="interest" value="0-100" />
+              <label for="range-0-100">0 - 100 NOK</label>
             </li>
             <li>
-              <input type="checkbox" id="range-500-2k" name="interest" value="500-2000" />
-              <label for="coding">500 - 2,000</label>
+              <input type="checkbox" id="range-100-200" name="interest" value="100-200" />
+              <label for="range-100-200">100 - 200 NOK</label>
             </li>
             <li>
-              <input type="checkbox" id="range-2k-4k" name="interest" value="2000-4000" />
-              <label for="coding">2,000 - 4,000</label>
+              <input type="checkbox" id="range-200-500" name="interest" value="200-500" />
+              <label for="range-200-500">200 - 500 NOK</label>
             </li>
           </ul>
         </details>
@@ -161,7 +169,7 @@
         </div>
         <div class="product">
 
-          <div class="item">
+          <div class="item" data-gender="men" data-category="rain jacket" data-size="s m l" data-price="850">
             <a href="rain-jacket-for-men.html">
               <div class="card-product">
                 <div class="pic">
@@ -174,7 +182,7 @@
 
           </div>
 
-           <div class="item">
+           <div class="item" data-gender="men women" data-category="jacket" data-size="s m l" data-price="799">
             <a href="midnight-reflective-urban-shell.html">
               <div class="card-product">
                 <div class="pic">
@@ -188,7 +196,7 @@
             </a>
           </div>
 
-           <div class="item">
+           <div class="item" data-gender="men women" data-category="jacket" data-size="s m l" data-price="1869">
             <a href="stormguard-pro-outdoor-jacket.html">
               <div class="card-product">
                 <div class="pic">
@@ -200,7 +208,7 @@
             </a>
           </div>
 
-         <div class="item">
+         <div class="item" data-gender="men" data-category="rain jacket" data-size="xs s m l" data-price="850">
             <a href="stormguard-pro-outdoor-jacket.html">
               <div class="card-product">
                 <div class="pic">
@@ -212,7 +220,7 @@
             </a>
           </div>
 
-          <div class="item">
+          <div class="item" data-gender="men women" data-category="fleece" data-size="s m l" data-price="1689">
             <a href="rain-jacket-for-men.html">
               <div class="card-product">
                 <div class="pic">
@@ -224,7 +232,7 @@
             </a>
           </div>
 
-          <div class="item">
+          <div class="item" data-gender="men women" data-category="jacket" data-size="xs s m l" data-price="2100">
             <a href="rain-jacket-for-men.html">
               <div class="card-product">
                 <div class="pic">
@@ -378,6 +386,11 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="src/js/script.js"></script>
+  <script src="src/js/api-config.js"></script>
+  <script src="src/js/products-api.js"></script>
+  <script src="src/js/filter.js"></script>
     
     
 </body>
