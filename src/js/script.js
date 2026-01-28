@@ -91,56 +91,66 @@ function addToCart(productName, price, image, size, color) {
   
   // STEP 1: Check if user selected a size
   if (!size || size === 'Size') {
-    alert('Please select a size');
+    alert('⚠️ Please select a size');
     return; // Stop here if no size selected
   }
   
   // STEP 2: Check if user selected a color
   if (!color || color === 'Color') {
-    alert('Please select a color');
+    alert('⚠️ Please select a color');
     return; // Stop here if no color selected
   }
   
-  // STEP 3: Get the current cart
-  var cart = getCart();
+  // STEP 3: Validate required fields
+  if (!productName || !price) {
+    alert('❌ Error: Product information is missing');
+    return;
+  }
   
-  // STEP 4: Check if this exact item is already in cart
-  // (same name, size, and color)
-  var foundItem = false;
-  var foundIndex = -1;
-  
-  for (var i = 0; i < cart.length; i++) {
-    if (cart[i].name === productName && 
-        cart[i].size === size.toLowerCase() && 
-        cart[i].color === color.toLowerCase()) {
-      foundItem = true;
-      foundIndex = i;
-      break; // Stop searching
+  try {
+    // STEP 4: Get the current cart
+    var cart = getCart();
+    
+    // STEP 5: Check if this exact item is already in cart
+    // (same name, size, and color)
+    var foundItem = false;
+    var foundIndex = -1;
+    
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i].name === productName && 
+          cart[i].size === size.toLowerCase() && 
+          cart[i].color === color.toLowerCase()) {
+        foundItem = true;
+        foundIndex = i;
+        break; // Stop searching
+      }
     }
+    
+    // STEP 6: If item exists, just increase the quantity
+    if (foundItem) {
+      cart[foundIndex].quantity = cart[foundIndex].quantity + 1;
+    } 
+    // STEP 7: If item doesn't exist, add it as new
+    else {
+      var newItem = {
+        name: productName,
+        price: Number(price),
+        image: image,
+        size: size.toLowerCase(),
+        color: color.toLowerCase(),
+        quantity: 1
+      };
+      cart.push(newItem); // Add to cart array
+    }
+    
+    // STEP 8: Save the updated cart
+    saveCart(cart);
+    
+    // STEP 9: Show success message
+    alert('✓ ' + productName + ' added to cart!');
+  } catch(error) {
+    alert('❌ Error adding to cart: ' + error.message);
   }
-  
-  // STEP 5: If item exists, just increase the quantity
-  if (foundItem) {
-    cart[foundIndex].quantity = cart[foundIndex].quantity + 1;
-  } 
-  // STEP 6: If item doesn't exist, add it as new
-  else {
-    var newItem = {
-      name: productName,
-      price: Number(price),
-      image: image,
-      size: size.toLowerCase(),
-      color: color.toLowerCase(),
-      quantity: 1
-    };
-    cart.push(newItem); // Add to cart array
-  }
-  
-  // STEP 7: Save the updated cart
-  saveCart(cart);
-  
-  // STEP 8: Show success message
-  alert(productName + ' added to cart!');
 }
 
 // ============================================

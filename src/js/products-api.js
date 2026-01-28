@@ -12,54 +12,50 @@
 // FUNCTION: Load All Products from API
 function loadProductsFromAPI() {
   
-  // Show loading message
+  // Get product container
   var productContainer = document.querySelector('.product');
-  if (productContainer) {
-    productContainer.innerHTML = '<p style="text-align:center; padding:40px;">Loading products...</p>';
+  if (!productContainer) {
+    return;
   }
   
   // Make API request to get all products
-  apiRequest(API_CONFIG.endpoints.allProducts, function(response) {
-    
-    // Get the products array from response.data
-    var products = response.data;
-    
-    // Check if we got products
-    if (!products || products.length === 0) {
-      if (productContainer) {
-        productContainer.innerHTML = '<p style="text-align:center; padding:40px;">No products found.</p>';
+  apiRequest(API_CONFIG.endpoints.allProducts, 
+    // Success callback
+    function(response) {
+      
+      // Get the products array from response.data
+      var products = response.data;
+      
+      // Check if we got products
+      if (!products || products.length === 0) {
+        productContainer.innerHTML = '<p style="text-align:center; padding:40px; color: #ff6b6b;">❌ No products found. Please try again later.</p>';
+        return;
       }
-      return;
-    }
-    
-    // Clear loading message
-    if (productContainer) {
+      
+      // Clear any previous content
       productContainer.innerHTML = '';
-    }
-    
-    // Show total count if available
-    if (response.meta && response.meta.totalCount) {
-      console.log('Total products loaded: ' + response.meta.totalCount);
-    }
-    
-    // Loop through each product and create HTML
-    for (var i = 0; i < products.length; i++) {
-      var product = products[i];
       
-      // Create product card HTML
-      var productHTML = createProductCard(product);
-      
-      // Add to page
-      if (productContainer) {
+      // Loop through each product and create HTML
+      for (var i = 0; i < products.length; i++) {
+        var product = products[i];
+        
+        // Create product card HTML
+        var productHTML = createProductCard(product);
+        
+        // Add to page
         productContainer.innerHTML += productHTML;
       }
+      
+      // After products are loaded, initialize filters
+      if (typeof initializeFilters === 'function') {
+        initializeFilters();
+      }
+    },
+    // Error callback
+    function(errorMessage) {
+      productContainer.innerHTML = '<p style="text-align:center; padding:40px; color: #ff6b6b;">❌ ' + errorMessage + '</p>';
     }
-    
-    // After products are loaded, initialize filters
-    if (typeof initializeFilters === 'function') {
-      initializeFilters();
-    }
-  });
+  );
 }
 
 // FUNCTION: Create HTML for One Product Card

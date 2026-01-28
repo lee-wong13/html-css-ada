@@ -37,20 +37,26 @@ function loadProductDetail() {
   // STEP 2: Make API request for this specific product
   var endpoint = API_CONFIG.endpoints.singleProduct + productId;
   
-  apiRequest(endpoint, function(response) {
-    
-    // Get the product data
-    var product = response.data;
-    
-    // Check if product exists
-    if (!product) {
-      showError('Product not found.');
-      return;
+  apiRequest(endpoint,
+    // Success callback
+    function(response) {
+      // Get the product data
+      var product = response.data;
+      
+      // Check if product exists
+      if (!product) {
+        showError('Product not found.');
+        return;
+      }
+      
+      // STEP 3: Display the product
+      displayProduct(product);
+    },
+    // Error callback
+    function(errorMessage) {
+      showError('❌ ' + errorMessage);
     }
-    
-    // STEP 3: Display the product
-    displayProduct(product);
-  });
+  );
 }
 
 // FUNCTION: Display Product Details on Page
@@ -152,17 +158,8 @@ function displayProduct(product) {
   // Add to cart buttons - ORIGINAL STRUCTURE
   html += '<div class="add-to-btn-product">';
   html += '<button class="btn" type="button">Add to Wishist</button>';
-  html += '<button class="btn" type="button" id="addToCartBtn">Add to Cart</button>';
+  html += '<button class="btn" type="button" id="addToCartBtn" data-product-id="' + id + '" data-product-title="' + title.replace(/"/g, '&quot;') + '" data-product-price="' + (onSale ? discountedPrice : price) + '" data-product-image="' + imageURL.replace(/"/g, '&quot;') + '">Add to Cart</button>';
   html += '</div>';
-  
-  // Script to handle add to cart
-  html += '<script>';
-  html += 'document.getElementById("addToCartBtn").addEventListener("click", function() {';
-  html += '  var size = document.querySelector(".size-product .select span").textContent;';
-  html += '  var color = document.querySelector(".color-product .select span").textContent;';
-  html += '  addToCart("' + title.replace(/"/g, '\\"') + '", "' + (onSale ? discountedPrice : price) + '", "' + imageURL + '", size, color);';
-  html += '});';
-  html += '<\/script>';
   
   html += '</div>'; // close product-item-layout-product
   
@@ -270,6 +267,21 @@ function initializeDropdowns() {
       $(this).parents('.dropdown').find('span').text($(this).text());
       $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
     });
+    
+    // Handle Add to Cart button click
+    var addBtn = document.getElementById('addToCartBtn');
+    if (addBtn) {
+      addBtn.addEventListener('click', function() {
+        var productTitle = this.getAttribute('data-product-title');
+        var productPrice = this.getAttribute('data-product-price');
+        var productImage = this.getAttribute('data-product-image');
+        
+        var size = document.querySelector('.size-product .select span').textContent;
+        var color = document.querySelector('.color-product .select span').textContent;
+        
+        addToCart(productTitle, productPrice, productImage, size, color);
+      });
+    }
     
   }, 100);
 }

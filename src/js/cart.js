@@ -38,6 +38,12 @@ function loadCart() {
   // STEP 3: Show each item in the cart
   for (var i = 0; i < cart.length; i++) {
     var item = cart[i];
+    
+    // Check if item has required data
+    if (!item.name || !item.price) {
+      continue; // Skip invalid items
+    }
+    
     var itemTotal = item.price * item.quantity; // Calculate item total
     
     // Create HTML for this cart item
@@ -45,10 +51,10 @@ function loadCart() {
     
     // Column 1: Product image and name
     itemHTML += '<div class="col item">';
-    itemHTML += '<img src="' + item.image + '" alt="' + item.name + '">';
+    itemHTML += '<img src="' + (item.image || 'assets/images/placeholder.jpg') + '" alt="' + item.name + '" style="max-width: 50px;">';
     itemHTML += '<div>';
     itemHTML += '<p class="desc">' + item.name + '</p>';
-    itemHTML += '<p class="desc-detail">• size ' + item.size + '<br>• ' + item.color + '</p>';
+    itemHTML += '<p class="desc-detail">• size ' + (item.size || 'N/A') + '<br>• ' + (item.color || 'N/A') + '</p>';
     itemHTML += '</div>';
     itemHTML += '</div>';
     
