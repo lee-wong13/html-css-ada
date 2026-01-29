@@ -13,7 +13,7 @@
 function loadProductsFromAPI() {
   
   // Get product container
-  var productContainer = document.querySelector('.product');
+  const productContainer = document.querySelector('.product');
   if (!productContainer) {
     return;
   }
@@ -24,7 +24,7 @@ function loadProductsFromAPI() {
     function(response) {
       
       // Get the products array from response.data
-      var products = response.data;
+      const products = response.data;
       
       // Check if we got products
       if (!products || products.length === 0) {
@@ -36,11 +36,11 @@ function loadProductsFromAPI() {
       productContainer.innerHTML = '';
       
       // Loop through each product and create HTML
-      for (var i = 0; i < products.length; i++) {
-        var product = products[i];
+      for (let i = 0; i < products.length; i++) {
+        const product = products[i];
         
         // Create product card HTML
-        var productHTML = createProductCard(product);
+        const productHTML = createProductCard(product);
         
         // Add to page
         productContainer.innerHTML += productHTML;
@@ -62,25 +62,25 @@ function loadProductsFromAPI() {
 function createProductCard(product) {
   
   // Get product details (with fallbacks for safety)
-  var id = product.id || '';
-  var title = product.title || 'Untitled Product';
-  var price = product.price || 0;
-  var discountedPrice = product.discountedPrice || price;
-  var onSale = product.onSale || false;
-  var imageURL = (product.image && product.image.url) ? product.image.url : '';
-  var imageAlt = (product.image && product.image.alt) ? product.image.alt : title;
-  var gender = product.gender ? product.gender.toLowerCase() : ''; // "Female" becomes "female"
-  var sizes = product.sizes ? product.sizes.join(' ').toLowerCase() : ''; // ["XS", "S"] becomes "xs s"
-  var tags = product.tags ? product.tags.join(' ') : ''; // ["jacket", "womens"] becomes "jacket womens"
+  const id = product.id || '';
+  const title = product.title || 'Untitled Product';
+  const price = product.price || 0;
+  const discountedPrice = product.discountedPrice || price;
+  const onSale = product.onSale || false;
+  const imageURL = (product.image && product.image.url) ? product.image.url : '';
+  const imageAlt = (product.image && product.image.alt) ? product.image.alt : title;
+  const gender = product.gender ? product.gender.toLowerCase() : ''; // "Female" becomes "female"
+  const sizes = product.sizes ? product.sizes.join(' ').toLowerCase() : ''; // ["XS", "S"] becomes "xs s"
+  const tags = product.tags ? product.tags.join(' ') : ''; // ["jacket", "womens"] becomes "jacket womens"
   
   // Create a clean URL-friendly name from title
   // "Rainy Days Akra Jacket" becomes "rainy-days-akra-jacket"
-  var urlName = title.toLowerCase()
+  const urlName = title.toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')  // Replace spaces and special chars with dashes
     .replace(/^-+|-+$/g, '');      // Remove dashes from start/end
   
   // Start building HTML
-  var html = '<div class="item"';
+  let html = '<div class="item"';
   
   // Add data attributes for filtering
   html += ' data-gender="' + gender + '"';
@@ -122,11 +122,11 @@ function createProductCard(product) {
 function loadSingleProduct(productId, callback) {
   
   // Make API request for single product
-  var endpoint = API_CONFIG.endpoints.singleProduct + productId;
+  const endpoint = API_CONFIG.endpoints.singleProduct + productId;
   
   apiRequest(endpoint, function(response) {
     // Get the product data
-    var product = response.data;
+    const product = response.data;
     
     // Call the callback function with product data
     if (callback) {

@@ -9,18 +9,18 @@ function filterProducts() {
   
   // STEP 1: Get all checked filters
   // Get all checkboxes that are checked
-  var checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
   
   // Create arrays to store what's checked in each category
-  var selectedGenders = [];    // men, women
-  var selectedCategories = []; // rain, jacket, fleece
-  var selectedSizes = [];      // xs, s, m, l
-  var selectedPrices = [];     // 0-500, 500-2000, 2000-4000
+  const selectedGenders = [];    // men, women
+  const selectedCategories = []; // rain, jacket, fleece
+  const selectedSizes = [];      // xs, s, m, l
+  const selectedPrices = [];     // 0-500, 500-2000, 2000-4000
   
   // STEP 2: Sort checkboxes into categories
   // Loop through all checked boxes
-  for (var i = 0; i < checkedBoxes.length; i++) {
-    var value = checkedBoxes[i].value;
+  for (let i = 0; i < checkedBoxes.length; i++) {
+    const value = checkedBoxes[i].value;
     
     // Check which category this checkbox belongs to
     if (value === 'male' || value === 'female') {
@@ -31,7 +31,7 @@ function filterProducts() {
     }
     else if (value.includes('size-')) {
       // Extract size (xs, s, m, l, xl, xxl) from "size-xs"
-      var size = value.replace('size-', '');
+      const size = value.replace('size-', '');
       selectedSizes.push(size);
     }
     else if (value.includes('-')) {
@@ -41,25 +41,25 @@ function filterProducts() {
   }
   
   // STEP 3: Get all product items
-  var allProducts = document.querySelectorAll('.product .item');
+  const allProducts = document.querySelectorAll('.product .item');
   
   // STEP 4: Check each product to see if it should be shown
-  for (var i = 0; i < allProducts.length; i++) {
-    var product = allProducts[i];
+  for (let i = 0; i < allProducts.length; i++) {
+    const product = allProducts[i];
     
     // Get product's attributes
-    var productGender = product.getAttribute('data-gender');     // "men women"
-    var productCategory = product.getAttribute('data-category'); // "rain jacket"
-    var productSizes = product.getAttribute('data-size');        // "xs s m l"
-    var productPrice = Number(product.getAttribute('data-price')); // 850
+    const productGender = product.getAttribute('data-gender');     // "men women"
+    const productCategory = product.getAttribute('data-category'); // "rain jacket"
+    const productSizes = product.getAttribute('data-size');        // "xs s m l"
+    const productPrice = Number(product.getAttribute('data-price')); // 850
     
-    var shouldShow = true; // Start by assuming we'll show this product
+    let shouldShow = true; // Start by assuming we'll show this product
     
     // CHECK 1: Gender filter
     if (selectedGenders.length > 0) {
-      var genderMatch = false;
+      let genderMatch = false;
       // Check if product matches any selected gender
-      for (var j = 0; j < selectedGenders.length; j++) {
+      for (let j = 0; j < selectedGenders.length; j++) {
         if (productGender.includes(selectedGenders[j])) {
           genderMatch = true;
           break;
@@ -73,9 +73,9 @@ function filterProducts() {
     
     // CHECK 2: Category filter
     if (selectedCategories.length > 0 && shouldShow) {
-      var categoryMatch = false;
+      let categoryMatch = false;
       // Check if product matches any selected category
-      for (var j = 0; j < selectedCategories.length; j++) {
+      for (let j = 0; j < selectedCategories.length; j++) {
         if (productCategory.includes(selectedCategories[j])) {
           categoryMatch = true;
           break;
@@ -89,9 +89,9 @@ function filterProducts() {
     
     // CHECK 3: Size filter
     if (selectedSizes.length > 0 && shouldShow) {
-      var sizeMatch = false;
+      let sizeMatch = false;
       // Check if product has any of the selected sizes
-      for (var j = 0; j < selectedSizes.length; j++) {
+      for (let j = 0; j < selectedSizes.length; j++) {
         if (productSizes.includes(selectedSizes[j])) {
           sizeMatch = true;
           break;
@@ -105,13 +105,13 @@ function filterProducts() {
     
     // CHECK 4: Price filter
     if (selectedPrices.length > 0 && shouldShow) {
-      var priceMatch = false;
+      let priceMatch = false;
       
       // Check each selected price range
-      for (var j = 0; j < selectedPrices.length; j++) {
-        var range = selectedPrices[j].split('-'); // Split "0-500" into ["0", "500"]
-        var minPrice = Number(range[0]);
-        var maxPrice = Number(range[1]);
+      for (let j = 0; j < selectedPrices.length; j++) {
+        const range = selectedPrices[j].split('-'); // Split "0-500" into ["0", "500"]
+        const minPrice = Number(range[0]);
+        const maxPrice = Number(range[1]);
         
         // Check if product price is in this range
         if (productPrice >= minPrice && productPrice <= maxPrice) {
@@ -140,25 +140,25 @@ function filterProducts() {
 function sortProducts(sortType) {
   
   // Get the product container
-  var productContainer = document.querySelector('.product');
+  const productContainer = document.querySelector('.product');
   
   // Get all product items as an array
-  var products = Array.from(document.querySelectorAll('.product .item'));
+  const products = Array.from(document.querySelectorAll('.product .item'));
   
   // Sort the products based on selected option
   if (sortType === 'low-to-high') {
     // Sort from lowest to highest price
     products.sort(function(a, b) {
-      var priceA = Number(a.getAttribute('data-price'));
-      var priceB = Number(b.getAttribute('data-price'));
+      const priceA = Number(a.getAttribute('data-price'));
+      const priceB = Number(b.getAttribute('data-price'));
       return priceA - priceB; // Lower price first
     });
   }
   else if (sortType === 'high-to-low') {
     // Sort from highest to lowest price
     products.sort(function(a, b) {
-      var priceA = Number(a.getAttribute('data-price'));
-      var priceB = Number(b.getAttribute('data-price'));
+      const priceA = Number(a.getAttribute('data-price'));
+      const priceB = Number(b.getAttribute('data-price'));
       return priceB - priceA; // Higher price first
     });
   }
@@ -171,7 +171,7 @@ function sortProducts(sortType) {
   productContainer.innerHTML = '';
   
   // Add products back in new order
-  for (var i = 0; i < products.length; i++) {
+  for (let i = 0; i < products.length; i++) {
     productContainer.appendChild(products[i]);
   }
 }
@@ -194,8 +194,8 @@ function init() {
 function initializeFilters() {
   
   // Add event listeners to all filter checkboxes
-  var checkboxes = document.querySelectorAll('.accordion-filter input[type="checkbox"]');
-  for (var i = 0; i < checkboxes.length; i++) {
+  const checkboxes = document.querySelectorAll('.accordion-filter input[type="checkbox"]');
+  for (let i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener('change', filterProducts);
   }
   

@@ -7,10 +7,10 @@
 // This shows all the products in your cart on the page
 function loadCart() {
   // Get cart data from browser storage
-  var cart = getCart();
+  const cart = getCart();
   
   // Find the cart header (the row with "Item, Price, Quantity, Total")
-  var cartHeader = document.querySelector('.cart-header');
+  const cartHeader = document.querySelector('.cart-header');
   
   // If cart header doesn't exist, stop here
   if (!cartHeader) {
@@ -19,14 +19,14 @@ function loadCart() {
   
   // STEP 1: Remove old cart items from the page
   // Find all elements with class "cart-item"
-  var oldItems = document.querySelectorAll('.cart-item');
-  for (var i = 0; i < oldItems.length; i++) {
+  const oldItems = document.querySelectorAll('.cart-item');
+  for (let i = 0; i < oldItems.length; i++) {
     oldItems[i].remove(); // Delete them
   }
   
   // STEP 2: If cart is empty, show empty message
   if (cart.length === 0) {
-    var emptyMessage = '<div class="cart-item max-width" style="text-align: center; padding: 40px;">';
+    let emptyMessage = '<div class="cart-item max-width" style="text-align: center; padding: 40px;">';
     emptyMessage += '<p>Your cart is empty. <a href="product.html">Continue shopping</a></p>';
     emptyMessage += '</div>';
     
@@ -36,18 +36,18 @@ function loadCart() {
   }
   
   // STEP 3: Show each item in the cart
-  for (var i = 0; i < cart.length; i++) {
-    var item = cart[i];
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
     
     // Check if item has required data
     if (!item.name || !item.price) {
       continue; // Skip invalid items
     }
     
-    var itemTotal = item.price * item.quantity; // Calculate item total
+    const itemTotal = item.price * item.quantity; // Calculate item total
     
     // Create HTML for this cart item
-    var itemHTML = '<div class="cart-item max-width" data-index="' + i + '">';
+    let itemHTML = '<div class="cart-item max-width" data-index="' + i + '">';
     
     // Column 1: Product image and name
     itemHTML += '<div class="col item">';
@@ -93,21 +93,21 @@ function loadCart() {
 function attachQuantityListeners() {
   
   // Find all "increase" (+) buttons
-  var increaseButtons = document.querySelectorAll('.increase-qty');
-  for (var i = 0; i < increaseButtons.length; i++) {
+  const increaseButtons = document.querySelectorAll('.increase-qty');
+  for (let i = 0; i < increaseButtons.length; i++) {
     increaseButtons[i].addEventListener('click', function() {
       // Get which item was clicked (0, 1, 2, etc.)
-      var index = Number(this.getAttribute('data-index'));
+      const index = Number(this.getAttribute('data-index'));
       updateQuantity(index, 1); // Add 1 to quantity
     });
   }
   
   // Find all "decrease" (-) buttons
-  var decreaseButtons = document.querySelectorAll('.decrease-qty');
-  for (var i = 0; i < decreaseButtons.length; i++) {
+  const decreaseButtons = document.querySelectorAll('.decrease-qty');
+  for (let i = 0; i < decreaseButtons.length; i++) {
     decreaseButtons[i].addEventListener('click', function() {
       // Get which item was clicked
-      var index = Number(this.getAttribute('data-index'));
+      const index = Number(this.getAttribute('data-index'));
       updateQuantity(index, -1); // Subtract 1 from quantity
     });
   }
@@ -119,7 +119,7 @@ function attachQuantityListeners() {
 // change = +1 to add, -1 to subtract
 function updateQuantity(index, change) {
   // Get current cart
-  var cart = getCart();
+  const cart = getCart();
   
   // Check if this item exists in cart
   if (cart[index]) {
@@ -144,29 +144,29 @@ function updateQuantity(index, change) {
 // This shows the subtotal, tax, and total at the bottom
 function updateCartSummary() {
   // Get cart
-  var cart = getCart();
+  const cart = getCart();
   
   // Calculate subtotal (add up all items)
-  var subtotal = 0;
-  for (var i = 0; i < cart.length; i++) {
-    var itemTotal = cart[i].price * cart[i].quantity;
+  let subtotal = 0;
+  for (let i = 0; i < cart.length; i++) {
+    const itemTotal = cart[i].price * cart[i].quantity;
     subtotal = subtotal + itemTotal;
   }
   
   // Calculate shipping (free for now)
-  var shipping = 0;
+  const shipping = 0;
   
   // Calculate tax (25% of subtotal)
-  var tax = Math.round(subtotal * 0.25);
+  const tax = Math.round(subtotal * 0.25);
   
   // Calculate final total
-  var total = subtotal + shipping + tax;
+  const total = subtotal + shipping + tax;
   
   // Find elements on page where we show these numbers
-  var subtotalElement = document.querySelector('.subtotal h1:last-child');
-  var shippingElement = document.querySelector('.shipping p:last-child');
-  var taxElement = document.querySelector('.tax p:last-child');
-  var totalElement = document.querySelector('.total h1:last-child');
+  const subtotalElement = document.querySelector('.subtotal h1:last-child');
+  const shippingElement = document.querySelector('.shipping p:last-child');
+  const taxElement = document.querySelector('.tax p:last-child');
+  const totalElement = document.querySelector('.total h1:last-child');
   
   // Update the numbers on the page
   if (subtotalElement) subtotalElement.textContent = Math.round(subtotal);
@@ -183,3 +183,4 @@ if (document.readyState === 'loading') {
 } else {
   loadCart();
 }
+

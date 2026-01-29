@@ -8,16 +8,16 @@
 // This function extracts the ID
 function getProductIdFromURL() {
   // Get the URL query string (everything after ?)
-  var queryString = window.location.search;
+  const queryString = window.location.search;
   
   // Create URLSearchParams to easily read parameters
-  var params = new URLSearchParams(queryString);
+  const params = new URLSearchParams(queryString);
   
   // Get the 'id' parameter (we need ID to fetch from API)
-  var productId = params.get('id');
+  const productId = params.get('id');
   
   // Get the 'name' parameter (this is just for nice URLs)
-  var productName = params.get('name');
+  const productName = params.get('name');
   
   return productId;
 }
@@ -26,7 +26,7 @@ function getProductIdFromURL() {
 function loadProductDetail() {
   
   // STEP 1: Get product ID from URL
-  var productId = getProductIdFromURL();
+  const productId = getProductIdFromURL();
   
   // Check if we have an ID
   if (!productId) {
@@ -35,13 +35,13 @@ function loadProductDetail() {
   }
   
   // STEP 2: Make API request for this specific product
-  var endpoint = API_CONFIG.endpoints.singleProduct + productId;
+  const endpoint = API_CONFIG.endpoints.singleProduct + productId;
   
   apiRequest(endpoint,
     // Success callback
     function(response) {
       // Get the product data
-      var product = response.data;
+      const product = response.data;
       
       // Check if product exists
       if (!product) {
@@ -63,21 +63,21 @@ function loadProductDetail() {
 function displayProduct(product) {
   
   // Get product details
-  var id = product.id || '';
-  var title = product.title || 'Untitled Product';
-  var description = product.description || 'No description available.';
-  var gender = product.gender || '';
-  var sizes = product.sizes || [];
-  var baseColor = product.baseColor || '';
-  var price = product.price || 0;
-  var discountedPrice = product.discountedPrice || price;
-  var onSale = product.onSale || false;
-  var imageURL = (product.image && product.image.url) ? product.image.url : '';
-  var imageAlt = (product.image && product.image.alt) ? product.image.alt : title;
-  var tags = product.tags || [];
+  const id = product.id || '';
+  const title = product.title || 'Untitled Product';
+  const description = product.description || 'No description available.';
+  const gender = product.gender || '';
+  const sizes = product.sizes || [];
+  const baseColor = product.baseColor || '';
+  const price = product.price || 0;
+  const discountedPrice = product.discountedPrice || price;
+  const onSale = product.onSale || false;
+  const imageURL = (product.image && product.image.url) ? product.image.url : '';
+  const imageAlt = (product.image && product.image.alt) ? product.image.alt : title;
+  const tags = product.tags || [];
   
   // Update page title in breadcrumb
-  var breadcrumbTitle = document.getElementById('breadcrumb-title');
+  const breadcrumbTitle = document.getElementById('breadcrumb-title');
   if (breadcrumbTitle) {
     breadcrumbTitle.textContent = title;
   }
@@ -86,7 +86,7 @@ function displayProduct(product) {
   document.title = title + ' - Rainy Days';
   
   // Build product HTML matching original design exactly
-  var html = '';
+  let html = '';
   
   // Left side: Product images with original structure
   html += '<div class="show-item-product">';
@@ -128,7 +128,7 @@ function displayProduct(product) {
   html += '<ul class="dropdown-menu">';
   
   // Add all available sizes
-  for (var i = 0; i < sizes.length; i++) {
+  for (let i = 0; i < sizes.length; i++) {
     html += '<li id="' + sizes[i] + '">' + sizes[i] + '</li>';
   }
   
@@ -164,7 +164,7 @@ function displayProduct(product) {
   html += '</div>'; // close product-item-layout-product
   
   // Insert HTML into page
-  var container = document.getElementById('product-container');
+  const container = document.getElementById('product-container');
   if (container) {
     container.innerHTML = html;
   }
@@ -175,11 +175,11 @@ function displayProduct(product) {
 
 // FUNCTION: Add Accordion Sections (Details, Materials, Size Guide, Care)
 function addAccordionSections(product) {
-  var sizes = product.sizes || [];
-  var gender = product.gender || '';
-  var baseColor = product.baseColor || '';
+  const sizes = product.sizes || [];
+  const gender = product.gender || '';
+  const baseColor = product.baseColor || '';
   
-  var html = '<section class="accordion container">';
+  let html = '<section class="accordion container">';
   
   // Detail Description
   html += '<details>';
@@ -234,7 +234,7 @@ function addAccordionSections(product) {
   html += '<!-- credit : https://codepen.io/nefejames/pen/myerjvJ -->';
   
   // Insert after product section
-  var container = document.getElementById('product-container');
+  const container = document.getElementById('product-container');
   if (container) {
     container.insertAdjacentHTML('afterend', html);
   }
@@ -269,15 +269,15 @@ function initializeDropdowns() {
     });
     
     // Handle Add to Cart button click
-    var addBtn = document.getElementById('addToCartBtn');
+    const addBtn = document.getElementById('addToCartBtn');
     if (addBtn) {
       addBtn.addEventListener('click', function() {
-        var productTitle = this.getAttribute('data-product-title');
-        var productPrice = this.getAttribute('data-product-price');
-        var productImage = this.getAttribute('data-product-image');
+        const productTitle = this.getAttribute('data-product-title');
+        const productPrice = this.getAttribute('data-product-price');
+        const productImage = this.getAttribute('data-product-image');
         
-        var size = document.querySelector('.size-product .select span').textContent;
-        var color = document.querySelector('.color-product .select span').textContent;
+        const size = document.querySelector('.size-product .select span').textContent;
+        const color = document.querySelector('.color-product .select span').textContent;
         
         addToCart(productTitle, productPrice, productImage, size, color);
       });
@@ -288,7 +288,7 @@ function initializeDropdowns() {
 
 // FUNCTION: Show Error Message
 function showError(message) {
-  var container = document.getElementById('product-container');
+  const container = document.getElementById('product-container');
   if (container) {
     container.innerHTML = '<div style="text-align: center; padding: 60px;">';
     container.innerHTML += '<p style="color: red;">' + message + '</p>';

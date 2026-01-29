@@ -35,7 +35,7 @@ $('.dropdown .dropdown-menu li').click(function () {
 // This reads the cart data from the browser's memory (localStorage)
 function getCart() {
   // Get the cart string from localStorage
-  var cartString = localStorage.getItem('cart');
+  const cartString = localStorage.getItem('cart');
   
   // If cart exists, convert it from text to JavaScript array
   // If not, return an empty array
@@ -50,7 +50,7 @@ function getCart() {
 // This saves the cart array to browser's memory
 function saveCart(cart) {
   // Convert cart array to text and save it
-  var cartText = JSON.stringify(cart);
+  const cartText = JSON.stringify(cart);
   localStorage.setItem('cart', cartText);
   
   // Update the cart count in the header
@@ -61,19 +61,19 @@ function saveCart(cart) {
 // This updates the "Cart(3)" number you see in the navigation
 function updateCartCount() {
   // Get current cart
-  var cart = getCart();
+  const cart = getCart();
   
   // Count total items (add up all quantities)
-  var totalItems = 0;
-  for (var i = 0; i < cart.length; i++) {
+  let totalItems = 0;
+  for (let i = 0; i < cart.length; i++) {
     totalItems = totalItems + cart[i].quantity;
   }
   
   // Find all cart links in the page
-  var cartLinks = document.querySelectorAll('a[href="cart.html"]');
+  const cartLinks = document.querySelectorAll('a[href="cart.html"]');
   
   // Update each cart link text to show the count
-  for (var i = 0; i < cartLinks.length; i++) {
+  for (let i = 0; i < cartLinks.length; i++) {
     // If cart is empty, show just "Cart"
     // If cart has items, show "Cart(3)" with the number
     if (totalItems === 0) {
@@ -109,14 +109,14 @@ function addToCart(productName, price, image, size, color) {
   
   try {
     // STEP 4: Get the current cart
-    var cart = getCart();
+    const cart = getCart();
     
     // STEP 5: Check if this exact item is already in cart
     // (same name, size, and color)
-    var foundItem = false;
-    var foundIndex = -1;
+    let foundItem = false;
+    let foundIndex = -1;
     
-    for (var i = 0; i < cart.length; i++) {
+    for (let i = 0; i < cart.length; i++) {
       if (cart[i].name === productName && 
           cart[i].size === size.toLowerCase() && 
           cart[i].color === color.toLowerCase()) {
@@ -132,7 +132,7 @@ function addToCart(productName, price, image, size, color) {
     } 
     // STEP 7: If item doesn't exist, add it as new
     else {
-      var newItem = {
+      const newItem = {
         name: productName,
         price: Number(price),
         image: image,

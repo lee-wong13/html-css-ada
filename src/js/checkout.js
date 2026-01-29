@@ -6,16 +6,16 @@
 // FUNCTION: Load Cart Items in Checkout
 function loadCheckoutCart() {
   // Get cart from localStorage
-  var cart = getCart();
+  const cart = getCart();
   
   // Get the container where items will be displayed
-  var container = document.querySelector('.col-right');
+  const container = document.querySelector('.col-right');
   if (!container) {
     return;
   }
   
   // Find the items section (before subtotal)
-  var subtotalLine = container.querySelector('.line');
+  const subtotalLine = container.querySelector('.line');
   if (!subtotalLine) {
     return;
   }
@@ -23,7 +23,7 @@ function loadCheckoutCart() {
   // Check if cart is empty
   if (cart.length === 0) {
     // Insert empty message before subtotal
-    var emptyHTML = '<div class="item" style="text-align: center; padding: 20px;">';
+    let emptyHTML = '<div class="item" style="text-align: center; padding: 20px;">';
     emptyHTML += '<p style="color: #999;">Your cart is empty</p>';
     emptyHTML += '<a href="product.html" style="color: #007bff;">Continue Shopping</a>';
     emptyHTML += '</div>';
@@ -35,29 +35,29 @@ function loadCheckoutCart() {
   }
   
   // Clear any existing items (between title and subtotal)
-  var existingItems = container.querySelectorAll('.item');
-  for (var i = 0; i < existingItems.length; i++) {
+  const existingItems = container.querySelectorAll('.item');
+  for (let i = 0; i < existingItems.length; i++) {
     existingItems[i].remove();
   }
   
   // Add each cart item
-  for (var i = 0; i < cart.length; i++) {
-    var item = cart[i];
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
     
     // Validate item data
     if (!item.name || !item.price || !item.quantity) {
       continue; // Skip invalid items
     }
     
-    var itemHTML = createCheckoutItemHTML(item);
+    const itemHTML = createCheckoutItemHTML(item);
     subtotalLine.insertAdjacentHTML('beforebegin', itemHTML);
   }
   
   // Calculate subtotal
-  var subtotal = calculateSubtotal(cart);
+  const subtotal = calculateSubtotal(cart);
   
   // Get selected shipping price (default to standard shipping)
-  var shippingPrice = getSelectedShippingPrice();
+  const shippingPrice = getSelectedShippingPrice();
   
   // Update the summary section
   updateCheckoutSummary(subtotal, shippingPrice);
@@ -65,17 +65,17 @@ function loadCheckoutCart() {
 
 // FUNCTION: Create HTML for Single Checkout Item
 function createCheckoutItemHTML(item) {
-  var name = item.name || 'Unknown Product';
-  var price = Number(item.price) || 0;
-  var quantity = Number(item.quantity) || 1;
-  var size = item.size || 'N/A';
-  var color = item.color || 'N/A';
-  var image = item.image || 'assets/images/RainyDays_Jacket1.jpg';
+  const name = item.name || 'Unknown Product';
+  const price = Number(item.price) || 0;
+  const quantity = Number(item.quantity) || 1;
+  const size = item.size || 'N/A';
+  const color = item.color || 'N/A';
+  const image = item.image || 'assets/images/RainyDays_Jacket1.jpg';
   
   // Calculate item total
-  var itemTotal = price * quantity;
+  const itemTotal = price * quantity;
   
-  var html = '';
+  let html = '';
   html += '<div class="item">';
   html += '<div class="thumb"><img src="' + image + '" alt="' + name + '"></div>';
   html += '<div class="sub-item">';
@@ -95,12 +95,12 @@ function createCheckoutItemHTML(item) {
 
 // FUNCTION: Calculate Subtotal from Cart
 function calculateSubtotal(cart) {
-  var subtotal = 0;
+  let subtotal = 0;
   
-  for (var i = 0; i < cart.length; i++) {
-    var item = cart[i];
-    var price = Number(item.price) || 0;
-    var quantity = Number(item.quantity) || 1;
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
+    const price = Number(item.price) || 0;
+    const quantity = Number(item.quantity) || 1;
     subtotal += price * quantity;
   }
   
@@ -110,14 +110,14 @@ function calculateSubtotal(cart) {
 // FUNCTION: Get Selected Shipping Price
 function getSelectedShippingPrice() {
   // Find the selected shipping radio button
-  var selectedShipping = document.querySelector('input[name="ship"]:checked');
+  const selectedShipping = document.querySelector('input[name="ship"]:checked');
   
   if (!selectedShipping) {
     return 69; // Default to standard shipping
   }
   
   // Get the price element next to the radio button
-  var priceElement = selectedShipping.closest('.option').querySelector('.price');
+  const priceElement = selectedShipping.closest('.option').querySelector('.price');
   
   if (priceElement) {
     return Number(priceElement.textContent) || 0;
@@ -129,25 +129,25 @@ function getSelectedShippingPrice() {
 // FUNCTION: Update Checkout Summary (Subtotal, Shipping, Total)
 function updateCheckoutSummary(subtotal, shippingPrice) {
   // Update subtotal
-  var subtotalElement = document.querySelector('.line h3:last-child');
+  const subtotalElement = document.querySelector('.line h3:last-child');
   if (subtotalElement) {
     subtotalElement.textContent = subtotal.toFixed(2);
   }
   
   // Update shipping price
-  var shippingPriceElement = document.querySelector('.line.ship h3:last-child');
+  const shippingPriceElement = document.querySelector('.line.ship h3:last-child');
   if (shippingPriceElement) {
     shippingPriceElement.textContent = shippingPrice.toFixed(2);
   }
   
   // Update shipping description
-  var selectedShipping = document.querySelector('input[name="ship"]:checked');
+  const selectedShipping = document.querySelector('input[name="ship"]:checked');
   if (selectedShipping) {
-    var shippingLabel = selectedShipping.closest('.option').querySelector('strong');
-    var shippingDesc = selectedShipping.closest('.option').querySelector('small');
+    const shippingLabel = selectedShipping.closest('.option').querySelector('strong');
+    const shippingDesc = selectedShipping.closest('.option').querySelector('small');
     
     if (shippingLabel && shippingDesc) {
-      var shippingTextElement = document.querySelector('.line.ship p');
+      const shippingTextElement = document.querySelector('.line.ship p');
       if (shippingTextElement) {
         shippingTextElement.textContent = shippingLabel.textContent + ', ' + shippingDesc.textContent;
       }
@@ -155,8 +155,8 @@ function updateCheckoutSummary(subtotal, shippingPrice) {
   }
   
   // Calculate and update total (subtotal + shipping)
-  var total = subtotal + shippingPrice;
-  var totalElement = document.querySelector('.line.total h2:last-child');
+  const total = subtotal + shippingPrice;
+  const totalElement = document.querySelector('.line.total h2:last-child');
   if (totalElement) {
     totalElement.textContent = total.toFixed(2);
   }
@@ -164,14 +164,14 @@ function updateCheckoutSummary(subtotal, shippingPrice) {
 
 // FUNCTION: Handle Shipping Method Change
 function attachShippingListeners() {
-  var shippingRadios = document.querySelectorAll('input[name="ship"]');
+  const shippingRadios = document.querySelectorAll('input[name="ship"]');
   
-  for (var i = 0; i < shippingRadios.length; i++) {
+  for (let i = 0; i < shippingRadios.length; i++) {
     shippingRadios[i].addEventListener('change', function() {
       // Recalculate total with new shipping price
-      var cart = getCart();
-      var subtotal = calculateSubtotal(cart);
-      var shippingPrice = getSelectedShippingPrice();
+      const cart = getCart();
+      const subtotal = calculateSubtotal(cart);
+      const shippingPrice = getSelectedShippingPrice();
       updateCheckoutSummary(subtotal, shippingPrice);
     });
   }
@@ -180,7 +180,7 @@ function attachShippingListeners() {
 // FUNCTION: Validate and Handle Checkout
 function handleCheckout() {
   // Check if Terms & Conditions is checked
-  var termsCheckbox = document.getElementById('terms-checkbox');
+  const termsCheckbox = document.getElementById('terms-checkbox');
   
   if (!termsCheckbox) {
     alert('❌ Error: Terms & Conditions checkbox not found');
@@ -193,14 +193,14 @@ function handleCheckout() {
   }
   
   // Check if cart is empty
-  var cart = getCart();
+  const cart = getCart();
   if (cart.length === 0) {
     alert('⚠️ Your cart is empty. Please add items before checkout');
     return;
   }
   
   // Collect form data
-  var orderData = {
+  const orderData = {
     email: document.querySelector('input[name="email"]').value || 'Not provided',
     firstName: document.querySelector('input[name="firstname"]').value || 'Not provided',
     lastName: document.querySelector('input[name="lastname"]').value || 'Not provided',
@@ -232,13 +232,13 @@ function handleCheckout() {
 
 // FUNCTION: Get Shipping Method Details
 function getShippingMethodDetails() {
-  var selectedShipping = document.querySelector('input[name="ship"]:checked');
+  const selectedShipping = document.querySelector('input[name="ship"]:checked');
   if (!selectedShipping) {
     return 'Standard Shipping';
   }
   
-  var shippingLabel = selectedShipping.closest('.option').querySelector('strong');
-  var shippingDesc = selectedShipping.closest('.option').querySelector('small');
+  const shippingLabel = selectedShipping.closest('.option').querySelector('strong');
+  const shippingDesc = selectedShipping.closest('.option').querySelector('small');
   
   return {
     name: shippingLabel ? shippingLabel.textContent : 'Standard Shipping',
@@ -248,12 +248,12 @@ function getShippingMethodDetails() {
 
 // FUNCTION: Get Payment Method Details
 function getPaymentMethodDetails() {
-  var selectedPayment = document.querySelector('input[name="pay"]:checked');
+  const selectedPayment = document.querySelector('input[name="pay"]:checked');
   if (!selectedPayment) {
     return 'Debit or Credit Card';
   }
   
-  var paymentLabel = selectedPayment.closest('.option').querySelector('strong');
+  const paymentLabel = selectedPayment.closest('.option').querySelector('strong');
   return paymentLabel ? paymentLabel.textContent : 'Debit or Credit Card';
 }
 
@@ -264,7 +264,7 @@ function generateOrderNumber() {
 
 // FUNCTION: Attach Checkout Button Listener
 function attachCheckoutListener() {
-  var checkoutBtn = document.getElementById('checkout-btn');
+  const checkoutBtn = document.getElementById('checkout-btn');
   
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', handleCheckout);
