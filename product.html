@@ -167,82 +167,14 @@
           </div>
 
         </div>
-        <div class="product">
-
-          <div class="item" data-gender="men" data-category="rain jacket" data-size="s m l" data-price="850">
-            <a href="rain-jacket-for-men.html">
-              <div class="card-product">
-                <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket3.jpg" alt="picture">
-                </div>
-                <h1>Rain Jacket for Men</h1>
-                <p class="price">850 NOK</p>
-              </div>
-            </a>
-
+        <!-- Products are loaded dynamically from the Noroff Rainy Days API via JavaScript -->
+        <noscript>
+          <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
+            <strong>⚠️ JavaScript Disabled:</strong> Products are loaded dynamically from our API. Please enable JavaScript for full shopping functionality, or <a href="about-us.html" style="color: #856404; text-decoration: underline;">contact us</a>.
           </div>
-
-           <div class="item" data-gender="men women" data-category="jacket" data-size="s m l" data-price="799">
-            <a href="midnight-reflective-urban-shell.html">
-              <div class="card-product">
-                <div class="pic">
-                  <div class="pic">
-                    <img src="./assets/images/RainyDays_Jacket2.jpg" alt="picture">
-                  </div>
-                </div>
-                <h1>Midnight Reflective Urban</h1>
-                <p class="price">799 NOK</p>
-              </div>
-            </a>
-          </div>
-
-           <div class="item" data-gender="men women" data-category="jacket" data-size="s m l" data-price="1869">
-            <a href="stormguard-pro-outdoor-jacket.html">
-              <div class="card-product">
-                <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket4.jpg" alt="picture">
-                </div>
-                <h1>Velocity Sport Jacket</h1>
-                <p class="price">1869 NOK <span class="sale-price">2199 NOK</span></p>
-              </div>
-            </a>
-          </div>
-
-         <div class="item" data-gender="men" data-category="rain jacket" data-size="xs s m l" data-price="850">
-            <a href="stormguard-pro-outdoor-jacket.html">
-              <div class="card-product">
-                <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket1.jpg" alt="picture">
-                </div>
-                <h1>Storm Guard Pro Outdoor Jacket</h1>
-                <p class="price">850 NOK</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item" data-gender="men women" data-category="fleece" data-size="s m l" data-price="1689">
-            <a href="rain-jacket-for-men.html">
-              <div class="card-product">
-                <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket7.jpg" alt="picture">
-                </div>
-                <h1>Thermal Fleece Jacket</h1>
-                <p class="price">1689 NOK <span class="sale-price">2195 NOK</span></p>
-              </div>
-            </a>
-          </div>
-
-          <div class="item" data-gender="men women" data-category="jacket" data-size="xs s m l" data-price="2100">
-            <a href="rain-jacket-for-men.html">
-              <div class="card-product">
-                <div class="pic">
-                  <img src="./assets/images/RainyDays_Jacket5.jpg" alt="picture">
-                </div>
-                <h1>Explorer Windbreaker</h1>
-                <p class="price">2100 NOK</p>
-              </div>
-            </a>
-          </div>
+        </noscript>
+        <div class="product" id="products-container">
+          <!-- Products are inserted here by loadProductsFromAPI() -->
         </div>
       </div>
 

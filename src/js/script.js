@@ -55,18 +55,14 @@ function updateCartCount() {
   // Count total items (add up all quantities)
   var totalItems = 0;
   for (var i = 0; i < cart.length; i++) {
-    var quantity = Number(cart[i].quantity);
-    if (!Number.isFinite(quantity) || quantity < 1) {
-      quantity = 1;
-    }
-    totalItems = totalItems + quantity;
+    totalItems = totalItems + cart[i].quantity;
   }
 
   // Find all cart links in the page
   var cartLinks = document.querySelectorAll('a[href="cart.html"]');
 
   // Update each cart link text to show the count
-  for (var i = 0; i < cartLinks.length; i++) {
+  for (let i = 0; i < cartLinks.length; i++) {
     // If cart is empty, show just "Cart"
     // If cart has items, show "Cart(3)" with the number
     if (totalItems === 0) {
@@ -115,7 +111,7 @@ function addToCart(productName, price, image, size, color) {
 
   // STEP 5: If item exists, just increase the quantity
   if (foundItem) {
-    cart[foundIndex].quantity = (Number(cart[foundIndex].quantity) || 0) + 1;
+    cart[foundIndex].quantity = cart[foundIndex].quantity + 1;
   }
   // STEP 6: If item doesn't exist, add it as new
   else {

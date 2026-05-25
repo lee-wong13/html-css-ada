@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Reflective Urban Shell</title>
     <link rel="stylesheet" href="src/css/product-detail-styles.css">
-
     <meta name="description" content="Midnight Reflective Urban Shell">
-
     <!-- RemixIcons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
 
     <!-- Navigation -->
-
-   <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-        </a>
-      </div>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
+                </a>
+            </div>
 
       <div class="flex">
         <input type="checkbox" id="menu-toggle">
@@ -30,26 +26,28 @@
         <ul class="menu">
           <ul class="sub-menu">
             <li><a href="product.html">Shop</a></li>
-            <li><a href="comingsoon.html">About Us</a></li>
-            <li><a href="comingsoon.html">Support</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
           </ul>
         </ul>
 
-        <ul class="sub-menu-2">
-          <li><i class="ri-search-line"></i></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </div>
+                <ul class="sub-menu-2">
+                    <li><i class="ri-search-line"></i></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    </nav>
-  </header>
-
-  <section class="breadcrumb container">
-    <h3><a href="index.html">Homepage</a></h3>
-    <p> >> </p>
-    <p>Product</p>
-  </section>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb container">
+        <h3><a href="index.html">Homepage</a></h3>
+        <p> >> </p>
+        <p><a href="product.html">Products</a></p>
+        <p> >> </p>
+        <p id="breadcrumb-title">Midnight Reflective Urban Shell</p>
+    </section>
 
   <section class="product container">
     <!-- <div class="item-product"> -->
@@ -115,24 +113,15 @@
         <button class="btn" type="button" id="addToCartBtn">Add to Cart</button>
       </div>
       <script>
-        // Wait for the "Add to Cart" button to be clicked
         document.getElementById('addToCartBtn').addEventListener('click', function() {
-          
-          // Step 1: Find the size that was selected
-          var sizeElement = document.querySelector('.size-product .select span');
-          var selectedSize = sizeElement.textContent;
-          
-          // Step 2: Find the color that was selected
-          var colorElement = document.querySelector('.color-product .select span');
-          var selectedColor = colorElement.textContent;
-          
-          // Step 3: Add the product to the cart with all the details
+          const size = document.querySelector('.size-product .select span').textContent;
+          const color = document.querySelector('.color-product .select span').textContent;
           addToCart(
-            'Midnight Reflective Urban Shell',  // Product name
-            '799',                               // Price
-            'assets/images/RainyDays_Jacket2.jpg',  // Image path
-            selectedSize,                        // Size chosen by user
-            selectedColor                        // Color chosen by user
+            'Midnight Reflective Urban Shell',
+            '799',
+            'assets/images/RainyDays_Jacket2.jpg',
+            size,
+            color
           );
         });
       </script>
@@ -282,9 +271,7 @@
             <h3>Explorer Windbreacker</h3>
         </div>
         </div>
-    </div>
-
-  </section>
+    </section>
 
 
   <!-- Footer -->
@@ -351,7 +338,7 @@
             <h3 class="footer__title">About Us</h3>
             <ul class="footer__links">
               <li>
-                <a href="comingsoon.html" class="footer__link">About Us</a>
+                <a href="about-us.html" class="footer__link">About Us</a>
               </li>
               <li>
                 <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
@@ -409,8 +396,48 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="src/js/script.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="src/js/api-config.js"></script>
+    <script src="src/js/script.js"></script>
+
+    <script>
+        // Load product by name (async/await)
+        async function loadProductByName() {
+            var productName = 'midnight-reflective-urban-shell';
+            
+            // Make API request to get all products
+            await apiRequest(API_CONFIG.endpoints.allProducts, function(response) {
+                var products = response.data;
+                
+                // Find product matching the name
+                var product = null;
+                for (var i = 0; i < products.length; i++) {
+                    var urlName = products[i].title.toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/^-+|-+$/g, '');
+                    
+                    if (urlName === productName) {
+                        product = products[i];
+                        break;
+                    }
+                }
+                
+                if (product) {
+                    displayProduct(product);
+                } else {
+                    showError('Product not found. Please try searching on our <a href="product.html">products page</a>.');
+                }
+            }, function(error) {
+                showError(error);
+            });
+        }
+        
+        // Load when page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadProductByName);
+        } else {
+            loadProductByName();
+        }
+    </script>
 </body>
 </html>
