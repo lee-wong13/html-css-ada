@@ -20,7 +20,6 @@
   --font-semi-bold: 600;
 }
 
-
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
@@ -32,7 +31,10 @@ body {
   margin: 0px;
 }
 
-h1, h2, p, h3{
+h1,
+h2,
+p,
+h3 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -65,12 +67,9 @@ span {
   font-weight: var(--font-regular);
 }
 
-
-
-
 /* Welcome Banner*/
 
-.banner{ 
+.banner {
   background-image: url(../../assets/images/banner.jpg);
   background-size: cover;
   height: 85vh;
@@ -82,26 +81,27 @@ span {
   position: relative;
 }
 
-.banner-content{
+.banner-content {
   position: relative;
   z-index: 1;
 }
 
-.banner-content h1{
+.banner-content h1 {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: 500;
   color: #0b0b0b;
 }
 
-.banner-content p{
+.banner-content p {
   font-size: 20px;
   margin-bottom: 30px;
   font-style: italic;
   color: #0b0b0b;
 }
 
-button.shopnow{
+button.shopnow,
+a.shopnow {
   background-color: #e27c60;
   padding: 10px 30px;
   border-radius: 25px;
@@ -109,14 +109,17 @@ button.shopnow{
   font-weight: 200;
   cursor: pointer;
   font-weight: var(--font-semi-bold);
+  display: inline-block;
 }
 
-button.shopnow:hover{
+button.shopnow:hover,
+a.shopnow:hover {
   background-color: white;
   color: black;
 }
 
-/* New Arrival */¨
+/* New Arrival */
+¨
 
 
 /* New Arrival */
@@ -185,20 +188,23 @@ button.shopnow:hover{
   text-align: center;
 }
 
-button.view-product {
+button.view-product,
+a.view-product {
   background-color: #e27c60;
   padding: 8px 30px;
   border-radius: 25px;
   font-size: 15px;
   cursor: pointer;
   width: 189px;
+  display: inline-block;
+  text-align: center;
 }
 
-button.view-product:hover{
+button.view-product:hover,
+a.view-product:hover {
   background-color: white;
   color: black;
 }
-
 
 /* Shop by Gender*/
 
@@ -221,7 +227,7 @@ button.view-product:hover{
   margin: 60px;
   justify-content: space-evenly;
 }
-.gender-card-male{
+.gender-card-male {
   background-image: url(../../assets/images/man-hiking-clothes.jpg);
   background-size: cover;
   width: 404px;
@@ -237,7 +243,7 @@ button.view-product:hover{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.gender-card-female{
+.gender-card-female {
   background-image: url(../../assets/images/woman-hiking-clothes.jpg);
   background-size: cover;
   width: 404px;
@@ -252,17 +258,17 @@ button.view-product:hover{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.gender-card-female:hover{
+.gender-card-female:hover {
   cursor: pointer;
   filter: brightness(100%);
 }
 
-.gender-card-male:hover{
+.gender-card-male:hover {
   cursor: pointer;
   filter: brightness(100%);
 }
 
-.gender-card-female h3{
+.gender-card-female h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,8 +277,7 @@ button.view-product:hover{
   font-size: 40px;
 }
 
-.gender-card-male 
-h3{
+.gender-card-male h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -284,7 +289,7 @@ h3{
 
 /* About us */
 
- .about-us{
+.about-us {
   background-image: url(../../assets/images/banner-about-us.jpg);
   background-size: cover;
   height: 700px;
@@ -294,27 +299,27 @@ h3{
   justify-content: flex-end;
   text-align: center;
   color: #fff;
- }
+}
 
- .about-us-content{
+.about-us-content {
   z-index: 1;
   width: 660px;
- }
+}
 
- .about-us-content h2{
+.about-us-content h2 {
   font-size: 48px;
   margin-bottom: 30px;
   font-weight: 500;
   color: #f5f5f5;
- }
+}
 
- .about-us p{
+.about-us p {
   font-size: 20px;
   line-height: 25px;
   text-align: left;
- }
+}
 
- /* Shop by acivity */
+/* Shop by acivity */
 
 .activity {
   padding: 30px 40px;
@@ -399,8 +404,6 @@ h3{
   background-color: #164d569a;
 }
 
-
-
 /* Special Price */
 
 .sale {
@@ -468,7 +471,8 @@ h3{
   text-decoration: line-through;
 }
 
-.sale-img button {
+.sale-img button,
+.sale-img .view-product {
   margin-top: 20px;
 }
 
@@ -530,34 +534,32 @@ h3{
   font-size: 40px;
 }
 
-
-
 /* Subscibe */
 
-.subscribe{
+.subscribe {
   background-color: #164d5694;
 }
 
-.subscribe h1{
+.subscribe h1 {
   font-size: 48px;
   color: var(--color-primary);
   padding: 2rem;
   text-align: center;
 }
 
-.subscribe-input{
+.subscribe-input {
   padding: 2rem;
   padding-top: 0;
   text-align: center;
 }
 
-.subscribe-input input{
+.subscribe-input input {
   width: 300px;
   height: 30px;
   border-radius: 10px;
 }
 
-.subscribe-input button{
+.subscribe-input button {
   background-color: #e27c60;
   padding: 5px 25px;
   border-radius: 10px;
@@ -565,12 +567,12 @@ h3{
   cursor: pointer;
 }
 
-.subscribe-input button:hover{
+.subscribe-input button:hover {
   background-color: white;
   color: black;
 }
 
-.subscribe p{
+.subscribe p {
   text-align: center;
   padding: 2rem;
   padding-top: 0;
@@ -579,8 +581,7 @@ h3{
   font-size: 20px;
 }
 
-
-/* RESPONSIVE ======================== */ 
+/* RESPONSIVE ======================== */
 
 /* For medium devices */
 @media screen and (max-width: 430px) {
@@ -627,7 +628,8 @@ h3{
     flex-direction: column;
     align-items: center;
   }
-  .gender-card-male, .gender-card-female {
+  .gender-card-male,
+  .gender-card-female {
     width: 254px;
     height: 359px;
   }
@@ -704,7 +706,8 @@ h3{
   .sale-img p {
     font-size: 1rem;
   }
-  .sale-img button {
+  .sale-img button,
+  .sale-img .view-product {
     margin-top: 0.5rem;
   }
 
@@ -733,7 +736,6 @@ h3{
 
   .subscribe h1 {
     font-size: 1.75rem;
-    
   }
   .subscribe-input input {
     margin-bottom: 0.5rem;
@@ -744,10 +746,11 @@ h3{
 }
 
 @media (max-width: 768px) {
-.gender-card-male, .gender-card-female {
-  width: 304px !important;
-  height: 409px !important;
-}
+  .gender-card-male,
+  .gender-card-female {
+    width: 304px !important;
+    height: 409px !important;
+  }
 }
 
 @media (max-width: 820px) {
@@ -763,11 +766,13 @@ h3{
   .product-card {
     width: 374px;
   }
-  .gender-card-female, .gender-card-male {
+  .gender-card-female,
+  .gender-card-male {
     width: 354px;
     height: 459px;
   }
-  .gender-card-female h3, .gender-card-male h3 {
+  .gender-card-female h3,
+  .gender-card-male h3 {
     font-size: 35px;
   }
 }
@@ -811,7 +816,7 @@ h3{
     width: 280px;
     height: 255px;
   }
-  .gender h1{
+  .gender h1 {
     font-size: 45px;
   }
   .right-arrow {

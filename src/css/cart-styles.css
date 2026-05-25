@@ -23,7 +23,6 @@
   --font-semi-bold: 600;
 }
 
-
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
@@ -36,7 +35,6 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
 
 h1,
 h2,
@@ -74,8 +72,6 @@ span {
   font-weight: var(--font-regular);
 }
 
-
-
 /* Content ============================================= */
 
 .page__title {
@@ -83,7 +79,7 @@ span {
   font-size: 50px;
   text-align: center;
   margin: 40px 0 40px 0;
-} 
+}
 
 .max-width {
   max-width: 1440px;
@@ -185,7 +181,6 @@ span {
 .cart-item .price {
   color: #164d56;
   font-size: 16px;
-
 }
 
 .quantity {
@@ -204,7 +199,7 @@ input {
   text-align: center;
 }
 .option {
-  width:28px;
+  width: 28px;
   height: 38px;
   font-size: 15px;
   font-weight: 400;
@@ -231,10 +226,9 @@ input {
   margin: 20px auto;
 }
 
-.cart-code-summary{
+.cart-code-summary {
   display: flex;
   justify-content: space-between;
-
 }
 .coupon {
   display: flex;
@@ -250,7 +244,7 @@ input {
   text-align: start;
 }
 
-.coupon button{
+.coupon button {
   flex: 1 1 0;
 }
 
@@ -270,19 +264,19 @@ input {
   padding: 0 1rem;
 }
 
-
-.bottom-col{
+.bottom-col {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
-.bottom-col button{
+.bottom-col button,
+.bottom-col .btn {
   flex: 1 1 0;
 }
 
-/* ==================== Responsive ===================== */ 
+/* ==================== Responsive ===================== */
 
 @media (max-width: 1024px) {
   .page__title {
@@ -362,7 +356,8 @@ input {
   .bottom-col {
     gap: 6px;
   }
-  .bottom-col button {
+  .bottom-col button,
+  .bottom-col .btn {
     padding: 0.5rem;
   }
 }

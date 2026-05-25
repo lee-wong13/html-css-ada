@@ -64,10 +64,9 @@ a {
   margin: 0 auto;
 }
 
-
 /* CSS for Product Page*/
 
-.banner-product{ 
+.banner-product {
   background-image: url(../../assets/images/mountain-bg.jpg);
   background-size: cover;
   height: 60vh;
@@ -79,7 +78,7 @@ a {
   position: relative;
 }
 
-.banner-product h1{
+.banner-product h1 {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: 500;
@@ -92,9 +91,7 @@ a {
   margin: 0 auto;
 }
 
-
 /* CONTENT ================= */
-
 
 .content {
   display: flex;
@@ -214,6 +211,18 @@ details li:last-child {
 .dropdown.active .select > i {
   transform: rotate(-180deg);
 }
+
+/* Static-site fallback: open dropdown without JavaScript */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown:hover .select > i,
+.dropdown:focus-within .select > i {
+  transform: rotate(-180deg);
+}
+
 .dropdown .dropdown-menu {
   position: absolute;
   background-color: #eaeaea;
@@ -319,7 +328,7 @@ details li:last-child {
 @media screen and (max-width: 430px) {
   .banner-product h1 {
     font-size: 1.25rem;
-    height: ;
+    height:;
   }
   .content {
     margin-top: 0;
