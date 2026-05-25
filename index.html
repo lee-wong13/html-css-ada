@@ -1,131 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rainy Days | Home </title>
-    <link rel="stylesheet" href="src/css/styles.css">
-    <meta name="description" content="Rainy Days Homepage">
+    <title>Rainy Days | Home</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <meta name="description" content="Rainy Days Homepage" />
 
     <!-- RemixIcons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
 
-
   <body>
+    <!-- Navigation -->
 
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days" />
+          </a>
+        </div>
 
-   <!-- Navigation -->
-
-   <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-        </a>
-      </div>
-
-      <div class="flex">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <ul class="sub-menu">
-            <li><a href="product.html">Shop</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="support.html">Support</a></li>
+        <div class="flex">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <ul class="sub-menu">
+              <li><a href="product.html">Shop</a></li>
+              <li><a href="comingsoon.html">About Us</a></li>
+              <li><a href="comingsoon.html">Support</a></li>
+            </ul>
           </ul>
-        </ul>
 
-        <ul class="sub-menu-2">
-          <li><i class="ri-search-line"></i></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
-
-
-  </header>
+          <ul class="sub-menu-2">
+            <li><i class="ri-search-line"></i></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!-- Banner and Tagline -->
 
     <main>
-
       <section class="banner">
         <div class="banner-content">
           <h1>Build for the Wild. Made for you.</h1>
-          <p>Durable, weather-ready jacket designed to keep you comfortable anywhere</p>
-          <button class="shopnow" onClick="location.href='product.html'">Shop Now</button>
+          <p>
+            Durable, weather-ready jacket designed to keep you comfortable
+            anywhere
+          </p>
+          <button class="shopnow" onClick="location.href='product.html'">
+            Shop Now
+          </button>
         </div>
       </section>
 
       <!-- New Arrival -->
 
-
       <section class="new-arrival">
+        <div class="container">
+          <h1>New Arrival</h1>
 
-      <div class="container">
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="pic">
+                <img
+                  src="assets/images/RainyDays_Jacket1.jpg"
+                  alt="StormGuard Pro Outdoor Jacket"
+                />
+              </div>
 
-        <h1>New Arrival</h1>
-
-        <div class="product-grid">
-
-          <div class="product-card">
-            <div class="pic">
-              <img src="assets/images/RainyDays_Jacket1.jpg" alt="StormGuard Pro Outdoor Jacket">
+              <h3>StormGuard Pro Outdoor Jacket</h3>
+              <p>899 NOK</p>
+              <button
+                class="view-product"
+                onclick="location.href = 'stormguard-pro-outdoor-jacket.html'"
+              >
+                View Product
+              </button>
             </div>
 
-            <h3>StormGuard Pro Outdoor Jacket</h3>
-            <p>899 NOK</p>
-            <button class="view-product" onclick="location.href='stormguard-pro-outdoor-jacket.html'">View
-              Product</button>
-          </div>
+            <div class="product-card">
+              <div class="pic">
+                <img
+                  src="assets/images/RainyDays_Jacket2.jpg"
+                  alt="Midnight Reflective Urban Shell"
+                />
+              </div>
 
-          <div class="product-card">
-            <div class="pic">
-              <img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell">
+              <h3>Midnight Reflective Urban Shell</h3>
+              <p>799 NOK</p>
+              <button
+                class="view-product"
+                onclick="location.href = 'midnight-reflective-urban-shell.html'"
+              >
+                View Product
+              </button>
             </div>
 
-            <h3>Midnight Reflective Urban Shell</h3>
-            <p>799 NOK</p>
-            <button class="view-product" onclick="location.href='midnight-reflective-urban-shell.html'">View
-              Product</button>
-          </div>
+            <div class="product-card">
+              <div class="pic">
+                <img
+                  src="assets/images/RainyDays_Jacket3.jpg"
+                  alt="Rain Jacket for Men"
+                />
+              </div>
 
-          <div class="product-card">
-            <div class="pic">
-              <img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men">
+              <h3>Rain Jacket for Men</h3>
+              <p>850 NOK</p>
+              <button
+                class="view-product"
+                onclick="location.href = 'rain-jacket-for-men.html'"
+              >
+                View Product
+              </button>
             </div>
-
-            <h3>Rain Jacket for Men</h3>
-            <p>850 NOK</p>
-            <button class="view-product" onclick="location.href='rain-jacket-for-men.html'">View Product</button>
           </div>
-
         </div>
-
-      </div>
-      
-
-    </section>
-
+      </section>
 
       <!-- Shop by Gender -->
 
       <section class="gender">
-
         <div class="container">
-
           <h1>Shop by Gender</h1>
 
           <div class="gender-grid">
-
             <a href="comingsoon.html">
-                <div class="gender-card-male">
-                  <h3>Male</h3>
-                </div>
+              <div class="gender-card-male">
+                <h3>Male</h3>
+              </div>
             </a>
 
             <a href="comingsoon.html">
@@ -133,311 +143,346 @@
                 <h3>Female</h3>
               </div>
             </a>
-
+          </div>
         </div>
-
       </section>
 
       <!-- About Us -->
 
-
-
       <section class="about-us">
-        
-
         <div class="about-us-content">
-
           <h2>About Us</h2>
-          <p>At Rainydays, we believe outdoor clothing should be built to last without breaking your budget. 
-            That’s why our jacket combine durability with timeless design and reliable weather protection - ensuring you stay comfortable whether it’s rain, wind, or sun. 
-            Mid-range in price but premium in performance, out jackets are made for explorers who value both quality and practicality.</p>
+          <p>
+            At Rainydays, we believe outdoor clothing should be built to last
+            without breaking your budget. That’s why our jacket combine
+            durability with timeless design and reliable weather protection -
+            ensuring you stay comfortable whether it’s rain, wind, or sun.
+            Mid-range in price but premium in performance, out jackets are made
+            for explorers who value both quality and practicality.
+          </p>
         </div>
-
       </section>
-
 
       <!-- Shop By Activity -->
 
-      
-    <section class="activity">
+      <section class="activity">
+        <div class="container">
+          <h1>Shop by Activity</h1>
 
-      <div class="container">
+          <div class="activity-card">
+            <a href="comingsoon.html">
+              <div class="hiking card-act">
+                <h3>Hiking</h3>
+              </div>
+            </a>
 
-        <h1>Shop by Activity</h1>
+            <a href="comingsoon.html">
+              <div class="skiing card-act">
+                <h3>Skiing</h3>
+              </div>
+            </a>
 
-        <div class="activity-card">
+            <a href="comingsoon.html">
+              <div class="camping card-act">
+                <h3>Camping</h3>
+              </div>
+            </a>
 
-          <a href="comingsoon.html">
-            <div class="hiking card-act">
-              <h3>Hiking</h3>
+            <a href="comingsoon.html">
+              <div class="canoeing card-act">
+                <h3>Canoeing</h3>
+              </div>
+            </a>
+
+            <div class="right-arrow">
+              <p>&#707;</p>
             </div>
-          </a>
-
-          <a href="comingsoon.html">
-            <div class="skiing card-act">
-              <h3>Skiing</h3>
-            </div>
-          </a>
-
-          <a href="comingsoon.html">
-            <div class="camping card-act">
-              <h3>Camping</h3>
-            </div>
-          </a>
-
-          <a href="comingsoon.html">
-            <div class="canoeing card-act">
-              <h3>Canoeing</h3>
-            </div>
-          </a>
-
-          <div class="right-arrow">
-            <p>&#707;</p>
           </div>
-
-
         </div>
-
-      </div>
-
-    </section>
-
+      </section>
 
       <!-- Special Price -->
 
       <section class="sale">
+        <div class="container">
+          <h1>Special Price</h1>
 
-      <div class="container">
-
-        <h1>Special Price</h1>
-
-        <div class="sale-card">
-
-          <div class="sale-img">
-            <div class="sale-per">
-              <img src="assets/images/RainyDays_Jacket7.jpg" alt="Thermal Fleece Jacket">
-              <p>30%</p>
+          <div class="sale-card">
+            <div class="sale-img">
+              <div class="sale-per">
+                <img
+                  src="assets/images/RainyDays_Jacket7.jpg"
+                  alt="Thermal Fleece Jacket"
+                />
+                <p>30%</p>
+              </div>
+              <h2>Thermal Fleece Jacket</h2>
+              <div class="price-col">
+                <p>1689 nok</p>
+                <p class="sale-price">2195 nok</p>
+              </div>
+              <button
+                class="view-product"
+                onclick="location.href = 'rain-jacket-for-men.html'"
+              >
+                View Product
+              </button>
             </div>
-            <h2>Thermal Fleece Jacket</h2>
-            <div class="price-col">
-              <p>1689 nok</p>
-              <p class="sale-price">2195 nok</p>
+
+            <div class="sale-img">
+              <div class="sale-per">
+                <img
+                  src="assets/images/RainyDays_Jacket6.jpg"
+                  alt="Apline Pro Adventure Jacket"
+                />
+                <p>25%</p>
+              </div>
+              <h2>Apline Pro Adventure Jacket</h2>
+              <div class="price-col">
+                <p>2024 nok</p>
+                <p class="sale-price">2699 nok</p>
+              </div>
+              <button
+                class="view-product"
+                onclick="location.href = 'stormguard-pro-outdoor-jacket.html'"
+              >
+                View Product
+              </button>
             </div>
-            <button class="view-product" onclick="location.href='rain-jacket-for-men.html'">View Product</button>
+
+            <div class="sale-img">
+              <div class="sale-per">
+                <img
+                  src="assets/images/RainyDays_Jacket4.jpg"
+                  alt="Velocity Sport Jacket"
+                />
+                <p>15%</p>
+              </div>
+              <h2>Velocity Sport Jacket</h2>
+              <div class="price-col">
+                <p>1869 nok</p>
+                <p class="sale-price">2199 nok</p>
+              </div>
+              <button
+                class="view-product"
+                onclick="location.href = 'midnight-reflective-urban-shell.html'"
+              >
+                View Product
+              </button>
+            </div>
           </div>
-
-          <div class="sale-img">
-            <div class="sale-per">
-              <img src="assets/images/RainyDays_Jacket6.jpg" alt="Apline Pro Adventure Jacket">
-              <p>25%</p>
-            </div>
-            <h2>Apline Pro Adventure Jacket</h2>
-            <div class="price-col">
-              <p>2024 nok</p>
-              <p class="sale-price">2699 nok</p>
-            </div>
-            <button class="view-product" onclick="location.href='stormguard-pro-outdoor-jacket.html'">View
-              Product</button>
-          </div>
-
-          <div class="sale-img">
-            <div class="sale-per">
-              <img src="assets/images/RainyDays_Jacket4.jpg" alt="Velocity Sport Jacket">
-              <p>15%</p>
-            </div>
-            <h2>Velocity Sport Jacket</h2>
-            <div class="price-col">
-              <p>1869 nok</p>
-              <p class="sale-price">2199 nok</p>
-            </div>
-            <button class="view-product" onclick="location.href='midnight-reflective-urban-shell.html'">View
-              Product</button>
-          </div>
-
         </div>
-
-      </div>
-
-    </section>
+      </section>
 
       <!-- Review -->
 
       <section class="review">
-
         <div class="container">
-
           <h1>Trust by Adventurers Like you</h1>
 
           <div class="review-content">
-
             <div class="review-card">
-              <img src="assets/images/woman-skiing.jpg" alt="Woman Skiing">
+              <img src="assets/images/woman-skiing.jpg" alt="Woman Skiing" />
               <h3>Gabriela</h3>
               <p>Review Text</p>
               <div class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
             </div>
 
             <div class="review-card">
-              <img src="assets/images/man-jacket.jpg" alt="Woman Skiing">
+              <img src="assets/images/man-jacket.jpg" alt="Woman Skiing" />
               <h3>Gabriela</h3>
               <p class="star">Review Text</p>
               <div class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
             </div>
 
             <div class="review-card">
-              <img src="assets/images/woman-in-forrest.jpg" alt="Woman Skiing">
+              <img
+                src="assets/images/woman-in-forrest.jpg"
+                alt="Woman Skiing"
+              />
               <h3>Gabriela</h3>
               <p>Review Text</p>
               <div class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
             </div>
-
           </div>
-
         </div>
-
       </section>
-
 
       <!-- Subsscribe for news letter -->
 
       <section class="subscribe">
-
         <h1>Be First to Know About New Arrivals & Offers</h1>
 
         <div class="subscribe-input">
-
-          <input type="email" name="email">
+          <input type="email" name="email" />
           <button class="subscribe-btn">Subscribe</button>
-
         </div>
 
-        <p>No spam. Just comfort, adventure and exclusive deals. Unsubscribe anytime.</p>
-
+        <p>
+          No spam. Just comfort, adventure and exclusive deals. Unsubscribe
+          anytime.
+        </p>
       </section>
-
-      
     </main>
 
-<!-- Footer Section -->
+    <!-- Footer Section -->
 
-  <footer class="footer">
-    <div class="footer__container grid">
-      <div class="footer__content grid">
-        <div class="footer__data grid">
-          <div class="footer__rainy">
-            <div class="footer__logo">
-              <a href="index.html"><img src="assets/images/RainyDays_Logo.png" alt="rainydays logo"></a>
-            </div>
-            <ul class="footer__social">
-              <li>
-                <a href="comingsoon.html">
-                  <img src="assets/images/instagram-logo.png" alt="instagram link">
-                </a>
-              </li>
-              <li>
-                <a href="comingsoon.html">
-                  <img src="assets/images/facebook-logo.png" alt="facebook link">
-                </a>
-              </li>
-              <li>
-                <a href="comingsoon.html">
-                  <img src="assets/images/youtube-logo.png" alt="youtube link">
-                </a>
-              </li>
-              <li>
-                <a href="comingsoon.html">
-                  <img src="assets/images/twitter-logo.png" alt="twitter link">
-                </a>
-              </li>
-
-            </ul>
-          </div>
-          <div>
-            <h3 class="footer__title">Shop</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Men</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Women</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">New Arrivals</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shop by Activity</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sale</a>
-              </li>
-
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="footer__title">About Us</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="about-us.html" class="footer__link">About Us</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Inspirations</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Our Shops</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="footer__title">Support</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shipping & Delivery</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Return & Exchange</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Size Guide</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__payment">
-            <h3 class="footer__title">We accept all major payment methods</h3>
-            <div class="footer__pay-item">
-              <div class="footer__icon-pay">
-                <img src="assets/images/visa-logo.png" alt="visa logo">
-                <img src="assets/images/mastercard-logo.png" alt="mastercard logo">
-                <img src="assets/images/amex-logo.png" alt="amex logo">
-                <img src="assets/images/unionpay- logo.png" alt="union pay logo">
+    <footer class="footer">
+      <div class="footer__container grid">
+        <div class="footer__content grid">
+          <div class="footer__data grid">
+            <div class="footer__rainy">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/RainyDays_Logo.png"
+                    alt="rainydays logo"
+                /></a>
               </div>
-              <div class="footer__icon-pay">
-                <img src="assets/images/paypal-logo.png" alt="paypal logo">
-                <img src="assets/images/applepay-logo.png" alt="apple pay logo">
-                <img src="assets/images/googlepay-logo.png" alt="google pay logo">
+              <ul class="footer__social">
+                <li>
+                  <a href="comingsoon.html">
+                    <img
+                      src="assets/images/instagram-logo.png"
+                      alt="instagram link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="comingsoon.html">
+                    <img
+                      src="assets/images/facebook-logo.png"
+                      alt="facebook link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="comingsoon.html">
+                    <img
+                      src="assets/images/youtube-logo.png"
+                      alt="youtube link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="comingsoon.html">
+                    <img
+                      src="assets/images/twitter-logo.png"
+                      alt="twitter link"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__title">Shop</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Men</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Women</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >New Arrivals</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shop by Activity</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Sale</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">About Us</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">About Us</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Sustainability / Materials</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Inspirations</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Our Shops</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">Support</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shipping & Delivery</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Return & Exchange</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Size Guide</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__payment">
+              <h3 class="footer__title">We accept all major payment methods</h3>
+              <div class="footer__pay-item">
+                <div class="footer__icon-pay">
+                  <img src="assets/images/visa-logo.png" alt="visa logo" />
+                  <img
+                    src="assets/images/mastercard-logo.png"
+                    alt="mastercard logo"
+                  />
+                  <img src="assets/images/amex-logo.png" alt="amex logo" />
+                  <img
+                    src="assets/images/unionpay- logo.png"
+                    alt="union pay logo"
+                  />
+                </div>
+                <div class="footer__icon-pay">
+                  <img src="assets/images/paypal-logo.png" alt="paypal logo" />
+                  <img
+                    src="assets/images/applepay-logo.png"
+                    alt="apple pay logo"
+                  />
+                  <img
+                    src="assets/images/googlepay-logo.png"
+                    alt="google pay logo"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer__copy">
-          <span>
-            &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies Policy
-          </span>
+          <div class="footer__copy">
+            <span>
+              &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies
+              Policy
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="src/js/script.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>

@@ -1,428 +1,501 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
 
-    <link rel="stylesheet" href="src/css/checkout-styles.css">
+    <link rel="stylesheet" href="src/css/checkout-styles.css" />
 
-    <meta name="description" content="Checkout Page">
+    <meta name="description" content="Checkout Page" />
 
-       <!-- RemixIcons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-<body>
+    <!-- RemixIcons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
 
-      <!-- Navigation -->
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days" />
+          </a>
+        </div>
 
-  <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-        </a>
-      </div>
-
-      <div class="flex">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <ul class="sub-menu">
-            <li><a href="product.html">Shop</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="support.html">Support</a></li>
+        <div class="flex">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <ul class="sub-menu">
+              <li><a href="product.html">Shop</a></li>
+              <li><a href="comingsoon.html">About Us</a></li>
+              <li><a href="comingsoon.html">Support</a></li>
+            </ul>
           </ul>
-        </ul>
 
-        <ul class="sub-menu-2">
-          <li><i class="ri-search-line"></i></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
-
-   <div class="container">
-
-    <h1 class="title"> Checkout </h1>
-
-    <div class="checkout-layout">
-
-      <!--- ====== Left form ================ -->
-
-      <section class="col">
-
-        <!-- Email -->
-
-
-        <h2 class="section-title">Email</h2>
-        <label for="email"><input type="email" name="email" placeholder="email">
-        </label>
-        <p class="hint">We'll send your order confirmation and updates to this email</p>
-        <div class="checkline">
-          <input type="checkbox">
-          <p>News and Info</p>
+          <ul class="sub-menu-2">
+            <li><i class="ri-search-line"></i></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
         </div>
+      </nav>
+    </header>
 
-        <!---- ======= Delivery ========== ------->
+    <div class="container">
+      <h1 class="title">Checkout</h1>
 
-        <h2 class="section-title">Delivery</h2>
-        <div class="row">
-          <div class="row-item">
-            <label for="firstname"><input type="text" name="firstname" placeholder="First name"></label>
+      <div class="checkout-layout">
+        <!--- ====== Left form ================ -->
+
+        <section class="col">
+          <!-- Email -->
+
+          <h2 class="section-title">Email</h2>
+          <label for="email"
+            ><input type="email" name="email" placeholder="email" />
+          </label>
+          <p class="hint">
+            We'll send your order confirmation and updates to this email
+          </p>
+          <div class="checkline">
+            <input type="checkbox" />
+            <p>News and Info</p>
           </div>
 
-          <div class="row-item">
-            <label for="lastname"><input type="text" name="lastname" placeholder="Last Name"></label>
-          </div>
-        </div>
+          <!---- ======= Delivery ========== ------->
 
+          <h2 class="section-title">Delivery</h2>
+          <div class="row">
+            <div class="row-item">
+              <label for="firstname"
+                ><input type="text" name="firstname" placeholder="First name"
+              /></label>
+            </div>
 
-        <label for="address"><input type="text" name="address" placeholder="Address..."></label>
-
-
-        <label for="apt"><input type="text" placeholder="Apartment nr, house nr, ..."></label>
-
-
-        <div class="row">
-          <div class="row-item">
-            <label for="post"><input type="text" name="post" placeholder="Postal Code"></label>
-          </div>
-
-          <div class="row-item">
-            <label for="city"><input type="text" name="city" placeholder="City"></label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="row-item">
-            <label for="province"><input type="text" name="province" placeholder="Province"></label>
-          </div>
-          <div class="row-item">
-            <label for="country"><input type="text" name="country" placeholder="Country"></label>
-          </div>
-        </div>
-
-        <label class="checkline">
-          <input type="checkbox" name="save">
-          <p>Save information</p>
-        </label>
-
-        <!-- ============== Shipping Method =============== -->
-
-        <h2 class="section-title">Shipping Method</h2>
-
-        <div class="option">
-          <div class="left">
-            <input type="radio" name="ship" checked>
-            <div>
-              <div><strong>Standard Shipping</strong></div>
-              <small>4–7 Business Days with Tracking Number</small>
+            <div class="row-item">
+              <label for="lastname"
+                ><input type="text" name="lastname" placeholder="Last Name"
+              /></label>
             </div>
           </div>
-          <div class="price">69</div>
-        </div>
 
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="ship">
-            <div>
-              <div><strong>Express Shipping</strong></div>
-              <small>2–3 Business Days with Tracking Number</small>
+          <label for="address"
+            ><input type="text" name="address" placeholder="Address..."
+          /></label>
+
+          <label for="apt"
+            ><input type="text" placeholder="Apartment nr, house nr, ..."
+          /></label>
+
+          <div class="row">
+            <div class="row-item">
+              <label for="post"
+                ><input type="text" name="post" placeholder="Postal Code"
+              /></label>
+            </div>
+
+            <div class="row-item">
+              <label for="city"
+                ><input type="text" name="city" placeholder="City"
+              /></label>
             </div>
           </div>
-          <div class="price">99</div>
-        </label>
 
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="ship">
-            <div>
-              <div><strong>Same Day/Next Day Delivery (Premium)</strong></div>
-              <small>within 24 hours</small>
+          <div class="row">
+            <div class="row-item">
+              <label for="province"
+                ><input type="text" name="province" placeholder="Province"
+              /></label>
+            </div>
+            <div class="row-item">
+              <label for="country"
+                ><input type="text" name="country" placeholder="Country"
+              /></label>
             </div>
           </div>
-          <div class="price">139</div>
-        </label>
 
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="ship">
-            <div>
-              <div><strong>Free Shipping</strong></div>
-              <small>5–10 Business Days</small>
-            </div>
-          </div>
-          <div class="price">0</div>
-        </label>
+          <label class="checkline">
+            <input type="checkbox" name="save" />
+            <p>Save information</p>
+          </label>
 
+          <!-- ============== Shipping Method =============== -->
 
-        <!--- ======= Payment Method =========== -->
+          <h2 class="section-title">Shipping Method</h2>
 
-
-        <h2 class="section-title">Payment Method</h2>
-
-
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="pay" checked>
-            <div>
-              <div><strong>Debit or Credit Card</strong></div>
-            </div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/visa-logo.png" alt="visa-logo" class="pic-visa">
-            <img src="assets/images/mastercard-logo.png" alt="mastercard-logo">
-            <img src="assets/images/amex-logo.png" alt="amex-logo">
-            <img src="assets/images/unionpay- logo.png" alt="">
-          </div>
-        </label>
-
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="pay">
-            <div><strong>Paypal</strong></div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/paypal-logo.png" alt="paypal-logo">
-          </div>
-        </label>
-
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="pay">
-            <div><strong>Google Pay</strong></div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/googlepay-logo.png" alt="googlepay-logo">
-          </div>
-        </label>
-
-        <label class="option">
-          <div class="left">
-            <input type="radio" name="pay">
-            <div><strong>Apple Pay</strong></div>
-          </div>
-          <div class="icons">
-            <img src="assets/images/applepay-logo.png" alt="applepay-logo">
-          </div>
-        </label>
-
-        <label class="checkline">
-          <input type="checkbox">
-          <p>Terms & Conditions</p>
-        </label>
-
-        <div class="actions">
-          <button class="btn secondary" onclick="location.href='product.html'">Continue Shopping</button>
-          <button class="btn primary" onclick="location.href='success.html'">Proceed to Checkout</button>
-        </div>
-
-
-      </section>
-
-
-
-      <!-- ============ Right: Order SUmmary ============ -->
-
-
-      <aside class="col col-right">
-        <h2 class="section-title">Order Summary :</h2>
-
-        <div class="item">
-          <div class="thumb"><img src="assets/images/RainyDays_Jacket1.jpg" alt="StormGuard Pro Outdoor Jacket"></div>
-          <div class="sub-item">
-            <div class="detail-item">
+          <div class="option">
+            <div class="left">
+              <input type="radio" name="ship" checked />
               <div>
-                <h3 class="name">StormGuard Pro Outdoor Jacket</h3>
-                <p class="muted">size s, orange</p>
+                <div><strong>Standard Shipping</strong></div>
+                <small>4–7 Business Days with Tracking Number</small>
               </div>
-              <p class="muted">1 piece</p>
             </div>
-            <h3 class="price">899</h3>
+            <div class="price">69</div>
           </div>
-        </div>
-        
-        <div class="item">
-          <div class="thumb"><img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell"></div>
-          <div class="sub-item">
-            <div class="detail-item">
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="ship" />
               <div>
-                <h3 class="name">Midnight Reflective Urban Shell</h3>
-                <p class="muted">size m, black</p>
+                <div><strong>Express Shipping</strong></div>
+                <small>2–3 Business Days with Tracking Number</small>
               </div>
-              <p class="muted">1 piece</p>
             </div>
-            <h3 class="price">899</h3>
-          </div>
-        </div>
-        
-        <div class="item">
-          <div class="thumb"><img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men"></div>
-          <div class="sub-item">
-            <div class="detail-item">
+            <div class="price">99</div>
+          </label>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="ship" />
               <div>
-                <h3 class="name">Rain Jacket for Men</h3>
-                <p class="muted">size m, red</p>
-              </div>
-              <p class="muted">1 piece</p>
-            </div>
-            <h3 class="price">899</h3>
-          </div>
-        </div>
-        
-
-        <div class="line">
-          <h3>Subtotal</h3>
-          <h3>2548</h3>
-        </div>
-
-        <div class="line ship">
-          <div>
-            <h3>Shipping</h3>
-            <p>Same Day / Next Day Delivery, within 24 hours</p>
-          </div>
-
-          <h3>139</h3>
-        </div>
-
-        <div class="line total">
-          <div class="total-col">
-            <h2>Total</h2>
-            <p>Incl. tax</p>
-          </div>
-          <h2>2687</h2>
-        </div>
-      </aside>
-    </div>
-  </div>
-
-    <hr>
-
-    
-
-    
-
-   <!-- Footer Section -->
-
-      <footer class="footer">
-    <div class="footer__container grid">
-      <div class="footer__content grid">
-        <div class="footer__data grid">
-          <div class="footer__rainy">
-            <div class="footer__logo">
-              <a href="index.html"><img src="assets/images/RainyDays_Logo.png" alt="rainydays logo"></a>
-            </div>
-            <ul class="footer__social">
-              <li>
-                <a href="#">
-                  <img src="assets/images/instagram-logo.png" alt="instagram link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/facebook-logo.png" alt="facebook link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/youtube-logo.png" alt="youtube link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/twitter-logo.png" alt="twitter link">
-                </a>
-              </li>
-
-            </ul>
-          </div>
-          <div>
-            <h3 class="footer__title">Shop</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Men</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Women</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">New Arrivals</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shop by Activity</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sale</a>
-              </li>
-
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="footer__title">About Us</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="about-us.html" class="footer__link">About Us</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Inspirations</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Our Shops</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="footer__title">Support</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shipping & Delivery</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Return & Exchange</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Size Guide</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__payment">
-            <h3 class="footer__title">We accept all major payment methods</h3>
-            <div class="footer__pay-item">
-              <div class="footer__icon-pay">
-                <img src="assets/images/visa-logo.png" alt="visa logo">
-                <img src="assets/images/mastercard-logo.png" alt="mastercard logo">
-                <img src="assets/images/amex-logo.png" alt="amex logo">
-                <img src="assets/images/unionpay- logo.png" alt="union pay logo">
-              </div>
-              <div class="footer__icon-pay">
-                <img src="assets/images/paypal-logo.png" alt="paypal logo">
-                <img src="assets/images/applepay-logo.png" alt="apple pay logo">
-                <img src="assets/images/googlepay-logo.png" alt="google pay logo">
+                <div><strong>Same Day/Next Day Delivery (Premium)</strong></div>
+                <small>within 24 hours</small>
               </div>
             </div>
+            <div class="price">139</div>
+          </label>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="ship" />
+              <div>
+                <div><strong>Free Shipping</strong></div>
+                <small>5–10 Business Days</small>
+              </div>
+            </div>
+            <div class="price">0</div>
+          </label>
+
+          <!--- ======= Payment Method =========== -->
+
+          <h2 class="section-title">Payment Method</h2>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="pay" checked />
+              <div>
+                <div><strong>Debit or Credit Card</strong></div>
+              </div>
+            </div>
+            <div class="icons">
+              <img
+                src="assets/images/visa-logo.png"
+                alt="visa-logo"
+                class="pic-visa"
+              />
+              <img
+                src="assets/images/mastercard-logo.png"
+                alt="mastercard-logo"
+              />
+              <img src="assets/images/amex-logo.png" alt="amex-logo" />
+              <img src="assets/images/unionpay- logo.png" alt="" />
+            </div>
+          </label>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="pay" />
+              <div><strong>Paypal</strong></div>
+            </div>
+            <div class="icons">
+              <img src="assets/images/paypal-logo.png" alt="paypal-logo" />
+            </div>
+          </label>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="pay" />
+              <div><strong>Google Pay</strong></div>
+            </div>
+            <div class="icons">
+              <img
+                src="assets/images/googlepay-logo.png"
+                alt="googlepay-logo"
+              />
+            </div>
+          </label>
+
+          <label class="option">
+            <div class="left">
+              <input type="radio" name="pay" />
+              <div><strong>Apple Pay</strong></div>
+            </div>
+            <div class="icons">
+              <img src="assets/images/applepay-logo.png" alt="applepay-logo" />
+            </div>
+          </label>
+
+          <label class="checkline">
+            <input type="checkbox" />
+            <p>Terms & Conditions</p>
+          </label>
+
+          <div class="actions">
+            <button
+              class="btn secondary"
+              onclick="location.href = 'product.html'"
+            >
+              Continue Shopping
+            </button>
+            <button
+              class="btn primary"
+              onclick="location.href = 'success.html'"
+            >
+              Proceed to Checkout
+            </button>
           </div>
-        </div>
-        <div class="footer__copy">
-          <span>
-            &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies Policy
-          </span>
-        </div>
+        </section>
+
+        <!-- ============ Right: Order SUmmary ============ -->
+
+        <aside class="col col-right">
+          <h2 class="section-title">Order Summary :</h2>
+
+          <div class="item">
+            <div class="thumb">
+              <img
+                src="assets/images/RainyDays_Jacket1.jpg"
+                alt="StormGuard Pro Outdoor Jacket"
+              />
+            </div>
+            <div class="sub-item">
+              <div class="detail-item">
+                <div>
+                  <h3 class="name">StormGuard Pro Outdoor Jacket</h3>
+                  <p class="muted">size s, orange</p>
+                </div>
+                <p class="muted">1 piece</p>
+              </div>
+              <h3 class="price">899</h3>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="thumb">
+              <img
+                src="assets/images/RainyDays_Jacket2.jpg"
+                alt="Midnight Reflective Urban Shell"
+              />
+            </div>
+            <div class="sub-item">
+              <div class="detail-item">
+                <div>
+                  <h3 class="name">Midnight Reflective Urban Shell</h3>
+                  <p class="muted">size m, black</p>
+                </div>
+                <p class="muted">1 piece</p>
+              </div>
+              <h3 class="price">899</h3>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="thumb">
+              <img
+                src="assets/images/RainyDays_Jacket3.jpg"
+                alt="Rain Jacket for Men"
+              />
+            </div>
+            <div class="sub-item">
+              <div class="detail-item">
+                <div>
+                  <h3 class="name">Rain Jacket for Men</h3>
+                  <p class="muted">size m, red</p>
+                </div>
+                <p class="muted">1 piece</p>
+              </div>
+              <h3 class="price">899</h3>
+            </div>
+          </div>
+
+          <div class="line">
+            <h3>Subtotal</h3>
+            <h3>2548</h3>
+          </div>
+
+          <div class="line ship">
+            <div>
+              <h3>Shipping</h3>
+              <p>Same Day / Next Day Delivery, within 24 hours</p>
+            </div>
+
+            <h3>139</h3>
+          </div>
+
+          <div class="line total">
+            <div class="total-col">
+              <h2>Total</h2>
+              <p>Incl. tax</p>
+            </div>
+            <h2>2687</h2>
+          </div>
+        </aside>
       </div>
     </div>
-  </footer>
-    
-</body>
+
+    <hr />
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+      <div class="footer__container grid">
+        <div class="footer__content grid">
+          <div class="footer__data grid">
+            <div class="footer__rainy">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/RainyDays_Logo.png"
+                    alt="rainydays logo"
+                /></a>
+              </div>
+              <ul class="footer__social">
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/instagram-logo.png"
+                      alt="instagram link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/facebook-logo.png"
+                      alt="facebook link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/youtube-logo.png"
+                      alt="youtube link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/twitter-logo.png"
+                      alt="twitter link"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__title">Shop</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Men</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Women</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >New Arrivals</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shop by Activity</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Sale</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">About Us</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">About Us</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Sustainability / Materials</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Inspirations</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Our Shops</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">Support</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shipping & Delivery</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Return & Exchange</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Size Guide</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__payment">
+              <h3 class="footer__title">We accept all major payment methods</h3>
+              <div class="footer__pay-item">
+                <div class="footer__icon-pay">
+                  <img src="assets/images/visa-logo.png" alt="visa logo" />
+                  <img
+                    src="assets/images/mastercard-logo.png"
+                    alt="mastercard logo"
+                  />
+                  <img src="assets/images/amex-logo.png" alt="amex logo" />
+                  <img
+                    src="assets/images/unionpay- logo.png"
+                    alt="union pay logo"
+                  />
+                </div>
+                <div class="footer__icon-pay">
+                  <img src="assets/images/paypal-logo.png" alt="paypal logo" />
+                  <img
+                    src="assets/images/applepay-logo.png"
+                    alt="apple pay logo"
+                  />
+                  <img
+                    src="assets/images/googlepay-logo.png"
+                    alt="google pay logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <span>
+              &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies
+              Policy
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

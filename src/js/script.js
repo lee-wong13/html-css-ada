@@ -1,31 +1,20 @@
 // ============================================
-// FOOTER LOADING (not related to cart)
-// ============================================
-// This loads footer from another file
-fetch('/component/footer.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-  });
-
-// ============================================
 // DROPDOWN MENU (for selecting size and color)
 // ============================================
 // Credit : https://codepen.io/AleksDev-/pen/PwZaZZb
-$('.dropdown').click(function () {
-  $(this).attr('tabindex', 1).focus();
-  $(this).toggleClass('active');
-  $(this).find('.dropdown-menu').slideToggle(300);
+$(".dropdown").click(function () {
+  $(this).attr("tabindex", 1).focus();
+  $(this).toggleClass("active");
+  $(this).find(".dropdown-menu").slideToggle(300);
 });
-$('.dropdown').focusout(function () {
-  $(this).removeClass('active');
-  $(this).find('.dropdown-menu').slideUp(300);
+$(".dropdown").focusout(function () {
+  $(this).removeClass("active");
+  $(this).find(".dropdown-menu").slideUp(300);
 });
-$('.dropdown .dropdown-menu li').click(function () {
-  $(this).parents('.dropdown').find('span').text($(this).text());
-  $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+$(".dropdown .dropdown-menu li").click(function () {
+  $(this).parents(".dropdown").find("span").text($(this).text());
+  $(this).parents(".dropdown").find("input").attr("value", $(this).attr("id"));
 });
-
 
 // ============================================
 // SHOPPING CART FUNCTIONS - SIMPLE VERSION
@@ -35,8 +24,8 @@ $('.dropdown .dropdown-menu li').click(function () {
 // This reads the cart data from the browser's memory (localStorage)
 function getCart() {
   // Get the cart string from localStorage
-  var cartString = localStorage.getItem('cart');
-  
+  var cartString = localStorage.getItem("cart");
+
   // If cart exists, convert it from text to JavaScript array
   // If not, return an empty array
   if (cartString) {
@@ -51,8 +40,8 @@ function getCart() {
 function saveCart(cart) {
   // Convert cart array to text and save it
   var cartText = JSON.stringify(cart);
-  localStorage.setItem('cart', cartText);
-  
+  localStorage.setItem("cart", cartText);
+
   // Update the cart count in the header
   updateCartCount();
 }
@@ -62,24 +51,28 @@ function saveCart(cart) {
 function updateCartCount() {
   // Get current cart
   var cart = getCart();
-  
+
   // Count total items (add up all quantities)
   var totalItems = 0;
   for (var i = 0; i < cart.length; i++) {
-    totalItems = totalItems + cart[i].quantity;
+    var quantity = Number(cart[i].quantity);
+    if (!Number.isFinite(quantity) || quantity < 1) {
+      quantity = 1;
+    }
+    totalItems = totalItems + quantity;
   }
-  
+
   // Find all cart links in the page
   var cartLinks = document.querySelectorAll('a[href="cart.html"]');
-  
+
   // Update each cart link text to show the count
   for (var i = 0; i < cartLinks.length; i++) {
     // If cart is empty, show just "Cart"
     // If cart has items, show "Cart(3)" with the number
     if (totalItems === 0) {
-      cartLinks[i].textContent = 'Cart';
+      cartLinks[i].textContent = "Cart";
     } else {
-      cartLinks[i].textContent = 'Cart(' + totalItems + ')';
+      cartLinks[i].textContent = "Cart(" + totalItems + ")";
     }
   }
 }
@@ -88,41 +81,42 @@ function updateCartCount() {
 // This is the main function that adds items to the cart
 // It needs: product name, price, image, size, and color
 function addToCart(productName, price, image, size, color) {
-  
   // STEP 1: Check if user selected a size
-  if (!size || size === 'Size') {
-    alert('Please select a size');
+  if (!size || size === "Size") {
+    alert("Please select a size");
     return; // Stop here if no size selected
   }
-  
+
   // STEP 2: Check if user selected a color
-  if (!color || color === 'Color') {
-    alert('Please select a color');
+  if (!color || color === "Color") {
+    alert("Please select a color");
     return; // Stop here if no color selected
   }
-  
+
   // STEP 3: Get the current cart
   var cart = getCart();
-  
+
   // STEP 4: Check if this exact item is already in cart
   // (same name, size, and color)
   var foundItem = false;
   var foundIndex = -1;
-  
+
   for (var i = 0; i < cart.length; i++) {
-    if (cart[i].name === productName && 
-        cart[i].size === size.toLowerCase() && 
-        cart[i].color === color.toLowerCase()) {
+    if (
+      cart[i].name === productName &&
+      cart[i].size === size.toLowerCase() &&
+      cart[i].color === color.toLowerCase()
+    ) {
       foundItem = true;
       foundIndex = i;
       break; // Stop searching
     }
   }
-  
+
   // STEP 5: If item exists, just increase the quantity
   if (foundItem) {
-    cart[foundIndex].quantity = cart[foundIndex].quantity + 1;
-  } 
+    cart[foundIndex].quantity = (Number(cart[foundIndex].quantity) || 0) + 1;
+  }
   // STEP 6: If item doesn't exist, add it as new
   else {
     var newItem = {
@@ -131,24 +125,24 @@ function addToCart(productName, price, image, size, color) {
       image: image,
       size: size.toLowerCase(),
       color: color.toLowerCase(),
-      quantity: 1
+      quantity: 1,
     };
     cart.push(newItem); // Add to cart array
   }
-  
+
   // STEP 7: Save the updated cart
   saveCart(cart);
-  
+
   // STEP 8: Show success message
-  alert(productName + ' added to cart!');
+  alert(productName + " added to cart!");
 }
 
 // ============================================
 // INITIALIZE: Run when page loads
 // ============================================
 // This updates the cart count when you first load the page
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', updateCartCount);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", updateCartCount);
 } else {
   updateCartCount();
 }
