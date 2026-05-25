@@ -1,329 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Product</title>
-    <link rel="stylesheet" href="src/css/product-styles.css">
-    <meta name="description" content="Our Products">
-        <!-- RemixIcons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" href="src/css/product-styles.css" />
+    <meta name="description" content="Our Products" />
+    <!-- RemixIcons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
 
-     <!-- Navigation -->
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days" />
+          </a>
+        </div>
 
-  <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-        </a>
-      </div>
-
-      <div class="flex">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <ul class="sub-menu">
-            <li><a href="product.html">Shop</a></li>
-            <li><a href="comingsoon.html">About Us</a></li>
-            <li><a href="comingsoon.html">Support</a></li>
+        <div class="flex">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <ul class="sub-menu">
+              <li><a href="product.html">Shop</a></li>
+              <li><a href="comingsoon.html">About Us</a></li>
+              <li><a href="comingsoon.html">Support</a></li>
+            </ul>
           </ul>
-        </ul>
 
-        <ul class="sub-menu-2">
-          <li><i class="ri-search-line"></i></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
-
+          <ul class="sub-menu-2">
+            <li><i class="ri-search-line"></i></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!-- Banner -->
 
     <section class="banner-product">
-        <h1>Explore Our Collection</h1>
+      <h1>Explore Our Collection</h1>
     </section>
 
     <!-- Product Section -->
 
     <div class="container">
       <div class="content">
+        <!-- ===== Left: Product Layout =====-->
 
-      <!-- ===== Left: Product Layout =====-->
+        <div class="accordion-filter">
+          <details>
+            <summary>Filter</summary>
+            <ul>
+              <li>
+                <input type="checkbox" id="male" name="interest" value="male" />
+                <label for="male">Men</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="female"
+                  name="interest"
+                  value="female"
+                />
+                <label for="female">Women</label>
+              </li>
+            </ul>
+          </details>
 
-      <div class="accordion-filter">
-        <details>
-          <summary>Filter</summary>
-          <ul>
-            <li>
-              <input type="checkbox" id="male" name="interest" value="male" />
-              <label for="male">Men</label>
-            </li>
-            <li>
-              <input type="checkbox" id="female" name="interest" value="female" />
-              <label for="female">Women</label>
-            </li>
-          </ul>
-        </details>
+          <details>
+            <summary>Category</summary>
+            <ul>
+              <li>
+                <input
+                  type="checkbox"
+                  id="jacket"
+                  name="interest"
+                  value="jacket"
+                />
+                <label for="jacket">Jacket</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="womens"
+                  name="interest"
+                  value="womens"
+                />
+                <label for="womens">Womens</label>
+              </li>
+              <li>
+                <input type="checkbox" id="mens" name="interest" value="mens" />
+                <label for="mens">Mens</label>
+              </li>
+            </ul>
+          </details>
 
-        <details>
-          <summary>Category</summary>
-          <ul>
-            <li>
-              <input type="checkbox" id="jacket" name="interest" value="jacket" />
-              <label for="jacket">Jacket</label>
-            </li>
-            <li>
-              <input type="checkbox" id="womens" name="interest" value="womens" />
-              <label for="womens">Womens</label>
-            </li>
-            <li>
-              <input type="checkbox" id="mens" name="interest" value="mens" />
-              <label for="mens">Mens</label>
-            </li>
-          </ul>
-        </details>
+          <details>
+            <summary>Size</summary>
+            <ul>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-xs"
+                  name="interest"
+                  value="size-xs"
+                />
+                <label for="size-xs">XS</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-s"
+                  name="interest"
+                  value="size-s"
+                />
+                <label for="size-s">S</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-m"
+                  name="interest"
+                  value="size-m"
+                />
+                <label for="size-m">M</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-l"
+                  name="interest"
+                  value="size-l"
+                />
+                <label for="size-l">L</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-xl"
+                  name="interest"
+                  value="size-xl"
+                />
+                <label for="size-xl">XL</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="size-xxl"
+                  name="interest"
+                  value="size-xxl"
+                />
+                <label for="size-xxl">XXL</label>
+              </li>
+            </ul>
+          </details>
 
-        <details>
-          <summary>Size</summary>
-          <ul>
-            <li>
-              <input type="checkbox" id="size-xs" name="interest" value="size-xs" />
-              <label for="size-xs">XS</label>
-            </li>
-            <li>
-              <input type="checkbox" id="size-s" name="interest" value="size-s" />
-              <label for="size-s">S</label>
-            </li>
-            <li>
-              <input type="checkbox" id="size-m" name="interest" value="size-m" />
-              <label for="size-m">M</label>
-            </li>
-            <li>
-              <input type="checkbox" id="size-l" name="interest" value="size-l" />
-              <label for="size-l">L</label>
-            </li>
-            <li>
-              <input type="checkbox" id="size-xl" name="interest" value="size-xl" />
-              <label for="size-xl">XL</label>
-            </li>
-            <li>
-              <input type="checkbox" id="size-xxl" name="interest" value="size-xxl" />
-              <label for="size-xxl">XXL</label>
-            </li>
-          </ul>
-        </details>
+          <details>
+            <summary>Price Range</summary>
+            <ul>
+              <li>
+                <input
+                  type="checkbox"
+                  id="range-0-100"
+                  name="interest"
+                  value="0-100"
+                />
+                <label for="range-0-100">0 - 100 NOK</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="range-100-200"
+                  name="interest"
+                  value="100-200"
+                />
+                <label for="range-100-200">100 - 200 NOK</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  id="range-200-500"
+                  name="interest"
+                  value="200-500"
+                />
+                <label for="range-200-500">200 - 500 NOK</label>
+              </li>
+            </ul>
+          </details>
 
-        <details>
-          <summary>Price Range</summary>
-          <ul>
-            <li>
-              <input type="checkbox" id="range-0-100" name="interest" value="0-100" />
-              <label for="range-0-100">0 - 100 NOK</label>
-            </li>
-            <li>
-              <input type="checkbox" id="range-100-200" name="interest" value="100-200" />
-              <label for="range-100-200">100 - 200 NOK</label>
-            </li>
-            <li>
-              <input type="checkbox" id="range-200-500" name="interest" value="200-500" />
-              <label for="range-200-500">200 - 500 NOK</label>
-            </li>
-          </ul>
-        </details>
+          <details>
+            <summary>ฺฺBrand</summary>
+            <ul></ul>
+          </details>
+        </div>
 
-        <details>
-          <summary>ฺฺBrand</summary>
-          <ul>
+        <!-- ===== Right : Product Layout ===== -->
 
-          </ul>
-        </details>
+        <div class="right-layout">
+          <div class="topbar">
+            <div class="sort">
+              <p>Featured jackets</p>
+            </div>
+          </div>
+          <div class="product">
+            <div
+              class="item"
+              data-gender="men"
+              data-category="jacket mens"
+              data-size="s m l xl"
+              data-price="850"
+            >
+              <a href="rain-jacket-for-men.html">
+                <div class="card-product">
+                  <div class="pic">
+                    <img
+                      src="./assets/images/RainyDays_Jacket3.jpg"
+                      alt="Rain Jacket for Men"
+                    />
+                  </div>
+                  <h1>Rain Jacket for Men</h1>
+                  <p class="price">850 NOK</p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="item"
+              data-gender="men women"
+              data-category="jacket urban"
+              data-size="s m l xl"
+              data-price="799"
+            >
+              <a href="midnight-reflective-urban-shell.html">
+                <div class="card-product">
+                  <div class="pic">
+                    <img
+                      src="./assets/images/RainyDays_Jacket2.jpg"
+                      alt="Midnight Reflective Urban Shell"
+                    />
+                  </div>
+                  <h1>Midnight Reflective Urban Shell</h1>
+                  <p class="price">799 NOK</p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="item"
+              data-gender="men women"
+              data-category="jacket outdoor"
+              data-size="s m l xl"
+              data-price="899"
+            >
+              <a href="stormguard-pro-outdoor-jacket.html">
+                <div class="card-product">
+                  <div class="pic">
+                    <img
+                      src="./assets/images/RainyDays_Jacket1.jpg"
+                      alt="StormGuard Pro Outdoor Jacket"
+                    />
+                  </div>
+                  <h1>StormGuard Pro Outdoor Jacket</h1>
+                  <p class="price">899 NOK</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- ===== Right : Product Layout ===== -->
+      <div class="pagination">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>...</p>
+        <p>&gt;</p>
+      </div>
+    </div>
 
-      <div class="right-layout">
-        <div class="topbar">
-          <div class="sort">
+    <hr />
 
-            <div class="dropdown">
-              <div class="select">
-                <span>Sort by</span>
-                <i class="fa fa-chevron-left">&#x2C5</i>
+    <!-- Footer Section -->
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+      <div class="footer__container grid">
+        <div class="footer__content grid">
+          <div class="footer__data grid">
+            <div class="footer__rainy">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/RainyDays_Logo.png"
+                    alt="rainydays logo"
+                /></a>
               </div>
-              <input type="hidden" name="gender">
-              <ul class="dropdown-menu">
-                <li id="popular">Popular</li>
-                <li id="low-to-high">Low to High</li>
-                <li id="high-to-low">High to Low</li>
-                <li id="newest">Newest</li>
+              <ul class="footer__social">
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/instagram-logo.png"
+                      alt="instagram link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/facebook-logo.png"
+                      alt="facebook link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/youtube-logo.png"
+                      alt="youtube link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/twitter-logo.png"
+                      alt="twitter link"
+                    />
+                  </a>
+                </li>
               </ul>
             </div>
-          </div>
-
-        </div>
-        <!-- Products are loaded dynamically from the Noroff Rainy Days API via JavaScript -->
-        <noscript>
-          <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
-            <strong>⚠️ JavaScript Disabled:</strong> Products are loaded dynamically from our API. Please enable JavaScript for full shopping functionality, or <a href="about-us.html" style="color: #856404; text-decoration: underline;">contact us</a>.
-          </div>
-        </noscript>
-        <div class="product" id="products-container">
-          <!-- Products are inserted here by loadProductsFromAPI() -->
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="pagination">
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
-      <p>6</p>
-      <p>...</p>
-      <p>&gt;</p>
-    </div>
-  </div>
-
-
-      <hr>
-
-
-
-      <!-- Footer Section -->
-
-     <!-- Footer Section -->
-
-      <footer class="footer">
-    <div class="footer__container grid">
-      <div class="footer__content grid">
-        <div class="footer__data grid">
-          <div class="footer__rainy">
-            <div class="footer__logo">
-              <a href="index.html"><img src="assets/images/RainyDays_Logo.png" alt="rainydays logo"></a>
+            <div>
+              <h3 class="footer__title">Shop</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Men</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Women</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >New Arrivals</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shop by Activity</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Sale</a>
+                </li>
+              </ul>
             </div>
-            <ul class="footer__social">
-              <li>
-                <a href="#">
-                  <img src="assets/images/instagram-logo.png" alt="instagram link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/facebook-logo.png" alt="facebook link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/youtube-logo.png" alt="youtube link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/twitter-logo.png" alt="twitter link">
-                </a>
-              </li>
 
-            </ul>
-          </div>
-          <div>
-            <h3 class="footer__title">Shop</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Men</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Women</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">New Arrivals</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shop by Activity</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sale</a>
-              </li>
+            <div>
+              <h3 class="footer__title">About Us</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">About Us</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Sustainability / Materials</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Inspirations</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Our Shops</a>
+                </li>
+              </ul>
+            </div>
 
-            </ul>
-          </div>
+            <div>
+              <h3 class="footer__title">Support</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shipping & Delivery</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Return & Exchange</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Size Guide</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 class="footer__title">About Us</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">About Us</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Inspirations</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Our Shops</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="footer__title">Support</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shipping & Delivery</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Return & Exchange</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Size Guide</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__payment">
-            <h3 class="footer__title">We accept all major payment methods</h3>
-            <div class="footer__pay-item">
-              <div class="footer__icon-pay">
-                <img src="assets/images/visa-logo.png" alt="visa logo">
-                <img src="assets/images/mastercard-logo.png" alt="mastercard logo">
-                <img src="assets/images/amex-logo.png" alt="amex logo">
-                <img src="assets/images/unionpay- logo.png" alt="union pay logo">
-              </div>
-              <div class="footer__icon-pay">
-                <img src="assets/images/paypal-logo.png" alt="paypal logo">
-                <img src="assets/images/applepay-logo.png" alt="apple pay logo">
-                <img src="assets/images/googlepay-logo.png" alt="google pay logo">
+            <div class="footer__payment">
+              <h3 class="footer__title">We accept all major payment methods</h3>
+              <div class="footer__pay-item">
+                <div class="footer__icon-pay">
+                  <img src="assets/images/visa-logo.png" alt="visa logo" />
+                  <img
+                    src="assets/images/mastercard-logo.png"
+                    alt="mastercard logo"
+                  />
+                  <img src="assets/images/amex-logo.png" alt="amex logo" />
+                  <img
+                    src="assets/images/unionpay- logo.png"
+                    alt="union pay logo"
+                  />
+                </div>
+                <div class="footer__icon-pay">
+                  <img src="assets/images/paypal-logo.png" alt="paypal logo" />
+                  <img
+                    src="assets/images/applepay-logo.png"
+                    alt="apple pay logo"
+                  />
+                  <img
+                    src="assets/images/googlepay-logo.png"
+                    alt="google pay logo"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer__copy">
-          <span>
-            &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies Policy
-          </span>
+          <div class="footer__copy">
+            <span>
+              &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies
+              Policy
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="src/js/script.js"></script>
-  <script src="src/js/api-config.js"></script>
-  <script src="src/js/products-api.js"></script>
-  <script src="src/js/filter.js"></script>
-    
-    
-</body>
+    </footer>
+  </body>
 </html>

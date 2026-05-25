@@ -1,294 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Cart</title>
 
-
-    <link rel="stylesheet" href="src/css/cart-styles.css">
+    <link rel="stylesheet" href="src/css/cart-styles.css" />
 
     <!-- RemixIcons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-</head>
-<body>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
 
- 
-  <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days">
-        </a>
-      </div>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days" />
+          </a>
+        </div>
 
-      <div class="flex">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <ul class="sub-menu">
-            <li><a href="product.html">Shop</a></li>
-            <li><a href="comingsoon.html">About Us</a></li>
-            <li><a href="comingsoon.html">Support</a></li>
+        <div class="flex">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <ul class="sub-menu">
+              <li><a href="product.html">Shop</a></li>
+              <li><a href="comingsoon.html">About Us</a></li>
+              <li><a href="comingsoon.html">Support</a></li>
+            </ul>
           </ul>
-        </ul>
 
-        <ul class="sub-menu-2">
-          <li><i class="ri-search-line"></i></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
-    
-    <noscript>
-      <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
-        <strong>⚠️ JavaScript Disabled:</strong> Cart functionality requires JavaScript. Please enable JavaScript to view and manage your cart items.
-      </div>
-    </noscript>
+          <ul class="sub-menu-2">
+            <li><i class="ri-search-line"></i></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <h1 class="page__title">Your Cart</h1>
 
-  <div class="cart-header max-width">
-    <h3 class="item">Item</h3>
-    <h3 class="price">Price</h3>
-    <h3 class="quantity">Quantity</h3>
-    <h3 class="total">Total</h3>
-  </div>
+    <div class="cart-header max-width">
+      <h3 class="item">Item</h3>
+      <h3 class="price">Price</h3>
+      <h3 class="quantity">Quantity</h3>
+      <h3 class="total">Total</h3>
+    </div>
 
-
-  <div class="cart-item max-width">
-    <div class="col item">
-      <img src="assets/images/RainyDays_Jacket1.jpg" alt="StormGuard Pro Outdoor Jacket">
-      <div>
-        <p class="desc">StormGuard Pro Outdoor Jacket</p>
-        <p class="desc-detail">• size s<br>• orange</p>
+    <div class="cart-item max-width">
+      <div class="col item">
+        <img
+          src="assets/images/RainyDays_Jacket1.jpg"
+          alt="StormGuard Pro Outdoor Jacket"
+        />
+        <div>
+          <p class="desc">StormGuard Pro Outdoor Jacket</p>
+          <p class="desc-detail">• size s<br />• orange</p>
+        </div>
       </div>
-    </div>
-    <div class="col price">
-      <p>899</p>
-    </div>
-    <div class="col quantity">
-      <button class="option">−</button>
-      <input class="option" value="1"></input>
-      <button class="option">+</button>
-    </div>
-    <div class="col total">
-      <p>899</p>
-    </div>
-  </div>
-
-
-  <div class="cart-item max-width">
-    <div class="col item">
-      <img src="assets/images/RainyDays_Jacket2.jpg" alt="Midnight Reflective Urban Shell">
-      <div>
-        <p class="desc">Midnight Reflective Urban Shell</p>
-        <p class="desc-detail">• size s<br>• black</p>
+      <div class="col price">
+        <p>899</p>
       </div>
-    </div>
-    <div class="col price">
-      <p>799</p>
-    </div>
-    <div class="col quantity">
-      <button class="option">−</button>
-      <input class="option" value="1"></input>
-      <button class="option">+</button>
-    </div>
-    <div class="col total">
-      <p>799</p>
-    </div>
-  </div>
-
-  <!-- ====== Content ==========-->
-
-
-  <div class="cart-item max-width">
-    <div class="col item">
-      <img src="assets/images/RainyDays_Jacket3.jpg" alt="Rain Jacket for Men">
-      <div>
-        <p class="desc">Rain Jacket for Men</p>
-        <p class="desc-detail">• size m<br>• red</p>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1" />
+        <button class="option">+</button>
       </div>
-    </div>
-    <div class="col price">
-      <p>850</p>
-    </div>
-    <div class="col quantity">
-      <button class="option">−</button>
-      <input class="option" value="1"></input>
-      <button class="option">+</button>
-    </div>
-    <div class="col total">
-      <p>850</p>
-    </div>
-  </div>
-
-  <div class="cart-code-summary max-width">
-
-    <div class="coupon">
-      <input type="text" placeholder="apply code...">
-      <button class="btn" type="button">Apply Code</button>
-    </div>
-
-    <div class="summary">
-      <div class="col-detail-shipping">
-        <div class="subtotal shipping-col">
-          <h1>Subtotal</h1>
-          <h1>2548</h1>
-        </div>
-        <div class="shipping shipping-col">
-          <p>Shipping</p>
-          <p>0</p>
-        </div>
-        <div class="tax shipping-col">
-          <p>Tax</p>
-          <p>637</p>
-        </div>
-        <hr>
-        <div class="total shipping-col">
-          <h1>Total</h1>
-          <h1>2548</h1>
-        </div>
-        <hr>
-        <div class="bottom-col">
-          <button class="btn" type="button" onclick="location.href='product.html'">Continue Shopping</button>
-          <button class="btn" type="button" onclick="location.href='checkout.html'">Proceed to Checkout</button>
-        </div>
+      <div class="col total">
+        <p>899</p>
       </div>
     </div>
 
-  </div>
+    <div class="cart-item max-width">
+      <div class="col item">
+        <img
+          src="assets/images/RainyDays_Jacket2.jpg"
+          alt="Midnight Reflective Urban Shell"
+        />
+        <div>
+          <p class="desc">Midnight Reflective Urban Shell</p>
+          <p class="desc-detail">• size s<br />• black</p>
+        </div>
+      </div>
+      <div class="col price">
+        <p>799</p>
+      </div>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1" />
+        <button class="option">+</button>
+      </div>
+      <div class="col total">
+        <p>799</p>
+      </div>
+    </div>
 
-      <hr>
+    <!-- ====== Content ==========-->
 
-       <!-- =================== Footer =======================-->
+    <div class="cart-item max-width">
+      <div class="col item">
+        <img
+          src="assets/images/RainyDays_Jacket3.jpg"
+          alt="Rain Jacket for Men"
+        />
+        <div>
+          <p class="desc">Rain Jacket for Men</p>
+          <p class="desc-detail">• size m<br />• red</p>
+        </div>
+      </div>
+      <div class="col price">
+        <p>850</p>
+      </div>
+      <div class="col quantity">
+        <button class="option">−</button>
+        <input class="option" value="1" />
+        <button class="option">+</button>
+      </div>
+      <div class="col total">
+        <p>850</p>
+      </div>
+    </div>
 
-       <!-- Footer Section -->
+    <div class="cart-code-summary max-width">
+      <div class="coupon">
+        <input type="text" placeholder="apply code..." />
+        <button class="btn" type="button">Apply Code</button>
+      </div>
 
-      <footer class="footer">
-    <div class="footer__container grid">
-      <div class="footer__content grid">
-        <div class="footer__data grid">
-          <div class="footer__rainy">
-            <div class="footer__logo">
-              <a href="index.html"><img src="assets/images/RainyDays_Logo.png" alt="rainydays logo"></a>
-            </div>
-            <ul class="footer__social">
-              <li>
-                <a href="#">
-                  <img src="assets/images/instagram-logo.png" alt="instagram link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/facebook-logo.png" alt="facebook link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/youtube-logo.png" alt="youtube link">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="assets/images/twitter-logo.png" alt="twitter link">
-                </a>
-              </li>
-
-            </ul>
+      <div class="summary">
+        <div class="col-detail-shipping">
+          <div class="subtotal shipping-col">
+            <h1>Subtotal</h1>
+            <h1>2548</h1>
           </div>
-          <div>
-            <h3 class="footer__title">Shop</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Men</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Women</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">New Arrivals</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shop by Activity</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sale</a>
-              </li>
-
-            </ul>
+          <div class="shipping shipping-col">
+            <p>Shipping</p>
+            <p>0</p>
           </div>
-
-          <div>
-            <h3 class="footer__title">About Us</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">About Us</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Inspirations</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Our Shops</a>
-              </li>
-            </ul>
+          <div class="tax shipping-col">
+            <p>Tax</p>
+            <p>637</p>
           </div>
-
-          <div>
-            <h3 class="footer__title">Support</h3>
-            <ul class="footer__links">
-              <li>
-                <a href="comingsoon.html" class="footer__link">Shipping & Delivery</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Return & Exchange</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Size Guide</a>
-              </li>
-              <li>
-                <a href="comingsoon.html" class="footer__link">Contact Us</a>
-              </li>
-            </ul>
+          <hr />
+          <div class="total shipping-col">
+            <h1>Total</h1>
+            <h1>2548</h1>
           </div>
+          <hr />
+          <div class="bottom-col">
+            <a class="btn" href="product.html">Continue Shopping</a>
+            <a class="btn" href="checkout.html">Proceed to Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="footer__payment">
-            <h3 class="footer__title">We accept all major payment methods</h3>
-            <div class="footer__pay-item">
-              <div class="footer__icon-pay">
-                <img src="assets/images/visa-logo.png" alt="visa logo">
-                <img src="assets/images/mastercard-logo.png" alt="mastercard logo">
-                <img src="assets/images/amex-logo.png" alt="amex logo">
-                <img src="assets/images/unionpay- logo.png" alt="union pay logo">
+    <hr />
+
+    <!-- =================== Footer =======================-->
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+      <div class="footer__container grid">
+        <div class="footer__content grid">
+          <div class="footer__data grid">
+            <div class="footer__rainy">
+              <div class="footer__logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/RainyDays_Logo.png"
+                    alt="rainydays logo"
+                /></a>
               </div>
-              <div class="footer__icon-pay">
-                <img src="assets/images/paypal-logo.png" alt="paypal logo">
-                <img src="assets/images/applepay-logo.png" alt="apple pay logo">
-                <img src="assets/images/googlepay-logo.png" alt="google pay logo">
+              <ul class="footer__social">
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/instagram-logo.png"
+                      alt="instagram link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/facebook-logo.png"
+                      alt="facebook link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/youtube-logo.png"
+                      alt="youtube link"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/images/twitter-logo.png"
+                      alt="twitter link"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__title">Shop</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Men</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Women</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >New Arrivals</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shop by Activity</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Sale</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">About Us</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link">About Us</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Sustainability / Materials</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Inspirations</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Our Shops</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="footer__title">Support</h3>
+              <ul class="footer__links">
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Shipping & Delivery</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link"
+                    >Return & Exchange</a
+                  >
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Size Guide</a>
+                </li>
+                <li>
+                  <a href="comingsoon.html" class="footer__link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__payment">
+              <h3 class="footer__title">We accept all major payment methods</h3>
+              <div class="footer__pay-item">
+                <div class="footer__icon-pay">
+                  <img src="assets/images/visa-logo.png" alt="visa logo" />
+                  <img
+                    src="assets/images/mastercard-logo.png"
+                    alt="mastercard logo"
+                  />
+                  <img src="assets/images/amex-logo.png" alt="amex logo" />
+                  <img
+                    src="assets/images/unionpay- logo.png"
+                    alt="union pay logo"
+                  />
+                </div>
+                <div class="footer__icon-pay">
+                  <img src="assets/images/paypal-logo.png" alt="paypal logo" />
+                  <img
+                    src="assets/images/applepay-logo.png"
+                    alt="apple pay logo"
+                  />
+                  <img
+                    src="assets/images/googlepay-logo.png"
+                    alt="google pay logo"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer__copy">
-          <span>
-            &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies Policy
-          </span>
+          <div class="footer__copy">
+            <span>
+              &#169; Rainydays (2025) Privacy Policy Terms & Conditions Cookies
+              Policy
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="src/js/script.js"></script>
-  <script src="src/js/cart.js"></script>
-</body>
+    </footer>
+  </body>
 </html>

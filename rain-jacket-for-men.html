@@ -45,18 +45,100 @@
     <!-- Breadcrumb -->
     <section class="breadcrumb container">
       <h3><a href="index.html">Homepage</a></h3>
-      <p>>></p>
+      <p>&gt;&gt;</p>
       <p><a href="product.html">Products</a></p>
-      <p>>></p>
+      <p>&gt;&gt;</p>
       <p id="breadcrumb-title">Rain Jacket for Men</p>
     </section>
 
     <!-- Product Details Section -->
-    <section class="product container" id="product-container">
-      <!-- Product will load here via JavaScript -->
-      <div style="text-align: center; padding: 60px">
-        <p>Loading product...</p>
+    <section class="product container">
+      <div class="show-item-product">
+        <div class="main-product-review-product">
+          <img
+            src="assets/images/RainyDays_Jacket3.jpg"
+            alt="Rain Jacket for Men"
+          />
+        </div>
+        <div class="other-product-review-product">
+          <img
+            src="assets/images/RainyDays_Jacket3.jpg"
+            alt="Rain Jacket for Men"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket3.jpg"
+            alt="Rain Jacket for Men"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket3.jpg"
+            alt="Rain Jacket for Men"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket3.jpg"
+            alt="Rain Jacket for Men"
+          />
+          <div class="arrow-down-product">
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+        </div>
       </div>
+
+      <div class="product-item-layout-product">
+        <div class="product-item-product">
+          <h1>Rain Jacket for Men</h1>
+          <h3>850 NOK</h3>
+          <p>
+            A lightweight jacket built for daily rain, short hikes, and travel.
+            It offers dependable water protection without the extra bulk, making
+            it an easy layer to wear through changing weather.
+          </p>
+          <div class="choose-size-color-product">
+            <div class="size-product">
+              <h3>Available Sizes</h3>
+              <p>S &#8226; M &#8226; L &#8226; XL</p>
+            </div>
+            <div class="color-product">
+              <h3>Available Colors</h3>
+              <p>Red &#8226; Navy</p>
+            </div>
+          </div>
+        </div>
+        <div class="add-to-btn-product">
+          <a class="btn" href="cart.html">View Cart</a>
+          <a class="btn" href="checkout.html">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="accordion container">
+      <details>
+        <summary>Detail Description</summary>
+        <ul>
+          <li>Water-resistant outer layer</li>
+          <li>Breathable comfort for everyday use</li>
+          <li>Adjustable hood and cuffs</li>
+          <li>Lightweight fit for easy movement</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Materials</summary>
+        <ul>
+          <li>Outer fabric: recycled polyester blend</li>
+          <li>Lining: soft mesh interior</li>
+          <li>Wind protection: yes</li>
+          <li>Water protection: everyday rain showers</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Care Instruction</summary>
+        <ul>
+          <li>Machine wash cold</li>
+          <li>Hang dry</li>
+          <li>Do not bleach</li>
+        </ul>
+      </details>
     </section>
 
     <!-- Footer -->
@@ -218,56 +300,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="src/js/api-config.js"></script>
-    <script src="src/js/script.js"></script>
-
-    <script>
-      // Load product by name (async/await)
-      async function loadProductByName() {
-        var productName = "rain-jacket-for-men";
-
-        // Make API request to get all products
-        await apiRequest(
-          API_CONFIG.endpoints.allProducts,
-          function (response) {
-            var products = response.data;
-
-            // Find product matching the name
-            var product = null;
-            for (var i = 0; i < products.length; i++) {
-              var urlName = products[i].title
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-+|-+$/g, "");
-
-              if (urlName === productName) {
-                product = products[i];
-                break;
-              }
-            }
-
-            if (product) {
-              displayProduct(product);
-            } else {
-              showError(
-                'Product not found. Please try searching on our <a href="product.html">products page</a>.',
-              );
-            }
-          },
-          function (error) {
-            showError(error);
-          },
-        );
-      }
-
-      // Load when page loads
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", loadProductByName);
-      } else {
-        loadProductByName();
-      }
-    </script>
   </body>
 </html>

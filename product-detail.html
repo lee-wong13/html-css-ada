@@ -51,18 +51,39 @@
       <p id="breadcrumb-title">Product</p>
     </section>
 
-    <noscript>
-      <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
-        <strong>⚠️ JavaScript Disabled:</strong> Product details require JavaScript to load. Please <a href="product.html" style="color: #856404; text-decoration: underline;">return to our products page</a> or enable JavaScript.
-      </div>
-    </noscript>
-
     <!-- Product Details Section -->
     <section class="product container" id="product-container">
-      <!-- Loading message will be replaced by product details -->
-      <div style="text-align: center; padding: 60px">
-        <p>Loading product...</p>
+      <div class="product-item-layout-product">
+        <div class="product-item-product">
+          <h1>Choose One of Our Jackets</h1>
+          <p>
+            This project is now presented as a static HTML and CSS site. Browse
+            the product listing to view each jacket page.
+          </p>
+          <div class="add-to-btn-product">
+            <a class="btn" href="product.html">Browse Products</a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="accordion container">
+      <details open>
+        <summary>Available Product Pages</summary>
+        <ul>
+          <li>
+            <a href="stormguard-pro-outdoor-jacket.html"
+              >StormGuard Pro Outdoor Jacket</a
+            >
+          </li>
+          <li>
+            <a href="midnight-reflective-urban-shell.html"
+              >Midnight Reflective Urban Shell</a
+            >
+          </li>
+          <li><a href="rain-jacket-for-men.html">Rain Jacket for Men</a></li>
+        </ul>
+      </details>
     </section>
 
     <!-- Footer Section -->
@@ -163,10 +184,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="src/js/api-config.js"></script>
-    <script src="src/js/script.js"></script>
-    <script src="src/js/product-detail.js"></script>
   </body>
 </html>

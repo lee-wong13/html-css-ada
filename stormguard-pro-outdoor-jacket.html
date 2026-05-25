@@ -45,18 +45,100 @@
     <!-- Breadcrumb -->
     <section class="breadcrumb container">
       <h3><a href="index.html">Homepage</a></h3>
-      <p>>></p>
+      <p>&gt;&gt;</p>
       <p><a href="product.html">Products</a></p>
-      <p>>></p>
+      <p>&gt;&gt;</p>
       <p id="breadcrumb-title">StormGuard Pro Outdoor Jacket</p>
     </section>
 
     <!-- Product Details Section -->
-    <section class="product container" id="product-container">
-      <!-- Product will load here via JavaScript -->
-      <div style="text-align: center; padding: 60px">
-        <p>Loading product...</p>
+    <section class="product container">
+      <div class="show-item-product">
+        <div class="main-product-review-product">
+          <img
+            src="assets/images/RainyDays_Jacket1.jpg"
+            alt="StormGuard Pro Outdoor Jacket"
+          />
+        </div>
+        <div class="other-product-review-product">
+          <img
+            src="assets/images/RainyDays_Jacket1.jpg"
+            alt="StormGuard Pro Outdoor Jacket"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket1.jpg"
+            alt="StormGuard Pro Outdoor Jacket"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket1.jpg"
+            alt="StormGuard Pro Outdoor Jacket"
+          />
+          <img
+            src="assets/images/RainyDays_Jacket1.jpg"
+            alt="StormGuard Pro Outdoor Jacket"
+          />
+          <div class="arrow-down-product">
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+        </div>
       </div>
+
+      <div class="product-item-layout-product">
+        <div class="product-item-product">
+          <h1>StormGuard Pro Outdoor Jacket</h1>
+          <h3>899 NOK</h3>
+          <p>
+            A dependable outdoor shell made for harsher weather. StormGuard Pro
+            balances insulation, durable construction, and waterproof protection
+            so you can stay comfortable on longer trips outside.
+          </p>
+          <div class="choose-size-color-product">
+            <div class="size-product">
+              <h3>Available Sizes</h3>
+              <p>S &#8226; M &#8226; L &#8226; XL</p>
+            </div>
+            <div class="color-product">
+              <h3>Available Colors</h3>
+              <p>Orange &#8226; Charcoal</p>
+            </div>
+          </div>
+        </div>
+        <div class="add-to-btn-product">
+          <a class="btn" href="cart.html">View Cart</a>
+          <a class="btn" href="checkout.html">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="accordion container">
+      <details>
+        <summary>Detail Description</summary>
+        <ul>
+          <li>Waterproof and windproof shell</li>
+          <li>Insulated lining for cold conditions</li>
+          <li>Secure zip pockets</li>
+          <li>Adjustable hood and waist</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Materials</summary>
+        <ul>
+          <li>Outer fabric: coated polyester</li>
+          <li>Lining: thermal fleece interior</li>
+          <li>Weather rating: suited for heavy rain</li>
+          <li>Breathable: yes</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Care Instruction</summary>
+        <ul>
+          <li>Machine wash cold</li>
+          <li>Do not tumble dry</li>
+          <li>Store dry between uses</li>
+        </ul>
+      </details>
     </section>
 
     <!-- Footer -->
@@ -218,56 +300,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="src/js/api-config.js"></script>
-    <script src="src/js/script.js"></script>
-
-    <script>
-      // Load product by name (async/await)
-      async function loadProductByName() {
-        var productName = "stormguard-pro-outdoor-jacket";
-
-        // Make API request to get all products
-        await apiRequest(
-          API_CONFIG.endpoints.allProducts,
-          function (response) {
-            var products = response.data;
-
-            // Find product matching the name
-            var product = null;
-            for (var i = 0; i < products.length; i++) {
-              var urlName = products[i].title
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-+|-+$/g, "");
-
-              if (urlName === productName) {
-                product = products[i];
-                break;
-              }
-            }
-
-            if (product) {
-              displayProduct(product);
-            } else {
-              showError(
-                'Product not found. Please try searching on our <a href="product.html">products page</a>.',
-              );
-            }
-          },
-          function (error) {
-            showError(error);
-          },
-        );
-      }
-
-      // Load when page loads
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", loadProductByName);
-      } else {
-        loadProductByName();
-      }
-    </script>
   </body>
 </html>

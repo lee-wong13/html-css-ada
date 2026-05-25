@@ -26,8 +26,8 @@
         <ul class="menu">
           <ul class="sub-menu">
             <li><a href="product.html">Shop</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="support.html">Support</a></li>
+            <li><a href="comingsoon.html">About Us</a></li>
+            <li><a href="comingsoon.html">Support</a></li>
           </ul>
         </ul>
 
@@ -43,9 +43,9 @@
     <!-- Breadcrumb -->
     <section class="breadcrumb container">
         <h3><a href="index.html">Homepage</a></h3>
-        <p> >> </p>
+        <p>&gt;&gt;</p>
         <p><a href="product.html">Products</a></p>
-        <p> >> </p>
+        <p>&gt;&gt;</p>
         <p id="breadcrumb-title">Midnight Reflective Urban Shell</p>
     </section>
 
@@ -68,63 +68,25 @@
 
     <div class="product-item-layout-product">
       <div class="product-item-product">
-        <h1>StormGuard Pro Outdoor Jacket</h1>
-        <h3>899 NOK</h3>
-        <p>Take on any adventure with confidence in the StormGuard Pro Outdoor Jacket. Engineered with a waterproof and
-          windproof outer shell, this jacket keeps you dry and comfortable even in extreme conditions. Its insulated
-          thermal lining provides warmth without adding bulk, while the breathable fabric ensures maximum comfort during
-          long outdoor activities</p>
+        <h1>Midnight Reflective Urban Shell</h1>
+        <h3>799 NOK</h3>
+        <p>A sleek urban rain shell with reflective details and lightweight weather protection. It is designed for city commutes, everyday layering, and changing conditions without feeling bulky.</p>
         <div class="choose-size-color-product">
           <div class="size-product">
-            <div class="dropdown">
-              <div class="select">
-                <span>Size</span>
-                <i class="fa fa-chevron-left">&#x2C5;</i>
-              </div>
-              <input type="hidden" name="gender">
-              <ul class="dropdown-menu">
-                <li id="S">S</li>
-                <li id="M">M</li>
-                <li id="L">L</li>
-              </ul>
-            </div>
-            <!-- dropdown credit : https://codepen.io/AleksDev-/pen/PwZaZZb -->
+            <h3>Available Sizes</h3>
+            <p>S &#8226; M &#8226; L &#8226; XL</p>
           </div>
 
           <div class="color-product">
-            <div class="dropdown">
-              <div class="select">
-                <span>Color</span>
-                <i class="fa fa-chevron-left">&#x2C5</i>
-              </div>
-              <input type="hidden" name="gender">
-              <ul class="dropdown-menu">
-                <li id="Black">Black</li>
-                <li id="Red">Red</li>
-                <li id="Orange">Orange</li>
-              </ul>
-            </div>
-            <!-- dropdown credit : https://codepen.io/AleksDev-/pen/PwZaZZb -->
+            <h3>Available Colors</h3>
+            <p>Black &#8226; Reflective Silver</p>
           </div>
         </div>
       </div>
       <div class="add-to-btn-product">
-        <button class="btn" type="button">Add to Wishist</button>
-        <button class="btn" type="button" id="addToCartBtn">Add to Cart</button>
+        <a class="btn" href="comingsoon.html">Add to Wishlist</a>
+        <a class="btn" href="cart.html">View Cart</a>
       </div>
-      <script>
-        document.getElementById('addToCartBtn').addEventListener('click', function() {
-          const size = document.querySelector('.size-product .select span').textContent;
-          const color = document.querySelector('.color-product .select span').textContent;
-          addToCart(
-            'Midnight Reflective Urban Shell',
-            '799',
-            'assets/images/RainyDays_Jacket2.jpg',
-            size,
-            color
-          );
-        });
-      </script>
     </div>
     <!-- </div> -->
   </section>
@@ -271,6 +233,7 @@
             <h3>Explorer Windbreacker</h3>
         </div>
         </div>
+      </div>
     </section>
 
 
@@ -338,7 +301,7 @@
             <h3 class="footer__title">About Us</h3>
             <ul class="footer__links">
               <li>
-                <a href="about-us.html" class="footer__link">About Us</a>
+                <a href="comingsoon.html" class="footer__link">About Us</a>
               </li>
               <li>
                 <a href="comingsoon.html" class="footer__link">Sustainability / Materials</a>
@@ -396,48 +359,5 @@
     </div>
   </footer>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="src/js/api-config.js"></script>
-    <script src="src/js/script.js"></script>
-
-    <script>
-        // Load product by name (async/await)
-        async function loadProductByName() {
-            var productName = 'midnight-reflective-urban-shell';
-            
-            // Make API request to get all products
-            await apiRequest(API_CONFIG.endpoints.allProducts, function(response) {
-                var products = response.data;
-                
-                // Find product matching the name
-                var product = null;
-                for (var i = 0; i < products.length; i++) {
-                    var urlName = products[i].title.toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '-')
-                        .replace(/^-+|-+$/g, '');
-                    
-                    if (urlName === productName) {
-                        product = products[i];
-                        break;
-                    }
-                }
-                
-                if (product) {
-                    displayProduct(product);
-                } else {
-                    showError('Product not found. Please try searching on our <a href="product.html">products page</a>.');
-                }
-            }, function(error) {
-                showError(error);
-            });
-        }
-        
-        // Load when page loads
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadProductByName);
-        } else {
-            loadProductByName();
-        }
-    </script>
 </body>
 </html>
