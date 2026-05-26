@@ -1,41 +1,52 @@
-# HTML & CSS Course Assignment
+# HTML & CSS Course Assignment - Rainy Days
 
-## Brief
+![Rainy Days banner](assets/images/rainy-day.png)
 
-You must deliver a properly functioning, responsive website for the assignment brief you chose in Design 1.
+A frontend project built as part of my studies at Noroff, focused on translating a Figma design into a fully functional website and responsive design using only HTML and CSS.
 
-The site needs to have every page listed in the site architecture on your chosen brief. Certain functionality requiring JavaScript can be mimicked; for example, a login page could link across from the ‘Sign in’ button.
+## Description
 
-- The HTML should be semantic and neat.
-- The CSS should follow the DRY principle and be easy to read.
-- The website should be responsive and look good at every screen size with no horizontal scrollbars. Use Flexbox and CSS Grids where appropriate. Please do not use a CSS framework like Bootstrap; we want to see that you can build responsive sites without the help of a framework.
-- The site should be WCAG compliant, and accessibility should be taken into account.
-- Each page should have a unique <meta name="description">, <title>, and <h1>.
-- You should not use copied code in your submission. All code submitted must be written by yourself. You may use external sources to show you how to achieve specific effects, which should be included in your report.
+Rainy Days is an online store selling outdoor clothing for people who love spending time outside regardless of the weather. The main purpose of this project was to design a complete website in Figma from scratch and then bring that design to life, including responsive design, using only HTML and CSS.
 
-## Process
+- Designed a full high-fidelity prototype in Figma independently
+- Translated the Figma design into 6-pages website
+- Focused on layout accuracy, typography, spacing, and consistency
+- Built fully responsive across mobile, tablet, and desktop
 
-1. Look at your prototype and consider how the elements will move across the different devices. Which elements move where on different devices?
-2. Write your HTML and CSS, ensuring your HTML is semantic and bug-free and your CSS follows DRY principles.
-3. Use media queries, flex or grid to make your website responsive across screen sizes.
-4. Test your website using your developer tools and also test on major browsers and various devices.
-5. Validate your code using the Markup Validation Service
-6. Use the WAVE Web Accessibility Evaluation Tools to test that your site matches best practices for accessibility
-7. When your site is ready, post it on the Teams peer review channel.
-8. Look at the work of your peers and write a review for them.
-9. Make adjustments based on the feedback you gather from peers and teachers.
-10. Submit here on Teams.
+## Built with
 
-## Delivery
+- HTML
+- CSS (Flexbox, Media Queries)
+- Figma
 
-- Please include a link to your live site, deployed on Netlify or GitHub Pages in your submission.
-- Please include a link to your public GitHub repo containing your code in your submission.
-- There is no reflection for this CA.
+## What I learned
 
+- Gained a much deeper understanding of CSS Flexbox and how to use
+  it to recreate complex layouts
+- Learned how to structure HTML semantically across multiple pages
+  while keeping the codebase consistent and readable
+- Developed a stronger eye for spacing, alignment, and typography
+  when working directly in code
+- Understood the importance of starting with mobile-first design
+  and building up with media queries
+- Learned how small design decisions in Figma — like padding and
+  font sizes — need careful thought when translated into CSS
 
-Wireframe Figma: 
-https://www.figma.com/design/sFpobxNwobujz86P7Gh9Kk/Rainydays.ada?node-id=0-1&t=H7AAKGFLwRF2V9qA-1 
+## Future Improvement
 
-Live website: 
-https://lee-wong13.github.io/html-css-ada/ 
+If I were to continue developing this project, I would focus on:
 
+- Adding JavaScript functionality — such as a working cart,
+  product filtering, and search
+- Improving performance by optimising image sizes and formats
+- Expanding the product pages with more detailed information
+  and image galleries
+- Adding form validation on the contact page
+- Improving accessibility further by reviewing keyboard
+  navigation and screen reader support
+- Connecting the site to a real backend or CMS for dynamic
+  product management
+
+## Live website:
+
+https://lee-wong13.github.io/html-css-ada/
