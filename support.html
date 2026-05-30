@@ -3,11 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=comingsoon.html" />
-    <title>Support</title>
-    <meta name="description" content="Support redirects to Coming Soon" />
+    <title>Support | Contact Us</title>
+    <meta
+      name="description"
+      content="Contact Rainy Days support for product and order help."
+    />
+    <link rel="stylesheet" href="src/css/support-style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="src/js/support-validation.js" defer></script>
   </head>
   <body>
-    <p><a href="comingsoon.html">Continue to Coming Soon</a></p>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/RainyDays_Logo.png" alt="Rainy Days" />
+          </a>
+        </div>
+
+        <div class="flex">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <ul class="sub-menu">
+              <li><a href="product.html">Shop</a></li>
+              <li><a href="comingsoon.html">About Us</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </ul>
+
+          <ul class="sub-menu-2">
+            <li><i class="ri-search-line"></i></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="support-main">
+      <section class="support-hero">
+        <div class="hero-copy">
+          <h1>Contact Support</h1>
+          <p>
+            Questions about shipping, returns, or product details? Send us a
+            message and our team will get back to you.
+          </p>
+        </div>
+      </section>
+
+      <section class="support-form-section">
+        <form id="supportForm" class="support-form" novalidate>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="fullName">Full name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Jane Doe"
+                aria-describedby="fullNameError"
+              />
+              <p class="field-error" id="fullNameError" aria-live="polite"></p>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                aria-describedby="emailError"
+              />
+              <p class="field-error" id="emailError" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="How can we help?"
+              aria-describedby="subjectError"
+            />
+            <p class="field-error" id="subjectError" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Describe your issue in a few sentences."
+              aria-describedby="messageError"
+            ></textarea>
+            <p class="field-error" id="messageError" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group checkbox-group">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              aria-describedby="consentError"
+            />
+            <label for="consent"
+              >I agree to be contacted by email regarding this request.</label
+            >
+          </div>
+          <p class="field-error" id="consentError" aria-live="polite"></p>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__copy">
+          <span>&#169; 2026 Rainy Days. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
