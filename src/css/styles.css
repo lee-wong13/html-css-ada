@@ -23,6 +23,7 @@
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
+  overflow-x: hidden;
 }
 
 * {
@@ -119,11 +120,7 @@ a.shopnow:hover {
 }
 
 /* New Arrival */
-¨
-
-
-/* New Arrival */
-¨ .new-arrival {
+.new-arrival {
   padding: 60px 40px;
   background-color: #f5f5f5;
   text-align: center;
@@ -144,7 +141,7 @@ a.shopnow:hover {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin: 0 3rem;
   gap: 3rem;
 }
@@ -230,7 +227,7 @@ a.view-product:hover {
 .gender-card-male {
   background-image: url(../../assets/images/man-hiking-clothes.jpg);
   background-size: cover;
-  width: 404px;
+  width: min(100%, 404px);
   height: 499px;
   display: flex;
   align-items: center;
@@ -246,7 +243,7 @@ a.view-product:hover {
 .gender-card-female {
   background-image: url(../../assets/images/woman-hiking-clothes.jpg);
   background-size: cover;
-  width: 404px;
+  width: min(100%, 404px);
   height: 499px;
   display: flex;
   align-items: center;
@@ -303,7 +300,7 @@ a.view-product:hover {
 
 .about-us-content {
   z-index: 1;
-  width: 660px;
+  width: min(100%, 660px);
 }
 
 .about-us-content h2 {
@@ -344,7 +341,7 @@ a.view-product:hover {
 
 .card-act {
   background-size: cover;
-  width: 300px;
+  width: min(100%, 300px);
   height: 275px;
   display: grid;
   align-items: center;
@@ -431,7 +428,7 @@ a.view-product:hover {
 }
 
 .sale-img img {
-  width: 390px;
+  width: min(100%, 390px);
   height: 435px;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -439,7 +436,7 @@ a.view-product:hover {
 
 .sale-per {
   position: relative;
-  width: 390px;
+  width: min(100%, 390px);
   height: 435px;
   margin-bottom: 1rem;
 }
@@ -512,7 +509,7 @@ a.view-product:hover {
 }
 
 .review-card img {
-  width: 383px;
+  width: min(100%, 383px);
   height: 574px;
   object-fit: cover;
   margin-bottom: 10px;
@@ -583,172 +580,10 @@ a.view-product:hover {
 
 /* RESPONSIVE ======================== */
 
-/* For medium devices */
-@media screen and (max-width: 430px) {
-  .banner {
-    height: 70vh;
-  }
-  .banner-content h1 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-  .banner-content p {
-    font-size: 0.6rem;
-  }
-
-  .new-arrival h1 {
-    font-size: 1.75rem;
-  }
-
-  .product-grid {
-    gap: 0.75rem;
-  }
-  .product-card {
-    max-width: 250px;
-    padding-bottom: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .product-card h3 {
-    font-size: 1rem;
-    padding-bottom: 0.5rem;
-  }
-  .product-card p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .gender {
-    padding: 1rem;
-  }
-  .gender h1 {
-    font-size: 1.75rem;
-  }
-  .gender-grid {
-    margin: 0;
-    flex-direction: column;
-    align-items: center;
-  }
-  .gender-card-male,
-  .gender-card-female {
-    width: 254px;
-    height: 359px;
-  }
-
-  .gender-card-female h3,
-  .gender-card-male h3 {
-    font-size: 1.5rem;
-  }
-
-  .about-us {
-    justify-content: center;
-    padding: 3rem;
-    height: 450px;
-  }
-  .about-us-content h2 {
-    font-size: 1.75rem;
-  }
-  .about-us-content p {
-    font-size: 0.75rem;
-  }
-
-  .activity {
-    padding: 0.75rem;
-  }
-  .activity h1 {
-    font-size: 1.75rem;
-    margin: 1rem 0;
-  }
-  .activity-card {
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .card-act {
-    width: 130px;
-    height: 105px;
-  }
-  .activity-card h3 {
-    font-size: 1.25rem;
-  }
-  .right-arrow {
-    display: none;
-  }
-
-  .sale h1 {
-    font-size: 1.75rem;
-    padding: 1.5rem;
-  }
-  .sale-card {
-    grid-row: 1;
-    margin: 0;
-    gap: 0;
-  }
-  .sale-img img {
-    width: 350px;
-    height: auto;
-    margin-bottom: 0;
-    /* padding: 0 1rem; */
-  }
-  .sale-per {
-    width: 350px;
-    height: auto;
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
-  .sale-per p {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-  .sale-img h2 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .sale-img p {
-    font-size: 1rem;
-  }
-  .sale-img button,
-  .sale-img .view-product {
-    margin-top: 0.5rem;
-  }
-
-  .review h1 {
-    font-size: 1.75rem;
-    padding: 0 1rem;
-  }
-  .review-content {
-    margin: 0;
-  }
-  .review-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-  .review-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .review-card p {
-    font-size: 0.75rem;
-  }
-  .star {
-    font-size: 1.75rem;
-  }
-
-  .subscribe h1 {
-    font-size: 1.75rem;
-  }
-  .subscribe-input input {
-    margin-bottom: 0.5rem;
-  }
-  .subscribe p {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 768px) {
   .gender-card-male,
   .gender-card-female {
-    width: 304px !important;
+    width: min(100%, 304px);
     height: 409px !important;
   }
 }
@@ -756,6 +591,9 @@ a.view-product:hover {
 @media (max-width: 820px) {
   .gender-grid {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -763,8 +601,13 @@ a.view-product:hover {
   .banner {
     height: 65vh;
   }
+  .product-grid {
+    justify-items: center;
+  }
   .product-card {
     width: 374px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .gender-card-female,
   .gender-card-male {
@@ -833,5 +676,188 @@ a.view-product:hover {
 @media (max-width: 1610px) {
   .right-arrow {
     margin-right: 1rem;
+  }
+}
+
+/* Keep narrow-screen rules at the end so they are not overridden by broader breakpoints above. */
+@media screen and (max-width: 430px) {
+  .banner {
+    height: 70vh;
+  }
+  .banner-content h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .banner-content p {
+    font-size: 0.6rem;
+  }
+
+  .new-arrival {
+    padding: 2rem 1rem;
+  }
+  .new-arrival h1 {
+    font-size: 1.75rem;
+  }
+  .product-grid {
+    margin: 0 auto;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .product-card {
+    width: min(100%, 300px);
+    max-width: 300px;
+    padding-bottom: 1rem;
+    margin: 0 auto 0.5rem;
+  }
+  .product-card h3 {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .product-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .gender {
+    padding: 1rem;
+  }
+  .gender h1 {
+    font-size: 1.75rem;
+  }
+  .gender-grid {
+    margin: 0;
+  }
+  .gender-card-male,
+  .gender-card-female {
+    width: min(100%, 254px);
+    height: 359px;
+  }
+  .gender-card-female h3,
+  .gender-card-male h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-us {
+    justify-content: center;
+    padding: 3rem 1rem;
+    height: 450px;
+  }
+  .about-us-content h2 {
+    font-size: 1.75rem;
+  }
+  .about-us-content p {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .activity {
+    padding: 0.75rem;
+  }
+  .activity h1 {
+    font-size: 1.75rem;
+    margin: 1rem 0;
+  }
+  .activity-card {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+  }
+  .card-act {
+    width: min(100%, 130px);
+    height: 105px;
+  }
+  .activity-card h3 {
+    font-size: 1.25rem;
+  }
+  .right-arrow {
+    display: none;
+  }
+
+  .sale h1 {
+    font-size: 1.75rem;
+    padding: 1.5rem;
+  }
+  .sale-card {
+    grid-row: 1;
+    margin: 0;
+    gap: 0;
+  }
+  .sale-img {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  .sale-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+  .sale-per {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+  .sale-per p {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .sale-img h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .sale-img p {
+    font-size: 1rem;
+  }
+  .sale-img button,
+  .sale-img .view-product {
+    margin-top: 0.5rem;
+  }
+
+  .review {
+    padding: 1rem;
+  }
+  .review h1 {
+    font-size: 1.75rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .review-content {
+    margin: 0;
+    gap: 1rem;
+  }
+  .review-card {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  .review-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  .review-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .review-card p {
+    font-size: 0.75rem;
+  }
+  .star {
+    font-size: 1.75rem;
+  }
+
+  .subscribe h1 {
+    font-size: 1.75rem;
+  }
+  .subscribe-input {
+    padding: 1rem;
+  }
+  .subscribe-input input {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 0.5rem;
+  }
+  .subscribe p {
+    font-size: 1rem;
   }
 }
