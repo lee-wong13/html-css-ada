@@ -36,12 +36,7 @@ Rainy Days is an online store selling outdoor clothing for people who love spend
 
 If I were to continue developing this project, I would focus on:
 
-- Improving performance by optimising image sizes and formats
-- Expanding the product pages with more detailed information
-  and image galleries
-- Adding form validation on the contact page
-- Improving accessibility further by reviewing keyboard
-  navigation and screen reader support
+- Adding form validation on the contact paget
 
 ## Live website:
 
